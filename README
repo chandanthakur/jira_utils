@@ -1,0 +1,7 @@
+
+Export Jira Filter results into a csv file with caret seperator. Sample file available as data/cfd_stats_2019_jan_01_onwards.csv
+
+Ensure following fields in the filter output:
+Key,Assignee, Components, Created, Status, Resolved 
+
+node cfd_stats.js --file data/cfd_stats_2019_jan_01_onwards.csv --today 25/jan/2020

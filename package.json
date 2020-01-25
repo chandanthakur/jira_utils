@@ -1,0 +1,27 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "azure-kusto-data": "^0.1.5",
+    "azure-storage": "^2.10.3",
+    "colors": "^1.1.2",
+    "dateformat": "^3.0.2",
+    "decompress": "^4.2.0",
+    "event-stream": "^3.3.4",
+    "extract-zip": "^1.6.6",
+    "gulp": "^4.0.2",
+    "minimist": "^1.2.0",
+    "moment": "^2.20.0",
+    "natives": "^1.1.6",
+    "request": "^2.83.0",
+    "sentiment": "^4.1.0",
+    "sqlite3": "^3.1.13",
+    "to-utf-8": "^1.3.0",
+    "unescape": "^1.0.1",
+    "unzip": "^0.1.11",
+    "unzip2": "^0.2.5",
+    "unzipper": "^0.8.14",
+    "winston": "^3.0.0-rc1",
+    "yauzl": "^2.9.1"
+  }
+}
