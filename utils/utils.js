@@ -2,113 +2,11 @@ var fs = require('fs');
 var os = require('os');
 var readline = require('readline');
 var colors = require('colors/safe');
-var moment = require('moment');
-//var https = require('https');
 var request = require('request');
-var unzip2 = require("unzip2");
-//var sqlite3 = require('sqlite3').verbose();
 var parseArgs = require('minimist')
 var es = require('event-stream');
 var utf8 = require('to-utf-8')
 var path = require('path');
-
-class LocalCache {
-    constructor() {
-    }
-
-    initialize() {
-        if (this.hasNetworkCacheTable) {
-            return new Promise((resolve, reject) => {
-                resolve(true);
-            });
-        }
-
-        if (this.initPromise) {
-            return this.initPromise;
-        }
-
-        this.initPromise = this.createNetworkCacheTableIfRequired();
-        return this.initPromise;
-    }
-
-    getDb() {
-        if (!this.db) {
-            this.db = null;//new sqlite3.Database(utils.getTmpDir() + "/sqlite_cache.db");
-        }
-
-        return this.db;
-    }
-
-    createNetworkCacheTableIfRequired() {
-        let ctx = this;
-        let promise = new Promise((resolve, reject) => {
-            ctx.getDb().get("SELECT name FROM sqlite_master WHERE type='table' AND name='networkCache'", function (err, row) {
-                if (row) {
-                    resolve(true);
-                    return;
-                }
-
-                if (!row || err) {
-                    ctx.getDb().run("create table networkCache (key TEXT PRIMARY KEY, value TEXT, expiry number)", function (errInner) {
-                        if (err) {
-                            ctx.initPromise = null;
-                            reject(errInner)
-                        } else {
-                            ctx.hasNetworkCacheTable = true;
-                            resolve(true);
-                        }
-                    });
-                }
-            })
-        });
-
-        return promise;
-    }
-
-    getKey(key) {
-        let ctx = this;
-        let promise = new Promise((resolve, reject) => {
-            ctx.initialize().then(function () {
-                ctx.getDb().get("SELECT key, value, expiry FROM networkCache WHERE key=$key", { $key: key }, function (err, row) {
-                    let value = row ? row.value : null;
-                    resolve(value);
-                })
-            });
-        });
-
-        return promise;
-    }
-
-    hasKey(key) {
-        let ctx = this;
-        let promise = new Promise((resolve, reject) => {
-            ctx.initialize().then(function () {
-                ctx.getDb().get("SELECT key FROM networkCache WHERE key=$key", { $key: key }, function (err, row) {
-                    let value = row ? true : false;
-                    resolve(value);
-                })
-            });
-        });
-
-        return promise;
-    }
-
-    putKey(key, value) {
-        let ctx = this;
-        let promise = new Promise((resolve, reject) => {
-            ctx.initialize().then(function () {
-                ctx.getDb().run("insert or replace into networkCache(key, value) VALUES ($key, $value)", { $key: key, $value: value }, function (err) {
-                    resolve(!!!err);
-                });
-            });
-        });
-
-        return promise;
-    }
-}
-
-let localCache = new LocalCache();
-
 utils = module.exports = {
 
     getLocalCache: function () {
