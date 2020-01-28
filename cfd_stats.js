@@ -15,6 +15,7 @@ let isOpen = function(status, today, resolved) {
     if(resolved && diff < 0) return true;
     return status != "Closed" && status != "Resolved";
 }
+
 let isP0P1 = function(priority) {
     return priority == P0 || priority == P1;
 }
