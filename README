@@ -10,3 +10,54 @@ Key,Assignee, Components, Created, Status, Resolved
 node cfd_stats.js --file data/cfd_stats_2019_jan_01_onwards.csv --today 25/jan/2020
 
 
+#Interpretation of results
+#When run, above command will generate two files(*_stats.csv and *_stats.raw.csv) for each of the filter(P0/P1, CFI etc)
+#A new filter can be added removed in the file by specifying the criteria similar to below
+ >> outputStats("CFD P0P1", "cfd_p0p1_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType) && isP0P1(item.priority)));
+
+ File *_stats.raw.csv is for debugging purpose
+ File *_stats.csv is for consumption and plotting graphs
+
+FAQ:
+
+Q1. How do I interpret the results?
+ Pasted below is sample output when below command is executed:
+ node cfd_stats.js --file data/cfd_stats_2019_jan_01_onwards.csv --today 25/jan/2020
+
+ [ 'key,percentile,success,total',
+  '10,9,11,118',
+  '20,15,18,116',
+  '30,22,26,114',
+  '40,26,30,112',
+  '50,31,35,112',
+  '60,32,36,112',
+  '70,37,41,109',
+  '80,39,43,108',
+  '90,41,45,108',
+  '100,43,46,105',
+  '110,45,47,103',
+  '120,47,48,102',
+  '130,48,49,102',
+  '140,49,50,102',
+  '150,50,52,102',
+  '160,51,53,102',
+  '170,52,54,102',
+  '180,53,54,101',
+  '190,54,55,101',
+  '200,56,57,101' ]
+
+Key - represents days
+percentile - percentage of items resolved as fixed
+success - number of items resolved as fixed
+total - Sum of: 
+        1) items resolved as fixed before "key" number of days 
+        2) items that couldn't be resolved in "Key" number of days.
+        * Total excludes items which are open for less than "Key" number of days
+
+ 
+
+
+
+
+
+

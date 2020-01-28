@@ -149,11 +149,11 @@ let main = function() {
     getRowsFromJiraExportedFile(jiraExportedFilePath).then(function(tableRows){
         tableRows = utils.filterArray(tableRows, (item) => !isCreatedAfterDate(item, pivotToday));
         tableRows.forEach( (bugData) => extendJiraProperties(bugData, pivotToday));
-        //outputStats("CFD All", "cfd_all_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType)));
+        outputStats("CFD All", "cfd_all_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType)));
         outputStats("CFD P0P1", "cfd_p0p1_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType) && isP0P1(item.priority)));
         outputStats("CFD P2P3", "cfd_p2p3_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType) && isP2P3(item.priority)));
 
-        //outputStats("CFI All", "cfi_all_stats", utils.filterArray(tableRows, (item) => isImprovement(item.issueType)));
+        outputStats("CFI All", "cfi_all_stats", utils.filterArray(tableRows, (item) => isImprovement(item.issueType)));
         outputStats("CFI P0/P1", "cfi_p0p1_stats", utils.filterArray(tableRows, (item) => isP0P1(item.priority) && isImprovement(item.issueType)));
         outputStats("CFI P2/P3", "cfi_p2p3_stats", utils.filterArray(tableRows, (item) => isP2P3(item.priority) && isImprovement(item.issueType)));
     });
