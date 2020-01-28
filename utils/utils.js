@@ -8,7 +8,6 @@ var es = require('event-stream');
 var utf8 = require('to-utf-8')
 var path = require('path');
 utils = module.exports = {
-
     getLocalCache: function () {
         return localCache;
     },
@@ -30,8 +29,6 @@ utils = module.exports = {
             }
 
             var rowList = [];
-            var rowIndex = 0;
-            var colNames = [];
             utils.getFileLinesV2(fileName, function (line) {
                 rowList.push(line);
             }, function () {

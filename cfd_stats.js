@@ -9,12 +9,10 @@ let P1 = "Critical - P1";
 let P2 = "Major - P2";
 let P3 = "Minor - P3";
 
-// Todo: Pass as script argument 
-let today = new Date();
-let pivotToday = (today.getMonth() + 1) + "/" + today.getDate() + "/" + today.getFullYear();
-console.log(pivotToday)
 // Basic helper functions
-let isOpen = function(status) {
+let isOpen = function(status, today, resolved) {
+    let diff = daysBetween(resolved, today);
+    if(resolved && diff < 0) return true;
     return status != "Closed" && status != "Resolved";
 }
 let isP0P1 = function(priority) {
@@ -66,21 +64,26 @@ let aggregateX = function(tableRows) {
 }
 
 // Extend Bug Data with additional custom properties
-let extendJiraProperties = function(bugData) {
-    let created = bugData['Created'];
-    let status = bugData['Status'];
-    let resolved = bugData['Resolved'];
+let normalizeJiraKeys = function(bugData) {
+    bugData.created = bugData['Created'];
+    bugData.resolved = bugData['Resolved'];
     bugData.issueId = bugData['Issue id'];
-    bugData.created = created;
     bugData.issueType = bugData['Issue Type'];
-    bugData.status = status;
+    bugData.status = bugData['Status'];
     bugData.priority = bugData['Priority'];
-    bugData.daysOpen = isOpen(status) ? daysBetween(created, pivotToday) : daysBetween(created, resolved);
-    bugData.daysToResolve = isOpen(status) ? undefined : daysBetween(created, resolved);
+}
+
+let extendJiraProperties = function(bugData, pivotToday) {
+    let created = bugData.created;
+    let status = bugData.status;
+    let resolved = bugData.resolved;
+    let open = isOpen(status, pivotToday, resolved);
+    bugData.daysOpen = open ? daysBetween(created, pivotToday) : daysBetween(created, resolved);
+    bugData.daysToResolve = open ? undefined : daysBetween(created, resolved);
     bugData.x = [];
     for(let ii = xAxisDaysDiff; ii <= xAxisDaysMax; ii = ii + xAxisDaysDiff) {
         let xval = ii;
-        let isApplicable = isOpen(status) ? bugData.daysOpen >= xval: true;
+        let isApplicable = open ? bugData.daysOpen >= xval: true;
         let value = isApplicable && bugData.daysToResolve <= xval ? 1 : 0;
         bugData.x.push({key: xval, x: xval, val: value, isApplicable: isApplicable});
     }
@@ -93,7 +96,7 @@ function getRowsFromJiraExportedFile(fileName) {
     return promise.then(function(result) {
         tableRows = result;
         tableRows.shift();
-        tableRows.forEach(bugData => extendJiraProperties(bugData));
+        tableRows.forEach(bugData => normalizeJiraKeys(bugData));
         return tableRows;
     });
 }
@@ -128,16 +131,29 @@ let outputStats = function(name, id, rows) {
     utils.writeToFile(id + ".raw.csv", csvRows.join("\n")).then(function(res){});
 }
 
+let getPivotToday = function(todayArg) {
+    let today = new Date();
+    let pivotToday = (today.getMonth() + 1) + "/" + today.getDate() + "/" + today.getFullYear();
+    return todayArg || pivotToday;;
+}
+
+let isCreatedAfterDate = function(item, pivotToday) {
+    let diff = daysBetween(item.created, pivotToday);
+    return diff < 0;
+}
+
 let main = function() {
     let jiraExportedFilePath = utils.getCmdArg("file");
     let todayArg = utils.getCmdArg("today");
-    pivotToday = todayArg || pivotToday;
+    let pivotToday = getPivotToday(todayArg);
     getRowsFromJiraExportedFile(jiraExportedFilePath).then(function(tableRows){
-        outputStats("CFD All", "cfd_all_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType)));
+        tableRows = utils.filterArray(tableRows, (item) => !isCreatedAfterDate(item, pivotToday));
+        tableRows.forEach( (bugData) => extendJiraProperties(bugData, pivotToday));
+        //outputStats("CFD All", "cfd_all_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType)));
         outputStats("CFD P0P1", "cfd_p0p1_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType) && isP0P1(item.priority)));
         outputStats("CFD P2P3", "cfd_p2p3_stats", utils.filterArray(tableRows, (item) => isBug(item.issueType) && isP2P3(item.priority)));
 
-        outputStats("CFI All", "cfi_all_stats", utils.filterArray(tableRows, (item) => isImprovement(item.issueType)));
+        //outputStats("CFI All", "cfi_all_stats", utils.filterArray(tableRows, (item) => isImprovement(item.issueType)));
         outputStats("CFI P0/P1", "cfi_p0p1_stats", utils.filterArray(tableRows, (item) => isP0P1(item.priority) && isImprovement(item.issueType)));
         outputStats("CFI P2/P3", "cfi_p2p3_stats", utils.filterArray(tableRows, (item) => isP2P3(item.priority) && isImprovement(item.issueType)));
     });

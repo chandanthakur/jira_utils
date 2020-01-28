@@ -6,6 +6,7 @@ Filter used currently https://jira.nutanix.com/issues/?filter=69467
 Ensure following fields in the filter output:
 Key,Assignee, Components, Created, Status, Resolved 
 
+# Sample command
 node cfd_stats.js --file data/cfd_stats_2019_jan_01_onwards.csv --today 25/jan/2020
 
 

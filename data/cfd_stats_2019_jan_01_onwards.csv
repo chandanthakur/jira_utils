@@ -1,590 +1,428 @@
-Issue Type^Issue key^Issue id^Summary^Assignee^Component/s^Component/s^Component/s^Priority^Created^Status^Resolved
-Improvement^ENG-281620^680776^Raise an alert in Prism for VM description longer than 1000 characters^acropolis^AHV-Management^^^Minor - P3^23/Jan/20 9:36 PM^Open^
-Improvement^ENG-281184^680360^Acropolis: Improve the workflow of updating the VM boot device in Prism.^jsims^AHV-Management^^^Major - P2^22/Jan/20 8:57 PM^Need Info^
-Improvement^ENG-280914^680008^Panacea: Highlight known and suspected causes for host reboots^ahv-eng^Panacea^^^Major - P2^22/Jan/20 3:06 AM^Open^
-Bug^ENG-280849^679547^device_index field in VM creation spec caused Uhura to go into a crash loop^syam.mohan^Uhura^^^Major - P2^21/Jan/20 9:04 PM^Open^
-Bug^ENG-280329^678276^AHV - Update NetKVM Tx/Rx buffers^peter.turschm^AHV^^^Major - P2^18/Jan/20 4:51 PM^Open^
-Bug^ENG-280328^678274^VirtIO - NetKVM should adjust m_nReusedRxBuffersLimit if allocation of all RX buffers fails^^AHV^^^Critical - P1^18/Jan/20 1:24 PM^Open^
-Bug^ENG-280246^678160^"Attempting to power on VMs fails with ""ValueError: need more than 1 value to unpack"""^bhuvnesh.jain^AHV-Management^^^Major - P2^18/Jan/20 2:39 AM^Open^
-Bug^ENG-279980^677465^[ncc] raise warning for ahv_read_only_fs_check alerts^raymond.yip^AHV-Management^^^Major - P2^16/Jan/20 10:25 PM^Closed^18/Jan/20 12:36 AM
-Bug^ENG-279650^676585^LCM does not offer 20190916.96 when using offline bundle^bruce.gao^AHV^^^Critical - P1^15/Jan/20 5:16 PM^In Progress^
-Bug^ENG-279167^675790^EnterMaintenanceMode task failed with message: Timed out waiting for HA status to become protected.^scheduler-eng^AHV-Management^^^Major - P2^14/Jan/20 12:01 AM^Open^
-Improvement^ENG-279051^675183^Need to map tap interfaces with UVM UUID in ovsdb logs^shrinivasa.kini^AHV^Networking^^Major - P2^13/Jan/20 1:39 PM^Open^
-Bug^ENG-278918^675098^REST APIv3 - Cannot specified the container_uuid during VM creation^acropolis^AHV-Management^^^Major - P2^11/Jan/20 6:40 PM^Resolved^14/Jan/20 10:35 AM
-Bug^ENG-278582^673690^Cannot put a vm into new project in PC^acropolis^AHV-Management^^^Critical - P1^10/Jan/20 5:17 AM^In Progress^
-Bug^ENG-278548^673325^Boot order lost after changing affinity rules^acropolis^AHV-Management^Uhura^^Major - P2^10/Jan/20 2:42 AM^Open^
-Bug^ENG-278231^672415^Dual Mellanox Connect-X cards do not have interfaces on 8035 G7'^ahv-eng^AHV^Networking^^Critical - P1^08/Jan/20 11:20 PM^Resolved^09/Jan/20 1:02 AM
-Improvement^ENG-277971^671814^Panacea: Highlight suspected instances of ENG-269432^russell.creech^Panacea^^^Major - P2^07/Jan/20 10:53 PM^Pending Review^
-Bug^ENG-277931^671745^Networking broken on el7 AHV because multiple devices want to be called eno1^jonathan.davies^AHV^^^Critical - P1^07/Jan/20 5:10 PM^Resolved^23/Jan/20 10:33 PM
-Bug^ENG-277038^669577^acli host.enter_maintenance_mode should work with either IP or hostname^shruthi.racha^AHV-Management^^^Major - P2^03/Jan/20 7:31 AM^Open^
-Improvement^ENG-276917^669408^Increase frequency of AHV SAR logs^ani.sinha^AHV^^^Major - P2^02/Jan/20 5:23 PM^Pending Merge^
-Bug^ENG-276873^669236^ha: change ha state from highlyAvailable when num_remaining_host_failures_to_tolerate changes to 1^asa.frank^AHV-Management^^^Major - P2^02/Jan/20 2:26 PM^Open^
-Improvement^ENG-276853^669230^acropolis guardrail for kNewNode^scheduler-eng^AHV-Management^^^Major - P2^02/Jan/20 12:56 PM^Open^
-Improvement^ENG-276707^668855^AHV: Add VM migration progress details in logs^ivan.teterevkov^AHV^^^Major - P2^31/Dec/19 2:40 AM^Open^
-Bug^ENG-276685^668831^Win2019 BSOD when hot adding vCPU (WDF Violation)^rob.scheepens^AHV^^^Major - P2^30/Dec/19 9:17 PM^Closed^31/Dec/19 3:44 PM
-Improvement^ENG-276476^667925^Panacea: Detect ISB-094^nishant.verma^Panacea^^^Minor - P3^28/Dec/19 2:16 AM^Open^
-Bug^ENG-276358^667440^Ergon crash due to IDF having 2 Lac+ tasks^asifali.jamadar^Ergon^^^Critical - P1^27/Dec/19 11:01 AM^Need Info^
-Improvement^ENG-275967^666819^Remove core dumps older than 3 months^ani.sinha^AHV^^^Major - P2^24/Dec/19 5:53 PM^In Progress^
-Bug^ENG-275952^666686^"Image List API call fails with ""message"": ""Internal Server Error. list index out of range"""^shashank.kumar^AHV-Management^^^Major - P2^24/Dec/19 3:37 PM^Open^
-Bug^ENG-275792^666366^"AHV (nutanix.20170830.319) -  Citrix (v.19.06) with Citrix App Layering (v.19.11) | App Layering VMs not being cleaned up."^russell.creech^AHV^AHV-Management^Citrix Integration^Critical - P1^23/Dec/19 9:58 PM^Closed^08/Jan/20 2:24 AM
-Bug^ENG-275781^666357^VirtIO - Lack of VPD_BLOCK_LIMITS support breaks BitLocker in 2019^peter.turschm^AHV^^^Critical - P1^23/Dec/19 8:11 PM^Open^
-Bug^ENG-274959^664359^AHV: Investigate possible causes for VM migrate task returning before migration completes^ivan.teterevkov^AHV^^^Major - P2^19/Dec/19 2:40 AM^Open^
-Improvement^ENG-274854^664122^"Gyldendal A/S | Need ""Power off Actions"" option to be available on multiple VMs at once"^jsims^AHV-Management^^^Minor - P3^18/Dec/19 6:21 PM^Open^
-Bug^ENG-274301^662866^Out-of-Memory failure on firstboot due to pressure-d issue.^asheesh.kwatra^AHV^^^Blocker - P0^17/Dec/19 4:27 AM^Closed^18/Jan/20 3:05 AM
-Bug^ENG-274248^662625^Improve messaging when a UVM has vga_console is set to false^glenn.ryan^AHV-Management^^^Major - P2^16/Dec/19 11:44 PM^Resolved^11/Jan/20 11:10 AM
-Bug^ENG-273600^660816^[GPU HA] Test failed to restart the VMs as apart of HAfailover^nitin.badam^AHV-Management^^^Critical - P1^12/Dec/19 5:01 PM^Closed^13/Dec/19 11:59 PM
-Bug^ENG-273008^659357^X722 firmware with LLDP disabled causes AHV crash on boot^raphael.norwitz^AHV^^^Blocker - P0^11/Dec/19 12:40 AM^Resolved^21/Jan/20 5:43 PM
-Improvement^ENG-273000^659262^Nutanix Virt-who not pushing AHV host to Satellite when having config files for both  ESXi and AHV under /etc/virt-who.d/^amir.eibagi^AHV-Management^^^Major - P2^11/Dec/19 12:23 AM^Open^
-Bug^ENG-272607^658268^Acropolis deadlock during initialisation (telemetry manager and host manager)^robert^AHV-Management^^^Critical - P1^09/Dec/19 10:59 PM^Closed^20/Dec/19 9:29 AM
-Bug^ENG-272245^657230^[Logrhythm] AHV host not schedulable due to inadvertent corruption^ahv-eng^AHV^^^Major - P2^07/Dec/19 6:08 AM^Resolved^09/Dec/19 5:39 PM
-Bug^ENG-271242^655121^NFS client object in _poll_loop causing Genesis to consume roughly 100% CPU  ^mladen.drobnjakovic^AHV-Management^Infrastructure^LCM^Critical - P1^03/Dec/19 7:06 PM^In Progress^
-Improvement^ENG-271232^655113^Enable HA reservation page shows a wrong value for reserved memory^jsims^AHV-Management^^^Major - P2^03/Dec/19 5:30 PM^Open^
-Bug^ENG-270655^653809^"[Uhura] Uhura crashing with ""CRITICAL vm_base_task.py: Found duplicate VM entity in task entity list"""^syam.mohan^Uhura^^^Critical - P1^29/Nov/19 1:06 PM^Resolved^31/Dec/19 10:08 AM
-Bug^ENG-270645^653799^[ERGON] dispatcher libraries should use task iterator for listing^monica.jeyachandran^AHV-Management^Ergon^^Critical - P1^29/Nov/19 12:30 PM^Closed^26/Dec/19 1:27 PM
-Bug^ENG-270376^652862^"Acropolis stats_publisher stuck after node down for multiple days, failing to publish virtual_network data to arithmos"^amit.singh^AHV-Management^^^Critical - P1^28/Nov/19 1:13 AM^Need Info^
-Improvement^ENG-270027^652298^Ergon Task should have basic attributes indexed in IDF^vistaar.juneja^AHV-Management^Ergon^^Critical - P1^26/Nov/19 4:41 PM^Reopened^
-Bug^ENG-269717^651553^Ergon should fail all updates which mark completed task to running^bhuvnesh.jain^AHV-Management^Ergon^^Critical - P1^25/Nov/19 6:34 PM^Closed^09/Dec/19 11:54 PM
-Bug^ENG-269432^650760^Fix for host_gpu entity publishing (ENG-222034) causes acropolis master initialization deadlock^shyam.rajendran^AHV-Management^^^Critical - P1^23/Nov/19 1:58 AM^Pending Merge^
-Improvement^ENG-269339^650486^Disable DHCP client on AHV^malcolm.crossley^AHV^^^Major - P2^22/Nov/19 4:14 PM^Resolved^04/Dec/19 2:58 AM
-Bug^ENG-269333^650525^Typo in printing usage section of the script - remove_image_catalog^suraj.kasi^AHV-Management^^^Major - P2^22/Nov/19 3:30 PM^Open^
-Improvement^ENG-269157^650065^Customer requests for the ability to schedule certain VMs to restart automatically based on a configurable schedule^luke.congdon^AHV^Prism Central^^Minor - P3^22/Nov/19 4:27 AM^Open^
-Bug^ENG-268795^649563^[AHV-PF] AHV upgrade from el6 to el7 failed due to satadom IO errors^daniel.shubin^AHV^^^Critical - P1^21/Nov/19 5:11 AM^Closed^09/Dec/19 11:41 PM
-Improvement^ENG-268677^649350^NCC check for EXT4 corruption signature on AHV boot device. Maybe we can improvise and use ENG-231407?^^AHV^NCC^^Minor - P3^20/Nov/19 5:36 PM^Open^
-Improvement^ENG-268672^649345^PXE UEFI improvement^prerna.saxena^AHV^^^Critical - P1^20/Nov/19 4:55 PM^Open^
-Improvement^ENG-268595^649291^acropolis: acropolis master should FATAL when it cannot connect to local ssh to the host for a long time^manikandan.selvagane^AHV-Management^^^Critical - P1^20/Nov/19 12:59 PM^Open^
-Bug^ENG-268562^648965^acropolis: improve logging in vmdisk scanner code path^raghu.rapole^AHV-Management^^^Major - P2^20/Nov/19 10:57 AM^Open^
-Bug^ENG-268559^648964^acropolis: improve vmdisk scanner logic for validating vm/vg config ^Sai.Vishalk^AHV-Management^^^Major - P2^20/Nov/19 10:45 AM^Open^
-Improvement^ENG-268510^649050^Panacea: parse log bundle to report on life cycle of VMs and hosts^nishant.verma^Panacea^^^Major - P2^20/Nov/19 4:05 AM^Open^
-Bug^ENG-268376^648644^acropolis: crashing because of weird characters in qemu logs^prema.kolli^AHV-Management^^^Critical - P1^19/Nov/19 4:26 PM^Resolved^22/Nov/19 4:55 AM
-Bug^ENG-268375^648643^Uhura VmDestroy task should succeed if the VM is already deleted.^syam.mohan^Uhura^^^Critical - P1^19/Nov/19 4:26 PM^Resolved^19/Dec/19 10:14 PM
-Bug^ENG-268126^648251^Unable to create or update VMs from PC or PE GUI due to acropolis connection limit exceeded^acropolis^AHV-Management^^^Major - P2^18/Nov/19 9:15 PM^Resolved^22/Jan/20 2:12 PM
-Bug^ENG-266745^644592^AHV upgrade - Software is not compatible error^bruce.gao^AHV^Prism UI^^Critical - P1^13/Nov/19 12:23 AM^Closed^14/Nov/19 1:31 AM
-Bug^ENG-266724^644465^Unable to view VM affinity details for the host from the ACLI command line^ahv-eng^AHV^AHV-Management^^Major - P2^12/Nov/19 10:33 PM^Resolved^14/Nov/19 4:50 AM
-Improvement^ENG-266615^644073^Request for Proactive HA on Nutanix^scheduler-eng^AHV-Management^^^Major - P2^12/Nov/19 1:08 PM^Open^
-Bug^ENG-266320^643285^acropolis: fix UEFI clone^prerna.saxena^AHV-Management^^^Blocker - P0^11/Nov/19 4:26 PM^Resolved^15/Jan/20 8:08 PM
-Bug^ENG-266177^643213^VM powering ON on the host having hotspot.^aramesh^AHV-Management^^^Major - P2^11/Nov/19 11:15 AM^Open^
-Bug^ENG-266083^642186^[ESX] UhuraManagementServerConnectionError: vCenter connection could not be established^acropolis^Uhura^^^Critical - P1^09/Nov/19 9:24 AM^Closed^17/Jan/20 1:25 PM
-Bug^ENG-265883^642038^Prism Central: Self Service - Error when changing VM Ownership for VM with name longer than 64 characters^acropolis^AHV-Management^^^Critical - P1^08/Nov/19 12:36 PM^Resolved^19/Nov/19 11:54 PM
-Improvement^ENG-265778^640874^AHV: Log image conversion progress^abhijit.khopkar^AHV-Management^^^Minor - P3^08/Nov/19 3:11 AM^Open^
-Improvement^ENG-265749^640940^Reduce IDF calls and memory in task_scanner^vistaar.juneja^Ergon^^^Major - P2^07/Nov/19 11:59 PM^Open^
-Bug^ENG-265678^640437^Guardrail Needed: A bad response from libvirtd on a single host should be prevented from bringing down an entire cluster^manikandan.selvagane^AHV-Management^^^Critical - P1^07/Nov/19 6:42 PM^Open^
-Bug^ENG-265368^640123^Improve deletion behavior for orphan images in case of one location_list^shashank.kumar^AHV-Management^^^Critical - P1^06/Nov/19 6:15 PM^Resolved^07/Nov/19 1:09 AM
-Bug^ENG-265367^640121^catalog: nuclei image.delete succeeded without cleaning up IDF metadata^shashank.kumar^AHV-Management^^^Critical - P1^06/Nov/19 6:00 PM^Closed^20/Nov/19 4:39 AM
-Bug^ENG-265260^640006^Traceback received while running Panacea on cluster^tao.guan^Panacea^^^Critical - P1^06/Nov/19 12:59 PM^Reopened^
-Improvement^ENG-265255^640001^[AHV-mgmt][AHV] Have a watchdog daemon or monitor service to bring up iscsi_redirector if it goes down ^^AHV^AHV-Management^^Critical - P1^06/Nov/19 12:40 PM^Open^
-Improvement^ENG-264989^639034^PRISM VM creation uses hot-add by default without being able to uncheck^chandan.thakur^AHV-Management^Uhura^^Critical - P1^05/Nov/19 4:49 PM^Open^
-Improvement^ENG-264825^638903^Augment RPCs and acli commands for adjusting vNIC rx_queue_size^gasmith^AHV-Management^^^Major - P2^05/Nov/19 7:09 AM^Pending Merge^
-Bug^ENG-264397^637889^OVS active-standby bond sometimes sends traffic out standby interface^ivan.teterevkov^AHV^^^Critical - P1^01/Nov/19 10:57 PM^Resolved^09/Jan/20 6:51 PM
-Bug^ENG-263988^636933^AHV 20170830.171 is missing in host-bundle-el6.nutanix.20170830.337-metadata.json. ^bruce.gao^AHV^^^Critical - P1^30/Oct/19 8:46 PM^Resolved^01/Nov/19 10:18 PM
-Bug^ENG-263534^635708^Shutdown or reboot a VM in AHV doesn't work if VM was never accessed from console or RDP. ^ahv-eng^AHV^AHV-Management^^Major - P2^28/Oct/19 3:52 PM^Resolved^31/Oct/19 8:18 PM
-Bug^ENG-263286^635168^Image update for Quest KACE SMA fails on AHV with invalid footer^amandeep.chabra^AHV-Management^^^Major - P2^25/Oct/19 3:05 PM^Need Info^
-Improvement^ENG-263211^635101^Disable HA on single node cluster^scheduler-eng^AHV-Management^^^Major - P2^25/Oct/19 10:58 AM^Resolved^31/Oct/19 6:51 PM
-Bug^ENG-262991^634433^ahv: rpmdb error: db3 error(30974) from dbenv>open: DB_RUNRECOVERY: Fatal^jonathan.davies^AHV^^^Critical - P1^24/Oct/19 4:27 PM^Resolved^19/Dec/19 3:05 PM
-Bug^ENG-262848^634134^LCM AHV el6->el7 upgrade failed on CO cluster:  lcm_ops_by_host encountered exception ^bruce.gao^AHV^^^Critical - P1^24/Oct/19 5:55 AM^Closed^07/Nov/19 6:36 AM
-Bug^ENG-269813^634078^Simpson Thacher & Bartlett- Adding VM to project (post ESXi to AHV conversion)  fails with - Edit Conflict :please retry change.^Sai.Vishalk^AHV-Management^^^Major - P2^24/Oct/19 3:02 AM^Pending Merge^
-Bug^ENG-262737^633997^NCC check vm_vhw_remote_check fails for VMs virtual with hw version 13 and 14 - Esxi 6.7U2^ranjan.rao^Cerebro-NCC^Uhura^^Major - P2^23/Oct/19 11:23 PM^Closed^18/Nov/19 10:32 PM
-Improvement^ENG-262387^633142^[AHV-Mgmt] - change the error message in migrate VMs or power on VMs failure when HA is in healing state to indicate HA is in healing state and the cluster in not really resource constrained^abhishek.kumar1^AHV-Management^^^Critical - P1^22/Oct/19 11:36 PM^Closed^08/Nov/19 5:56 PM
-Improvement^ENG-262382^633137^HA in healing because of EMM needs to trigger and alert immediately after it knows EMM cannot succeed.^infra_torch_bearer^AHV-Management^^^Critical - P1^22/Oct/19 11:19 PM^In Progress^
-Bug^ENG-262231^632795^Windows 2k12 R2 VM fails to load vioscsi driver sometimes when doing a 'reset' or 'power cycle'^thanos.makatos^AHV^^^Major - P2^22/Oct/19 11:25 AM^Resolved^22/Oct/19 9:29 PM
-Bug^ENG-262118^632378^API v3 returns 500 internal error when creating the image with the 'X-Nutanix-Checksum' option^mladen.drobnjakovic^AHV-Management^^^Major - P2^22/Oct/19 2:28 AM^Open^
-Bug^ENG-262016^632322^Unable to mount ISO to a VM through Prism Central^chris.guan^AHV-Management^^^Major - P2^21/Oct/19 9:39 PM^Resolved^24/Oct/19 3:00 AM
-Bug^ENG-261700^631762^volume_group GET APIs should not create charges on PE^lonnie.hutchinson^AHV-Management^^^Critical - P1^19/Oct/19 4:52 AM^Closed^10/Jan/20 3:13 AM
-Bug^ENG-261593^631473^acropolis times out on reaching max number of http connections. ^amir.eibagi^AHV-Management^^^Critical - P1^18/Oct/19 4:21 PM^Resolved^24/Jan/20 2:23 AM
-Bug^ENG-261310^630647^"5.11 PC Image service - Image Deletion needs to be improved , should be able to allow the deletion irrespective of the owner_cluster_uuid"^srinivas.pakala^AHV-Management^^^Critical - P1^17/Oct/19 9:54 PM^Closed^22/Oct/19 2:29 PM
-Improvement^ENG-260981^629887^[New] AOS Pre-upgrade Check: AHV - AOS Pre-upgrade Check to verify the compatibility of the current AHV with the AHV bundled with AOS trying to upgrade to.^yunting.xiang^AHV^^^Major - P2^16/Oct/19 7:25 PM^In Progress^
-Improvement^ENG-260877^629764^[AHV] Warn users proactively that newly created VM will not be able to start.^acropolis^AHV-Management^^^Major - P2^16/Oct/19 2:31 PM^Resolved^17/Oct/19 6:41 AM
-Improvement^ENG-260797^629459^Flip the UI logic to fetch for all images not owned by PC in Image Import PC^jsims^AHV-Management^^^Major - P2^16/Oct/19 5:41 AM^Resolved^19/Oct/19 2:38 AM
-Bug^ENG-259882^627422^"Remove x86 drivers for Windows Server 2008 r2, 2012, 2012 r2 and 2016 from virtio iso"^peter.turschm^AHV^^^Major - P2^11/Oct/19 7:27 PM^Open^
-Bug^ENG-259822^627409^Exceptions occurred running powershell cmdlets on Hyper-V hosts are not properly handled^ramashish.gaurav^Uhura^^^Major - P2^11/Oct/19 2:40 PM^Closed^21/Nov/19 12:08 PM
-Improvement^ENG-259446^626641^Need better mechanism to determine Acropolis master and Libvirt timeout for HA actions ^scheduler-eng^AHV-Management^^^Critical - P1^10/Oct/19 2:30 PM^Open^
-Improvement^ENG-259312^626363^Additional field options while taking VM snapshot^luke.congdon^AHV-Management^^^Minor - P3^10/Oct/19 3:32 AM^Open^
-Bug^ENG-259141^625641^"Image list fails -- ""message"": ""Internal Server Error. kNotFound: Could not find images: <IMAGE_UUID>"^mladen.drobnjakovic^AHV-Management^^^Critical - P1^09/Oct/19 12:54 PM^Resolved^23/Jan/20 4:15 AM
-Bug^ENG-259029^625194^Image creation fails if source_url points to local NFS container and contains a space^mladen.drobnjakovic^AHV-Management^Stargate^^Minor - P3^09/Oct/19 3:02 AM^Pending Merge^
-Bug^ENG-258868^624660^Panacea only extracts one host into report for logbay uploads^nishant.verma^Panacea^^^Blocker - P0^08/Oct/19 1:45 AM^Closed^25/Oct/19 3:42 PM
-Bug^ENG-258807^624601^CVMs for the Nodes with node_type set to kAhvNeverSchedulable missing in the Prism VM list^amir.eibagi^AHV-Management^Nutanix Insights^^Critical - P1^07/Oct/19 6:18 PM^Pending Review^
-Bug^ENG-258694^623787^"""Morgans financial Pty LTD"" - can not open vm console when connect to PE via PC"^jsims^AHV-Management^^^Major - P2^07/Oct/19 6:47 AM^Need Info^
-Bug^ENG-258393^623217^POC: Prism VM console performance is slow / laggy^jsims^AHV-Management^^^Major - P2^04/Oct/19 1:53 AM^Resolved^15/Oct/19 1:51 AM
-Improvement^ENG-258234^622652^Add visual indication in Prism for Agent VMs^team-pm^AHV-Management^^^Major - P2^03/Oct/19 2:37 PM^Open^
-Improvement^ENG-257967^622125^Add Guest OS as custom focus element in PE^jsims^AHV-Management^^^Minor - P3^02/Oct/19 9:31 PM^Open^
-Bug^ENG-257542^620707^manage_ovs command doesn't allow deleting bridge with uplinks^uzui.li^AHV^^^Major - P2^01/Oct/19 1:08 AM^Resolved^04/Oct/19 4:03 AM
-Bug^ENG-257450^620429^AHV 1-click upgrade stalled due to files with no owner (follow up from ENG-56191)^^AHV^^^Critical - P1^30/Sep/19 6:08 PM^Closed^07/Oct/19 7:29 PM
-Bug^ENG-257439^620313^Ethtool version bundled with AHV does not support link mode above 10gbps^ahv-eng^AHV^AHV-Management^^Major - P2^30/Sep/19 5:02 PM^Resolved^01/Oct/19 2:32 AM
-Improvement^ENG-257317^619686^Feature to regulate bandwidth usage between CVM and vCenter. ^parth.gupta1^Uhura^^^Critical - P1^30/Sep/19 10:08 AM^Open^
-Bug^ENG-257303^619674^AHV host in Kernel panic loop after the LCM firmware upgrade^ahv-eng^AHV^LCM^^Major - P2^30/Sep/19 5:40 AM^Resolved^02/Oct/19 9:21 AM
-Bug^ENG-257132^619604^AHV upgrade path not match/possible with AOS upgrade path for AOS 4.7.x -> 5.5.9.5^prerna.saxena^AHV^^^Critical - P1^27/Sep/19 7:03 PM^Resolved^18/Nov/19 6:25 PM
-Bug^ENG-257104^619590^"Granular VM permission like 'Update VM memory', 'Update VM CPU' doesn't work. "^chris.guan^AHV-Management^^^Critical - P1^27/Sep/19 3:55 PM^Resolved^06/Dec/19 4:53 AM
-Bug^ENG-256869^618953^Uhura Code Incorrect on AOS 5.10.x^syam.mohan^Uhura^^^Major - P2^27/Sep/19 2:38 AM^Resolved^05/Nov/19 11:50 AM
-Bug^ENG-256601^618708^uhura need to gracefully handle host down situation ^syam.mohan^Uhura^^^Major - P2^26/Sep/19 11:07 AM^Closed^14/Nov/19 3:41 PM
-Bug^ENG-256485^618288^Xi Leap (Engie Energy) - Image upload failure showing successful task with 64 KB^acropolis-catalog^AHV-Management^Cerebro^Xi^Minor - P3^26/Sep/19 2:51 AM^Resolved^25/Oct/19 10:17 AM
-Bug^ENG-256455^618249^Modification of KEX Algorithms used by Paramiko for Image SFTP Server^robert^AHV-Management^Security^^Critical - P1^26/Sep/19 12:36 AM^Resolved^02/Jan/20 11:10 PM
-Improvement^ENG-256421^618205^We should warn customers when they try to delete VMs that have 3rd party snapshots present^team-pm^AHV-Management^^^Major - P2^25/Sep/19 10:02 PM^Open^
-Improvement^ENG-255763^616357^PXE boot support for UEFI-enabled guest VMs on AHV^dli^AHV^^^Major - P2^23/Sep/19 11:42 PM^Open^
-Bug^ENG-255066^614820^CD-ROM Update performs Add Disk function^chris.guan^AHV-Management^^^Major - P2^19/Sep/19 9:32 PM^Resolved^20/Sep/19 10:39 PM
-Bug^ENG-254757^614114^Mitigate CVE-2019-14835 vhost-net error during migration^malcolm.crossley^AHV^^^Major - P2^18/Sep/19 8:14 PM^Resolved^04/Oct/19 3:35 AM
-Bug^ENG-254538^613585^Unable to create VM on ESX cluster on latest 5.11.1 through vCenter is connected^ramashish.gaurav^Uhura^^^Critical - P1^18/Sep/19 3:04 AM^Closed^18/Sep/19 8:28 AM
-Bug^ENG-254380^613143^Incorrect virtual disk uuid sent in v2.0 vms/uuid/disks/update api^chris.guan^AHV-Management^^^Critical - P1^17/Sep/19 3:01 PM^Resolved^21/Oct/19 11:22 PM
-Bug^ENG-254256^612872^[Ergon] TaskGet and TaskList should give ErgonRetryError instead of Ergon crashing^vistaar.juneja^Ergon^^^Critical - P1^17/Sep/19 10:45 AM^Closed^14/Jan/20 10:58 AM
-Improvement^ENG-254103^612536^[Itron Inc] - RFE: VM console improvements^^AHV^^^Minor - P3^16/Sep/19 8:56 PM^Closed^26/Sep/19 2:09 AM
-Bug^ENG-253840^611656^"[AHV] Hypervisor installer md5sum not in the iso whitelist, It blocks Expand cluster operation where target node has higher AHV version."^foundation-dailtone^AHV^Foundation^^Critical - P1^14/Sep/19 5:09 PM^Resolved^16/Sep/19 10:14 AM
-Improvement^ENG-253358^611044^Logbay: Additional AHV logs to collect^russell.creech^AHV^NCC^^Major - P2^13/Sep/19 3:52 AM^Closed^30/Dec/19 12:33 PM
-Bug^ENG-253319^611096^Remove restriction to filter image by type when creating VMs.^chris.guan^AHV-Management^^^Critical - P1^13/Sep/19 1:04 AM^Resolved^06/Nov/19 4:25 AM
-Bug^ENG-252511^608520^Cosmetic: wrong translation of Japanese on Prism UI^chris.guan^AHV-Management^^^Minor - P3^10/Sep/19 11:29 AM^Resolved^18/Sep/19 3:07 AM
-Bug^ENG-252277^608048^AHV Pressured updates erroneous nr_hugepages ^shyam.rajendran^AHV^^^Critical - P1^09/Sep/19 10:52 PM^Resolved^11/Jan/20 3:03 AM
-Bug^ENG-252058^607733^ahv: lenovo HX7521 with intel x722 panic loop after .319/5.11.1 upgrade^jonatha.kohler^AHV^^^Critical - P1^09/Sep/19 10:57 AM^Closed^17/Sep/19 10:39 PM
-Improvement^ENG-252014^607607^NCC check vm_vhw_remote_check fails for VMs virtual with hw version 15 ^syam.mohan^Uhura^^^Critical - P1^08/Sep/19 6:57 PM^In Progress^
-Improvement^ENG-251898^607501^Investigate resource usage of salt-call on AHV^shyam.rajendran^AHV^^^Major - P2^07/Sep/19 12:15 AM^Resolved^20/Sep/19 9:39 PM
-Bug^ENG-251461^606543^AHV crash due to Redhat bug BZ1251577^ivan.teterevkov^AHV^^^Major - P2^05/Sep/19 6:44 PM^Resolved^09/Jan/20 4:10 PM
-Bug^ENG-251382^606249^"PC 5.11 | VM update on removing CD-ROM not working"^chris.guan^AHV-Management^^^Critical - P1^05/Sep/19 1:00 PM^Resolved^21/Oct/19 10:38 PM
-Bug^ENG-251330^606446^Adding G7 nodes to G6 complains with VM Power cycle needs^ivan.teterevkov^AHV^AHV-Management^^Major - P2^05/Sep/19 10:19 AM^Closed^12/Sep/19 1:20 AM
-Bug^ENG-251109^605960^Add guardrails when fencing storage during HA failover^dhruv.jogi^AHV-Management^^^Critical - P1^04/Sep/19 8:48 PM^Resolved^26/Oct/19 10:39 AM
-Bug^ENG-250601^604934^"""Fullgoal fund managemet Co.,Ltd."" - error ""Edit conflict: please retry change. Entity CAS version mismatch"" in PC 5.10.5"^victor.wu^AHV-Management^^^Critical - P1^03/Sep/19 8:07 AM^Resolved^21/Sep/19 5:00 AM
-Bug^ENG-250557^604891^Affinity hosts cannot be deleted^jsims^AHV-Management^^^Major - P2^02/Sep/19 5:48 AM^Resolved^03/Sep/19 9:57 PM
-Bug^ENG-250083^603355^Intel X722 [i40e] - CVM goes dead during NIC Macro Testing^suresh.gumpula^AHV^^^Blocker - P0^29/Aug/19 10:22 PM^Closed^04/Oct/19 3:35 AM
-Bug^ENG-250009^603170^Avoid ha_priority field checks in VM creates/updates^bhuvnesh.jain^AHV-Management^^^Critical - P1^29/Aug/19 2:21 PM^Closed^08/Sep/19 9:48 AM
-Bug^ENG-249807^602572^OVS revalidator thread caused kernel panic^vamsi.nagineni^AHV^Networking^^Critical - P1^28/Aug/19 7:44 PM^Resolved^10/Sep/19 9:47 PM
-Improvement^ENG-249742^602238^have Acropolis Service redundant if a Host get's corrupted ^igor.grobman^AHV-Management^^^Major - P2^28/Aug/19 3:31 PM^Resolved^29/Aug/19 10:20 PM
-Bug^ENG-249451^602100^Ubuntu 18.04.3 Desktop GUI not loading on boot (FBDEV)^ivan.teterevkov^AHV^^^Minor - P3^27/Aug/19 7:13 PM^Closed^09/Dec/19 10:46 PM
-Bug^ENG-248617^600078^No Error message when incorrect file type is uploaded in the custom script option while creating a VM^jsims^AHV-Management^^^Trivial - P4^23/Aug/19 4:39 PM^Resolved^24/Oct/19 10:56 PM
-Improvement^ENG-248367^599949^Enhance qemu log parsing to detect unexpected shutdowns during reconciliation^prema.kolli^AHV-Management^^^Critical - P1^23/Aug/19 2:52 AM^Closed^28/Nov/19 5:01 AM
-Improvement^ENG-248022^599309^VM creation fails in SSP-Project when underlying resources is not available^acropolis^AHV-Management^^^Major - P2^22/Aug/19 4:24 AM^Resolved^23/Oct/19 6:52 AM
-Bug^ENG-247729^598711^UncaughtException unable to map backing store for guest RAM: Cannot allocate memory^dhruv.jogi^AHV-Management^^^Critical - P1^21/Aug/19 4:32 AM^Open^
-Bug^ENG-247630^598413^[PC/SSP] Incorrect networks are observed in SSP for the projects in PC UI ^chris.guan^AHV-Management^^^Critical - P1^20/Aug/19 5:37 PM^Open^
-Bug^ENG-247623^598133^[AHV] BUG: soft lockup - CPU#X stuck for xxs!^shaju.abraham^AHV^^^Critical - P1^20/Aug/19 5:10 PM^Closed^03/Dec/19 3:34 PM
-Bug^ENG-247296^597752^ngt: investigate why ngt created flood of kUpdateVmDbState tasks ^annie.pillai^AHV-Management^NGT^^Critical - P1^19/Aug/19 5:11 PM^Open^
-Bug^ENG-246822^596746^"After vm migration, stale VM still be displayed. Delete stale VM through PC UI will delete both stale vm and new migrate live vm"^shubham.agrawal^Arithmos^Uhura^^Critical - P1^16/Aug/19 1:07 AM^Resolved^28/Oct/19 11:19 AM
-Bug^ENG-246805^596719^Prism Central displays stale migrated VM which migrate from original cluster to new cluster^acropolis^Uhura^^^Critical - P1^15/Aug/19 11:19 PM^Closed^16/Aug/19 2:30 AM
-Bug^ENG-246741^596623^VM disk add fails for disks smaller than 0.0001GB^chris.guan^AHV-Management^^^Major - P2^15/Aug/19 4:38 AM^Resolved^09/Jan/20 11:42 PM
-Bug^ENG-246616^596272^acropolis: boot device read only leads to cluster wide control plane outages^robert^AHV-Management^^^Critical - P1^14/Aug/19 7:56 PM^Resolved^20/Dec/19 11:31 PM
-Bug^ENG-246229^594744^When Unmarking the VM as Agent VM the ha_priority is not changed^bhuvnesh.jain^AHV-Management^^^Major - P2^13/Aug/19 2:39 PM^Closed^16/Nov/19 6:12 AM
-Bug^ENG-246165^594725^AHV Guest OS not populated^jsims^AHV-Management^^^Major - P2^13/Aug/19 11:30 AM^Resolved^30/Aug/19 10:09 PM
-Improvement^ENG-245703^593572^Support for passthrough devices on AHV (USB)^nithin.reddy^AHV^^^Major - P2^09/Aug/19 7:51 PM^Resolved^12/Aug/19 1:16 PM
-Improvement^ENG-245700^593571^[AHV] Create script to rename AHV hosts^prerna.saxena^AHV^AHV-Management^Infrastructure^Critical - P1^09/Aug/19 7:35 PM^Open^
-Bug^ENG-245637^593701^SSP User: Only One Disk/ISO selected if search is used^glenn.ryan^AHV-Management^^^Major - P2^09/Aug/19 1:43 PM^Resolved^05/Dec/19 9:30 PM
-Bug^ENG-245034^592194^Unable to launch Virtual machine console when launching PE from PC^chris.guan^AHV-Management^^^Blocker - P0^07/Aug/19 8:17 AM^Resolved^21/Oct/19 10:35 PM
-Improvement^ENG-245003^592111^Acropolis should explicitly check for node state during host_removal callback.^bhuvnesh.jain^AHV-Management^^^Critical - P1^07/Aug/19 4:48 AM^Closed^30/Dec/19 11:41 PM
-Improvement^ENG-245002^592110^Acropolis host_removal_watch should watch for non-AHV hosts too^bhuvnesh.jain^AHV-Management^^^Critical - P1^07/Aug/19 4:44 AM^Closed^31/Dec/19 12:45 AM
-Bug^ENG-244988^591960^ahv_cvm_startup_dependency_check should check the current name of the CVM matches the existing file^ahv-eng^AHV^AHV-Management^^Major - P2^07/Aug/19 3:18 AM^Closed^08/Aug/19 3:38 PM
-Bug^ENG-244909^591779^"Acropolis master lost the connection to libvirt as noticed during VmMigration with error ""Timed out during operation: cannot acquire state change lock (held by remoteDispatchDomainMigrateBegin3)"""^malcolm.crossley^AHV^^^Critical - P1^06/Aug/19 8:48 PM^Resolved^01/Oct/19 1:42 PM
-Bug^ENG-244794^591608^[Ha workflows] Failed to remove node on hpe hardware : EnterMaintenanceMode task failed^ahv-eng^AHV^^^Critical - P1^06/Aug/19 12:08 PM^Resolved^03/Sep/19 10:37 PM
-Bug^ENG-244707^591440^Uhura should give up leadership when node is marked as degraded ^infra_torch_bearer^Uhura^^^Major - P2^06/Aug/19 4:06 AM^Need Info^
-Bug^ENG-244397^590592^Hard lock in wait_lapic_expire^suresh.gumpula^AHV^^^Major - P2^04/Aug/19 1:59 PM^Resolved^20/Aug/19 11:36 PM
-Bug^ENG-244356^590246^VM names can end in blank space^jsims^AHV-Management^^^Major - P2^03/Aug/19 3:52 AM^Resolved^28/Aug/19 8:16 PM
-Improvement^ENG-244335^590216^Host upgrade pre-check to warn customer about ENG-209770^suresh.gumpula^AHV^AHV-Management^^Major - P2^03/Aug/19 2:22 AM^Open^
-Bug^ENG-243645^588616^AHV hosts in the cluster reboot randomly^malcolm.crossley^AHV^^^Critical - P1^01/Aug/19 1:30 AM^Resolved^06/Aug/19 10:20 AM
-Bug^ENG-242841^586981^CESA-2018:3854 - ntp: Stack-based buffer overflow in ntpq and ntpdc allows denial of service or code execution^cosmin.marin^AHV^Security^^Critical - P1^29/Jul/19 6:59 PM^Resolved^02/Aug/19 7:53 PM
-Improvement^ENG-242390^585412^CPU ready percent for VM on Prism is different with Vcenter^parth.gupta1^Uhura^^^Critical - P1^26/Jul/19 2:24 PM^Closed^26/Sep/19 7:57 PM
-Improvement^ENG-241946^583942^ncc/acropolis: health check to check the number of http sessions ^manikandan.selvagane^AHV-Management^NCC^^Critical - P1^24/Jul/19 4:23 PM^Closed^18/Oct/19 4:26 PM
-Bug^ENG-241864^583577^Node added on AHV cluster can be non schedulable^acropolis^AHV-Management^^^Major - P2^24/Jul/19 11:26 AM^Resolved^01/Aug/19 1:03 AM
-Improvement^ENG-241033^581903^Show pop-up on Prism UI whenever anti-affinity rules for a set of VMs are violated ^scheduler-eng^AHV-Management^^^Critical - P1^19/Jul/19 5:39 PM^Open^
-Bug^ENG-241022^581889^VM Type for FSVM changes to kGuestVM after upgrade to 3.5.1^deepanshu.singhal^Uhura^^^Critical - P1^19/Jul/19 4:29 PM^Closed^07/Aug/19 11:19 AM
-Bug^ENG-240893^581609^"AHV Upgrade hangs with ""stderr: chmod: changing permissions of `/mnt/DRACRW': Operation not permitted """^ani.sinha^AHV^^^Critical - P1^19/Jul/19 4:25 AM^Resolved^20/Aug/19 11:36 PM
-Bug^ENG-240491^580484^[Xi-CHDR] Failback from xi to onprem resulted in 95/100 vms being deleted^raja.thota^Uhura^^^Critical - P1^17/Jul/19 12:42 PM^Closed^12/Nov/19 4:37 AM
-Bug^ENG-240409^580405^[Smartbox Experience] Nodes having issues after expand cluster due to acropolis service on Master Node^robert^AHV-Management^^^Major - P2^17/Jul/19 5:02 AM^Closed^13/Aug/19 5:44 AM
-Bug^ENG-239999^579476^Unable to change VM boot type from UEFI to BIOS: AttributeError: 'AcropolisVm' object has no attribute 'delete_nvram_vmdisk'^prerna.saxena^AHV-Management^^^Critical - P1^16/Jul/19 1:26 AM^Resolved^09/Sep/19 10:18 AM
-Bug^ENG-239950^579274^iSCSI Failover Enhancement: Make it deterministic and under five seconds^raphael.norwitz^AHV^^^Critical - P1^15/Jul/19 6:35 PM^Resolved^04/Oct/19 3:35 AM
-Bug^ENG-239921^579363^Uhura looking for AHV node in Vcenter in case of mixed hypervisor setup^shubham.agrawal^Uhura^^^Critical - P1^15/Jul/19 4:47 PM^Resolved^16/Sep/19 12:17 PM
-Bug^ENG-239468^578302^Shows 500 error when create VM button is selected^suraj.kasi^AHV-Management^^^Critical - P1^12/Jul/19 2:22 AM^Resolved^11/Sep/19 11:32 PM
-Bug^ENG-238891^576408^"VM migrate during LCM based AHV upgrade is failing ""internal error: process exited while connecting to monitor"""^prema.kolli^AHV-Management^^^Blocker - P0^10/Jul/19 4:14 AM^Resolved^11/Jul/19 3:22 AM
-Bug^ENG-238788^575889^acropolis: limit the outstanding migrations to 1 on a 1G link^Sai.Vishalk^AHV-Management^^^Critical - P1^09/Jul/19 5:21 PM^Resolved^28/Oct/19 11:07 AM
-Bug^ENG-238277^569594^VM-VM Anti-affinity rules not being followed^scheduler-eng^AHV-Management^^^Critical - P1^05/Jul/19 3:32 PM^Resolved^06/Jul/19 9:34 PM
-Bug^ENG-238228^569242^LCM Update to upgrade Karbon from 0.8.2 to 1.0.1 is failing with Catalog creation failure^alejand.mier^AHV-Management^^^Major - P2^05/Jul/19 12:00 PM^Closed^22/Aug/19 10:26 AM
-Bug^ENG-238206^568638^AHV crash - kernel/futex.c - AOS 5.10.3.2 - AHV 20170830.270^ani.sinha^AHV^^^Critical - P1^05/Jul/19 10:03 AM^Closed^20/Aug/19 11:36 PM
-Bug^ENG-237733^566599^PC LCM Inventory Failing with Failed to stage catalog item^chaitanya.karlekar^AHV-Management^^^Major - P2^03/Jul/19 2:22 AM^Closed^30/Aug/19 12:42 AM
-Bug^ENG-237555^566242^Unable to attach images to cd-rom with size less than 1 GiB^chris.guan^AHV-Management^^^Critical - P1^02/Jul/19 2:08 PM^Resolved^03/Jul/19 12:14 AM
-Bug^ENG-237525^566045^Mount ISO not listing the available disk in the cluster^chris.guan^AHV-Management^^^Critical - P1^02/Jul/19 12:31 PM^Closed^11/Oct/19 3:09 AM
-Improvement^ENG-237341^565583^Optimize lazan queries for non-AHV managed VMs^nevena.milinkovic^AHV-Management^^^Major - P2^01/Jul/19 11:42 PM^Open^
-Bug^ENG-237320^565568^Prism Central local image upload does not offer image on all clusters.^tyler.pope^AHV-Management^^^Major - P2^01/Jul/19 10:18 PM^Resolved^07/Jul/19 10:48 PM
-Bug^ENG-237235^565334^acropolis: restore Locality task did not kick in after exiting the host out of maintenance mode^bhuvnesh.jain^AHV-Management^^^Critical - P1^01/Jul/19 4:17 PM^Closed^20/Dec/19 9:31 AM
-Bug^ENG-237230^565329^uhura: high network traffic between CVMs and vcenter^parth.gupta1^Uhura^^^Critical - P1^01/Jul/19 3:58 PM^Closed^14/Aug/19 9:54 AM
-Bug^ENG-236742^563245^Windows crash due to StatWorkItem of balloon device context is null^peter.turschm^AHV^^^Critical - P1^27/Jun/19 3:52 PM^Open^
-Bug^ENG-236684^563331^"""TAISHIN INTERNATIONAL BANK"" - PCI enumeration is changed after upgrade AOS"^ahv-eng^AHV^^^Major - P2^27/Jun/19 11:38 AM^Resolved^28/Jun/19 8:46 PM
-Improvement^ENG-236457^562726^Part 3: Reduce Ergon Memory consumption & improve efficiency^monica.jeyachandran^AHV-Management^Ergon^^Critical - P1^26/Jun/19 3:08 PM^Open^
-Improvement^ENG-236026^561412^Export VM list should have a higher hard limit^Raj^AHV-Management^^^Minor - P3^24/Jun/19 7:11 PM^Resolved^09/Jul/19 9:46 PM
-Bug^ENG-235937^561243^AHV crash due to incorrect handling of PROT_NONE mappings on AOS 5.10.x^ahv-eng^AHV^^^Major - P2^24/Jun/19 12:35 PM^Resolved^24/Jun/19 8:42 PM
-Bug^ENG-235930^561061^"ahv: investigate the yum traceback - ""sqlite3.DatabaseError: file is encrypted or is not a database"""^jonathan.davies^AHV^^^Major - P2^24/Jun/19 12:15 PM^Resolved^25/Jun/19 4:21 PM
-Improvement^ENG-235748^560430^acropolis: ha tasks are stuck because of not being able to post an alert.^sudhakar.kamanboina^AHV-Management^^^Critical - P1^21/Jun/19 11:37 PM^Resolved^05/Oct/19 4:40 AM
-Improvement^ENG-235269^559381^Panacea: Detect if an image file is not present leading to image list failing in UI^shubham.bhardwaj^Panacea^^^Major - P2^20/Jun/19 2:01 AM^Resolved^11/Sep/19 11:56 AM
-Bug^ENG-235226^559035^Hard lockup in try_to_wake_up^peter.turschm^AHV^^^Major - P2^19/Jun/19 9:47 PM^Resolved^11/Oct/19 4:58 AM
-Improvement^ENG-235141^559105^"alert message for ""Power on VM after failover recovery"" to have list for all the VMs impacted"^Infra_NCC_Torch_Bearer_Mailing_List^AHV-Management^Alerts^NCC^Critical - P1^19/Jun/19 3:12 PM^Open^
-Improvement^ENG-234673^557943^Acropolis task based RPCs should not be master only^monica.jeyachandran^AHV-Management^^^Major - P2^17/Jun/19 9:03 PM^Closed^30/Sep/19 8:19 PM
-Bug^ENG-233694^555361^"[cfd][uhura] http_rpc.py, https, wsman: python2.7 processes do an absurd amount of syscalls for RPC recv's"^vistaar.juneja^Uhura^^^Critical - P1^12/Jun/19 9:07 AM^Closed^19/Jun/19 11:07 PM
-Bug^ENG-233661^555333^"After domrename the autostart is not applied, so the CVM does not start"^jonathan.davies^AHV^^^Major - P2^12/Jun/19 4:46 AM^Resolved^20/Aug/19 11:36 PM
-Improvement^ENG-233516^555163^Add support for opaque networks (exposed via NSXT for ex.) in Uhura^raja.thota^Uhura^^^Blocker - P0^11/Jun/19 10:08 PM^Resolved^07/Dec/19 6:41 AM
-Bug^ENG-233446^555000^ifcfg-eth2 and ifcfg-eth3 config files missing after cluster shutdown and power up^ani.sinha^AHV^^^Critical - P1^11/Jun/19 3:10 PM^Resolved^10/Dec/19 4:12 PM
-Bug^ENG-233362^554809^Duplicate or stale CVMs found running in Prism Central after converting ESXi cluster to AHV ^parth.gupta1^AHV-Management^^^Major - P2^11/Jun/19 10:28 AM^Closed^04/Nov/19 12:11 PM
-Bug^ENG-233261^554527^Dynamic Scheduling Failure alert received on ESXi cluster^nevena.milinkovic^AHV-Management^^^Minor - P3^11/Jun/19 2:43 AM^Closed^20/Dec/19 1:53 PM
-Bug^ENG-233064^554098^AHV upgrade failed on one node due to Failed to upgrade packages^prerna.saxena^AHV^^^Critical - P1^10/Jun/19 2:35 PM^Closed^15/Jul/19 2:05 PM
-Bug^ENG-233042^553686^[cfd][uhura][publisher] consuming a lot of cpu cycles while publishing vm^shubham.agrawal^Uhura^^^Critical - P1^10/Jun/19 12:10 PM^Resolved^18/Jun/19 10:03 PM
-Bug^ENG-232675^553390^[OVA/OVF]: Disk conversion fails with Read failed with NFS3ERR_STALE^deepanshu.singhal^AHV-Management^^^Critical - P1^07/Jun/19 10:47 AM^Closed^04/Jul/19 11:06 AM
-Bug^ENG-232661^553214^Space Usage discrepancy between Prism UI and Storage Pool due to cloned vDisks^acropolis^AHV-Management^Prism UI^^Major - P2^07/Jun/19 10:08 AM^Resolved^30/Jul/19 7:49 PM
-Bug^ENG-232547^553026^"Memory/CPU increase from Prism are not reflected in Debian 9.7, 9.8 and 9.9 VMs"^ahv-eng^AHV^^^Major - P2^07/Jun/19 2:07 AM^Resolved^07/Jun/19 6:00 PM
-Bug^ENG-232484^552862^VmForcePowerOff task causing acropolis crash (ONCALL-6484)^prema.kolli^AHV-Management^^^Critical - P1^06/Jun/19 10:22 PM^Resolved^15/Jun/19 3:53 AM
-Improvement^ENG-232178^552339^Nodes backed with 1G links are marked as degraded while performing VM migration in AHV^michael.laube^AHV^Cassandra^Medusa^Major - P2^06/Jun/19 12:35 AM^Resolved^28/Aug/19 7:58 PM
-Bug^ENG-232030^551909^AHV hosts cannot be SSHed into due to rsyslog server not reachable^shaju.abraham^AHV^^^Major - P2^05/Jun/19 2:50 AM^Resolved^25/Jun/19 3:33 PM
-Bug^ENG-232023^551900^Race between ACPI shutdown and a migrate task created by enter maintenance mode^acropolis^AHV-Management^^^Critical - P1^05/Jun/19 1:48 AM^Resolved^16/Aug/19 2:43 AM
-Improvement^ENG-231673^551054^Prism Alert for Disk Space Usage on User VMs ^luke.congdon^AHV-Management^^^Major - P2^03/Jun/19 10:14 PM^Open^
-Bug^ENG-231536^550813^[AHV-PF] HA failover triggered during AHV upgrade to 20170830.279^asa.frank^AHV-Management^^^Major - P2^03/Jun/19 4:14 AM^Open^
-Bug^ENG-231332^550159^qemu-kvm: hw/ide/core.c:668: ide_cancel_dma_sync: Assertion s->bus->dma->aiocb == ((void *)0) failed.^shaju.abraham^AHV^^^Critical - P1^31/May/19 2:01 PM^Resolved^03/Oct/19 3:10 PM
-Bug^ENG-231204^550064^hypervisor upgrade failed and node was down^felipe.franciosi^AHV^^^Blocker - P0^31/May/19 5:49 AM^Resolved^27/Jun/19 12:13 AM
-Bug^ENG-230890^548601^Unable to upload/delete images^peter.turschm^AHV^^^Critical - P1^30/May/19 12:02 AM^Closed^12/Jun/19 4:16 AM
-Improvement^ENG-230872^548477^create UI to extend idle timeout value of dl_dst flow on br.dmx^uzui.li^AHV^^^Major - P2^29/May/19 10:44 PM^Closed^13/Jun/19 10:04 PM
-Bug^ENG-230673^548142^AHV 201708030.273 crashes when powering on a 2.3TiB RAM VM^ani.sinha^AHV^^^Blocker - P0^29/May/19 8:31 AM^Closed^09/Jul/19 9:44 PM
-Improvement^ENG-230658^547980^Single script to clean-up image metadata^mladen.drobnjakovic^AHV-Management^^^Critical - P1^29/May/19 5:46 AM^Resolved^30/Dec/19 11:11 PM
-Bug^ENG-230613^548065^Leaking websocket connection between Acropolis and Apache causing console access failures^akanksha.singh^AHV-Management^^^Critical - P1^29/May/19 2:14 AM^Resolved^16/Oct/19 10:53 PM
-Improvement^ENG-230317^547391^catalog: not able to select particular images in PC^shashank.kumar^AHV-Management^^^Major - P2^27/May/19 5:21 PM^Resolved^16/Oct/19 5:42 AM
-Bug^ENG-229877^546179^VmHighAvailabilityFailure alert immediately after acropolis master change^prema.kolli^AHV-Management^^^Critical - P1^24/May/19 3:38 AM^Resolved^29/May/19 11:42 PM
-Improvement^ENG-229864^546171^Make acli default to avoid doing DNS lookups^shruthi.racha^AHV-Management^^^Critical - P1^24/May/19 2:12 AM^Closed^24/Jun/19 7:02 AM
-Bug^ENG-229566^545553^VM High Availability Failure alert triggered due to missing iostat on host^malcolm.crossley^AHV-Management^^^Major - P2^22/May/19 11:37 PM^Resolved^24/May/19 5:01 AM
-Bug^ENG-229327^544977^ADS migrates VMs frequently because of Stargate CPU usage periodically shows 0%^amit.singh^AHV-Management^Stargate^^Critical - P1^22/May/19 9:13 AM^Resolved^06/Aug/19 10:43 PM
-Improvement^ENG-229154^544840^VM creation Timestamp to be available/retained on the Prism for all the VM's on the VM tasks.^jsims^AHV-Management^^^Major - P2^21/May/19 6:53 PM^Blocked^
-Bug^ENG-228132^540505^"AHV: Corrupted disk bootloader causes Windows VM is in paused state, and does not boot due to ""emulation failure"""^prerna.saxena^AHV^^^Major - P2^16/May/19 11:19 AM^Closed^29/Nov/19 9:46 AM
-Improvement^ENG-228072^540257^Improve logging on Acropolis to detect greenlet starvation^lonnie.hutchinson^AHV-Management^^^Critical - P1^16/May/19 5:21 AM^Open^
-Bug^ENG-228008^540202^RTC state change events spamming Acropolis^soham.ghosh^AHV-Management^^^Critical - P1^16/May/19 1:07 AM^Resolved^11/Jun/19 2:33 PM
-Improvement^ENG-227961^539886^Image Deletion Improvements - II^shashank.kumar^AHV-Management^^^Critical - P1^15/May/19 11:23 PM^Resolved^17/Dec/19 12:23 AM
-Improvement^ENG-227716^539312^Provide link to the Catalog page from the error message when no VM templates are available during VM creation ^jsims^AHV-Management^^^Critical - P1^15/May/19 4:40 AM^Open^
-Bug^ENG-227247^538327^Stale VMs present on Uhura master arithmos agent^shubham.agrawal^Uhura^^^Major - P2^13/May/19 4:23 PM^Resolved^28/Oct/19 11:16 AM
-Bug^ENG-226761^535832^KVM : Fix corruption of blocked_vcpu_list in linux kernel during VM power on^ani.sinha^AHV^^^Major - P2^09/May/19 3:01 PM^Resolved^09/May/19 5:05 PM
-Bug^ENG-226570^535420^Sansha Electric Manufacturing - Unable to power on VM from Prism Web Console^acropolis^AHV-Management^^^Minor - P3^08/May/19 6:09 PM^Resolved^10/May/19 10:59 AM
-Bug^ENG-226350^535016^'NoneType' object has no attribute 'container_uuid'^shashank.kumar^AHV-Management^^^Critical - P1^07/May/19 10:49 PM^Pending Merge^
-Improvement^ENG-226331^534998^Support FileAnalytics as a VM type ^abhiram.parvatharedd^AHV-Management^^^Critical - P1^07/May/19 7:14 PM^Open^
-Improvement^ENG-225631^533363^Toward a non-arbitrary percentage to state idle VMs^fabien.hermenier^AHV-Management^^^Major - P2^03/May/19 5:30 PM^Closed^23/May/19 11:00 PM
-Improvement^ENG-225427^532959^Checkout Queueing can make vm create operations delayed for a very long time^shashank.kumar^AHV-Management^^^Critical - P1^03/May/19 1:43 AM^Open^
-Improvement^ENG-225184^532317^Image task cancel / pause / resume^shashank.kumar^AHV-Management^^^Major - P2^02/May/19 2:58 AM^Blocked^
-Bug^ENG-225072^531966^[5.11][Prism] Cannot mount iso from VM console window on cloned VMs^chris.guan^AHV-Management^^^Critical - P1^01/May/19 2:58 PM^Resolved^13/Jun/19 4:42 AM
-Bug^ENG-225022^531873^RCA on why ha manager's _host_conn_change watch callback on is_connected is not getting a chance to run^prema.kolli^AHV-Management^^^Critical - P1^01/May/19 4:37 AM^Resolved^16/May/19 3:59 AM
-Improvement^ENG-224891^531518^Prism should report when migration fails due to maintenance mode^abhiram.parvatharedd^AHV-Management^^^Major - P2^30/Apr/19 9:01 PM^Open^
-Bug^ENG-224575^530667^"After an upgrade acropolis is crashing with ""invalid length of packed IP address string"""^ramesh.uppili^AHV-Management^^^Major - P2^30/Apr/19 12:22 AM^Resolved^30/Apr/19 8:49 PM
-Improvement^ENG-224123^529904^Prism VM Table Column Adjustments Should Be Save-able & Default View Should Be Improved to Always Show VM IPs^jsims^AHV-Management^^^Major - P2^26/Apr/19 9:54 PM^Blocked^
-Bug^ENG-224084^529631^NCC: AHV upgrades are encouraged unnecessarily^jonathan.davies^AHV^^^Major - P2^26/Apr/19 4:09 PM^Closed^30/Apr/19 2:20 PM
-Improvement^ENG-224062^529780^Failback of VMs failed when an affinity rule for the VM was present before migration^Sai.Vishalk^AHV-Management^^^Critical - P1^26/Apr/19 2:14 PM^Open^
-Bug^ENG-223901^529371^VM migration failed after upgrade from AHV 20170830.151 to AHV 20180802.97^vistaar.juneja^AHV^AHV-Management^^Critical - P1^26/Apr/19 2:05 AM^Closed^12/Nov/19 10:54 AM
-Bug^ENG-223654^528645^VM Guest's system clock sync issue in AHV^ahv-eng^AHV^^^Major - P2^25/Apr/19 8:30 AM^Resolved^27/Apr/19 12:55 AM
-Bug^ENG-223313^528040^[PC Systest] No Option to mount ISO to CDROM for SSP user^chris.guan^AHV-Management^^^Critical - P1^24/Apr/19 2:58 AM^Resolved^26/Apr/19 3:47 AM
-Improvement^ENG-222995^527399^Cannot add a IDE CDROM device if there are more than 3 scsi disks attached to VM^chris.guan^AHV-Management^^^Major - P2^23/Apr/19 4:17 AM^Open^
-Improvement^ENG-222918^527064^Need to capture SCSI controller type for 3rd party backup (HYCU) restores with ESXi^acropolis^Uhura^^^Critical - P1^22/Apr/19 11:41 PM^Resolved^07/Jun/19 10:00 PM
-Bug^ENG-222780^526859^[cfd][uhura][cherry-pick][systest-cdp-smoke] Not listing all the vm entities after PD restore^shubham.agrawal^Uhura^^^Critical - P1^22/Apr/19 1:05 PM^Resolved^12/Jun/19 11:51 AM
-Bug^ENG-222732^526642^(ahv_version_check) false positive in NCC 3.7.1^sonny.li^AHV^^^Critical - P1^22/Apr/19 10:18 AM^Closed^11/Sep/19 3:39 PM
-Bug^ENG-222369^525934^Able to Delete VM but not Create until Acropolis Restart^acropolis^AHV-Management^Ergon^^Major - P2^18/Apr/19 8:27 PM^Resolved^08/May/19 12:58 AM
-Bug^ENG-222344^525747^AHV: Disks deleted from Windows guests online are still accessible in the Windows explorer until a rescan^peter.turschm^AHV^^^Major - P2^18/Apr/19 12:09 PM^Reopened^
-Bug^ENG-222330^525740^"[Mach Resources] cannot attach ""DISK"" image types to CD-ROM"^chase.chou^AHV-Management^^^Major - P2^18/Apr/19 9:36 AM^Resolved^15/May/19 1:18 AM
-Bug^ENG-222157^525426^[Xenit AB] VM does not boot into CD-ROM if it has Uefi_boot flag enabled^soham.ghosh^AHV^^^Major - P2^17/Apr/19 3:12 PM^Resolved^17/Apr/19 5:16 PM
-Bug^ENG-222144^525418^"Failed to mount cdrom at the first boot after installation, but succeeded at next attempt"^shaju.abraham^AHV^^^Minor - P3^17/Apr/19 2:22 PM^Resolved^11/Jul/19 11:52 AM
-Improvement^ENG-222068^525113^Catalog should fail a download if curl returns a partially downloaded return code (was:LCM should retry download when checksum doesn't match)^alejand.mier^AHV-Management^^^Critical - P1^17/Apr/19 6:57 AM^Resolved^13/Nov/19 9:05 PM
-Bug^ENG-222064^525285^Fix is_connected watch_disconnect behavior and audit callback registrations for is_connected^robert^AHV-Management^^^Critical - P1^17/Apr/19 6:22 AM^Closed^03/May/19 4:58 AM
-Bug^ENG-222046^525257^"After a VM was migrated as part of HostRestoreLocality task, it was forcibly powered off"^acropolis^AHV^AHV-Management^^Critical - P1^17/Apr/19 4:30 AM^Closed^17/Apr/19 10:40 PM
-Bug^ENG-222005^525194^Images created using clone from vmdisk cannot be updated using v3 APIs^suraj.kasi^AHV-Management^^^Critical - P1^17/Apr/19 1:59 AM^Resolved^25/Oct/19 10:45 PM
-Bug^ENG-221603^524370^V3 - VM creation failed with - Error reading file item from Catalog^alejand.mier^AHV-Management^Prism Gateway^^Critical - P1^15/Apr/19 9:57 PM^Resolved^15/Aug/19 9:14 PM
-Bug^ENG-221577^524353^VM's manageability is lost when the node goes into degraded state^shruthi.racha^AHV-Management^^^Critical - P1^15/Apr/19 7:46 PM^In Progress^
-Bug^ENG-221432^524002^IP address column cannot be stretched^chris.guan^AHV-Management^^^Major - P2^14/Apr/19 3:03 PM^Resolved^06/Sep/19 11:04 PM
-Bug^ENG-221101^523315^"Lazan is in crash loop ""CRITICAL zookeeper_session.py:548 Zookeeper session expired"""^aramesh^AHV-Management^^^Blocker - P0^12/Apr/19 3:20 AM^Closed^22/Apr/19 1:23 PM
-Bug^ENG-221089^523086^handle kernel crash seen in ONCALL-5948^peter.turschm^AHV^^^Major - P2^12/Apr/19 2:23 AM^Closed^19/Apr/19 11:45 PM
-Bug^ENG-220948^522828^Temporary fix to workaround ENG-220628^shyam.rajendran^AHV-Management^^^Blocker - P0^11/Apr/19 3:48 PM^Resolved^18/Apr/19 9:33 PM
-Bug^ENG-220937^522916^Don't set complete_time while creating a task in legacy task service.^bhuvnesh.jain^AHV-Management^Ergon^^Critical - P1^11/Apr/19 2:27 PM^Closed^19/Apr/19 1:43 AM
-Bug^ENG-220835^522650^Unnecessary v1/utils/entities REST calls are making prism ui unusable^jsims^AHV-Management^^^Blocker - P0^11/Apr/19 6:43 AM^Resolved^17/Apr/19 10:20 PM
-Bug^ENG-220760^522520^Catalog checkout task needs to be restartable for _byte_offset^suraj.kasi^AHV-Management^^^Major - P2^11/Apr/19 2:36 AM^Closed^30/Apr/19 4:39 AM
-Improvement^ENG-220751^522507^[ADS] VGPU scheduling^karan.talreja^AHV-Management^^^Critical - P1^11/Apr/19 2:15 AM^Pending Review^
-Bug^ENG-220680^522241^Acropolis bombarding arithmos for gpu related queries^ahv-eng^AHV^^^Blocker - P0^10/Apr/19 9:30 PM^Resolved^11/Apr/19 3:03 AM
-Bug^ENG-220628^522179^Acropolis Master initialization took longer than expected as a consequence of post AOS upgrade VM publishing activity.^shyam.rajendran^AHV^AHV-Management^^Blocker - P0^10/Apr/19 5:18 PM^Resolved^22/Apr/19 9:43 PM
-Bug^ENG-220584^522113^[ui-boot-order]: as non-admin user if none boot configuration is selected then still save button is highlighted.^chris.guan^AHV-Management^^^Critical - P1^10/Apr/19 1:55 PM^Resolved^16/Apr/19 2:12 AM
-Improvement^ENG-220523^521956^Provide dry run ADS plan execution in Acropolis to avoid false positives^abhishek.kumar1^AHV-Management^^^Major - P2^10/Apr/19 9:51 AM^Open^
-Bug^ENG-220318^521530^ Genesis fails to report the 25G Speed and get the 25G NIC as part of bonding.Unable to perform cluster conversion with 25G NIC's On Intel DCB Platforms.^prerna.saxena^AHV^^^Major - P2^09/Apr/19 7:29 PM^Closed^22/Oct/19 3:56 PM
-Bug^ENG-220291^521350^ZETT CORPORATION - 1st key is always ignored when using 10key in full size keyboard^peter.turschm^AHV-Management^^^Minor - P3^09/Apr/19 4:42 PM^Open^
-Bug^ENG-220169^521306^AHV upgrade (EMM) fails seen after cluster expansion with a storage node and kAhvNeverSchedulable^prema.kolli^AHV-Management^^^Critical - P1^09/Apr/19 10:49 AM^Resolved^10/Apr/19 12:58 AM
-Bug^ENG-220157^521251^EMM on kAhvNeverSchedulable node is failing^asa.frank^AHV-Management^^^Critical - P1^09/Apr/19 10:10 AM^Resolved^24/May/19 1:09 AM
-Bug^ENG-219685^520203^Image list fails since the the backing .file_repo entry was missing^suraj.kasi^AHV-Management^^^Critical - P1^06/Apr/19 4:56 AM^Closed^17/Aug/19 4:03 AM
-Bug^ENG-219432^519483^PE Error “VM with id ‘XXX’ was not found” when trying to select VM from Overview Widgets^jsims^AHV-Management^^^Critical - P1^05/Apr/19 3:23 PM^Resolved^02/May/19 4:00 AM
-Improvement^ENG-219412^519471^Allow Guest Customization in V3 vms clone API^parth.gupta1^AHV-Management^^^Critical - P1^05/Apr/19 2:30 PM^Open^
-Bug^ENG-218729^518434^"For task based updates, have dcheck if IDF entity logical timestamp is greater than pithos's"^Sai.Vishalk^AHV-Management^^^Major - P2^03/Apr/19 7:23 PM^Resolved^15/May/19 2:03 PM
-Bug^ENG-218631^518144^_get_remote_file_size could get better at handling curl failure^alejand.mier^AHV-Management^^^Minor - P3^03/Apr/19 12:07 PM^Resolved^22/May/19 2:58 AM
-Bug^ENG-217964^516852^CVM cannot be powered on after adding new NIC to the host in AHV^ahv-eng^AHV^^^Major - P2^01/Apr/19 10:51 PM^Resolved^01/Apr/19 10:53 PM
-Bug^ENG-217912^516827^"v3 VM PUT fails when boot order is enabled, but boot config is not set"^shruthi.racha^AHV-Management^^^Critical - P1^01/Apr/19 7:39 PM^Resolved^18/Apr/19 1:45 AM
-Bug^ENG-217882^516786^"RCA Acropolis crash loop - CRITICAL set_power_state_task.py:653 2 == 1 failed, Stack"^scheduler-eng^AHV-Management^^^Major - P2^01/Apr/19 4:23 PM^Open^
-Improvement^ENG-217338^515512^Log spam: ERROR stats_util.py:272 Could not get stat controller.vdisk_cpu_time_usecs^aramesh^AHV-Management^^^Major - P2^29/Mar/19 12:52 AM^Open^
-Bug^ENG-217153^515113^acropolis: crash on the zktimeout while assigning backplane params^robert^AHV-Management^^^Critical - P1^28/Mar/19 12:11 PM^Closed^18/Apr/19 3:20 AM
-Bug^ENG-216806^514634^Node removal is stuck on kAcropolisOkToRemove after cleanly entering maintenance mode^igor.grobman^AHV-Management^^^Major - P2^27/Mar/19 11:21 PM^Resolved^12/Jun/19 9:19 AM
-Improvement^ENG-216648^514329^"[Uhura] Detect multi writer disks as ""shared"" on ESX"^syam.mohan^Uhura^^^Major - P2^27/Mar/19 12:04 PM^Open^
-Bug^ENG-216436^513840^ADS not automatically migrating VM's to adhere to anti-affinity rules^fabien.hermenier^AHV-Management^^^Critical - P1^26/Mar/19 8:24 PM^Resolved^06/Nov/19 3:32 PM
-Bug^ENG-216090^512172^disabling ads.update will not prevent VM migration after host exiting maintenance mode ^bhuvnesh.jain^AHV-Management^^^Major - P2^25/Mar/19 4:26 PM^Closed^02/Apr/19 10:12 PM
-Bug^ENG-216078^512785^Uploaded Image created from Image volume is showing zero bytes size^rajesh.battala^AHV-Management^^^Major - P2^25/Mar/19 3:43 PM^Resolved^14/Jun/19 12:41 PM
-Bug^ENG-215561^511371^uefi_boot attribute publishing was introduced in 5.10.2 but corresponding entry missing from IDF template ^soham.ghosh^AHV-Management^^^Blocker - P0^22/Mar/19 10:34 AM^Resolved^23/Mar/19 11:18 AM
-Bug^ENG-215412^511329^Traceback instead of appropriate response if the attempt to power on VM with enable_migration was failed.^karan.talreja^AHV-Management^^^Major - P2^21/Mar/19 9:33 PM^Closed^28/Mar/19 1:36 AM
-Bug^ENG-215364^511126^VM IDF entity for Xen is missing '_arithmos_id_' field.^shubham.agrawal^AHV-Management^^^Blocker - P0^21/Mar/19 4:06 PM^Closed^10/Apr/19 5:23 PM
-Improvement^ENG-215140^510386^Provide mechanism to update hardware_version in VmUpdateArg.^vistaar.juneja^Uhura^^^Major - P2^20/Mar/19 10:59 PM^Closed^22/Apr/19 11:30 AM
-Bug^ENG-214823^510068^"After AOS upgrade, ""update vm db state"" tasks appears in prism, customers have no context to understand these."^monica.jeyachandran^AHV-Management^^^Critical - P1^20/Mar/19 1:47 AM^Closed^23/Apr/19 10:15 PM
-Bug^ENG-214816^509982^"[Uhura] When using DIAL to convert from ESXi to AHV, Uhura publisher does not display AHV networks correctly"^shubham.agrawal^AHV-Management^^^Major - P2^20/Mar/19 1:21 AM^Resolved^07/Nov/19 12:04 PM
-Bug^ENG-214378^509132^"VM update operation from UI on PC throwing error ""Given input is invalid. 'LEARNED' not allowed"""^jsims^AHV-Management^^^Major - P2^18/Mar/19 10:49 PM^Resolved^17/Apr/19 11:02 PM
-Bug^ENG-214328^509100^frodo repeatedly reconnecting to stargate^raphael.norwitz^AHV^^^Critical - P1^18/Mar/19 6:10 PM^Resolved^01/Aug/19 12:54 AM
-Bug^ENG-213931^508362^"Roles menu does not display users, user groups if thay are attached trough Projects menu"^andrey.zarovnyaev^AHV-Management^^^Critical - P1^15/Mar/19 10:26 PM^Resolved^21/Mar/19 12:57 AM
-Improvement^ENG-213688^507844^Lift memory slots limits imposed by vhost-user's implementation in Qemu (cannot increase memory of VM in XI)^raphael.norwitz^AHV^^^Critical - P1^15/Mar/19 2:51 AM^Open^
-Bug^ENG-213655^507817^get_kvmclock_ns vs kvm_gen_update_masterclock race could lead to hard lockup of AHV^ani.sinha^AHV^^^Blocker - P0^15/Mar/19 12:35 AM^Closed^29/Mar/19 12:34 PM
-Bug^ENG-213356^506971^After removed a CO node and added it back. This CO node is not schedulable ^robert^AHV-Management^^^Critical - P1^14/Mar/19 4:09 AM^Closed^12/Aug/19 10:33 PM
-Improvement^ENG-212992^506211^AHV: sysstat configuration improvements^russell.creech^AHV^^^Major - P2^13/Mar/19 12:01 AM^Resolved^23/Jul/19 10:29 PM
-Bug^ENG-212901^505853^NCC - uvm_ide_disk_check ncc check gives an error^casey.williamssmith^AHV^^^Critical - P1^12/Mar/19 4:45 PM^Resolved^30/Apr/19 6:31 PM
-Bug^ENG-212433^505087^[acropolis] VGs failed to publish as part of VolumeGroupCreate op.^raghu.rapole^AHV-Management^^^Critical - P1^11/Mar/19 1:34 PM^Resolved^30/Apr/19 8:46 PM
-Bug^ENG-211912^504118^Network Adapter is not added after create a VM with Admin User^andrey.zarovnyaev^AHV-Management^^^Critical - P1^08/Mar/19 3:53 AM^Resolved^23/Aug/19 11:21 PM
-Improvement^ENG-211326^502924^Implement VM-to-VM affinity/anti-affinity rules on AHV^ahv-eng^AHV-Management^^^Major - P2^06/Mar/19 2:36 PM^Resolved^06/Mar/19 11:52 PM
-Bug^ENG-211055^502494^[cfd][uhura] Port attributes in management_server_info of IDF entity won't allow more than three digits^raghu.rapole^Uhura^^^Major - P2^05/Mar/19 6:34 PM^Closed^29/Mar/19 9:53 AM
-Bug^ENG-210832^502028^VM does not appear in Prism for days after Xtract migration^raymond.yip^AHV-Management^^^Major - P2^05/Mar/19 6:44 AM^Closed^13/Aug/19 2:13 AM
-Bug^ENG-210711^501670^Drift between reference TSC and sythentic timer clocksource causing performance degradation on AHV .184/.185^malcolm.crossley^AHV^^^Critical - P1^05/Mar/19 1:45 AM^Resolved^11/Mar/19 3:49 PM
-Bug^ENG-210629^501319^PRISM Central - Should show memory usage (usage + cached) in correlation to available memory^guido.hagemann^^^^Major - P2^04/Mar/19 8:34 PM^Resolved^15/May/19 6:23 AM
-Bug^ENG-210580^501544^"Unable to map an iso or disk smaller then 0,01 GiB"^chris.guan^AHV-Management^^^Critical - P1^04/Mar/19 4:46 PM^Resolved^21/Oct/19 11:30 PM
-Improvement^ENG-210262^500860^Create a tool to look up VM to which vdisk belongs.^luke.congdon^AHV-Management^Stargate^^Minor - P3^01/Mar/19 7:55 PM^Open^
-Bug^ENG-209952^500334^Physical ethernet interfaces that have two digits(ethxx) and more in their name are not visible/displayed in Prism.	^vistaar.juneja^AHV-Management^Arithmos^Infrastructure^Major - P2^28/Feb/19 9:46 PM^Resolved^10/Mar/19 10:28 PM
-Bug^ENG-209770^499454^AHV should allow live migration of a VM with memory hotplugged upto hotplug limit^suresh.gumpula^AHV^^^Critical - P1^28/Feb/19 8:04 AM^Resolved^12/Apr/19 5:27 AM
-Bug^ENG-209696^499424^Error message is too generic when power on vm failed during failover operation^abhishek.kumar1^AHV-Management^^^Major - P2^28/Feb/19 4:54 AM^Closed^22/Nov/19 2:29 AM
-Improvement^ENG-209441^498929^Duplicate master instances due to greenlet overruns^shubham.agrawal^AHV-Management^^^Critical - P1^27/Feb/19 10:34 AM^Closed^09/Sep/19 9:29 PM
-Improvement^ENG-208888^497784^Pre-upgrade Check for AHV to Warn About Potential Memory Implications^^AHV^^^Major - P2^26/Feb/19 2:17 AM^Open^
-Bug^ENG-208504^496518^Improve error reporting in the EMM task when its aborted due to not enough resources^dhruv.jogi^AHV-Management^^^Critical - P1^23/Feb/19 3:49 AM^Closed^22/Dec/19 10:24 PM
-Bug^ENG-208211^495884^RCA for INCDT-5188^asa.frank^AHV-Management^^^Critical - P1^22/Feb/19 2:49 AM^Closed^09/Mar/19 12:29 PM
-Bug^ENG-207986^495444^"When cloned via Prism UI, cloned VM does not have NIC even though parent VM had NIC in connected state"^jsims^AHV-Management^^^Critical - P1^21/Feb/19 11:07 AM^Resolved^20/Mar/19 5:43 AM
-Bug^ENG-207743^494891^high number of IsrDPC on usbport.sys causing Windows Guest's CPU usage to be very high^malcolm.crossley^AHV^^^Critical - P1^20/Feb/19 1:50 PM^Resolved^05/Mar/19 11:34 AM
-Bug^ENG-207113^493652^AHV - support over 64 vCPUs for Windows guests^malcolm.crossley^AHV^^^Major - P2^17/Feb/19 6:28 PM^Resolved^11/Mar/19 3:50 PM
-Bug^ENG-206944^493415^Fix extraneous ssh_host_dsa_key syslog entries on AHV and CVM^ani.sinha^AHV^^^Critical - P1^16/Feb/19 3:06 AM^Resolved^13/Jan/20 1:21 PM
-Improvement^ENG-206735^493018^ImageGet operations are time taking with increasing number of images resulting in delayed page load(s)^shashank.kumar^AHV-Management^^^Critical - P1^15/Feb/19 11:54 AM^Resolved^14/Jan/20 3:25 AM
-Bug^ENG-206365^492367^[acropolis] VM's update menu and console is not opening^vistaar.juneja^AHV-Management^^^Critical - P1^14/Feb/19 12:15 PM^Closed^27/Jun/19 12:09 AM
-Bug^ENG-206229^492080^[acropolis] Node added on AHV cluster is not schedulable^vistaar.juneja^AHV-Management^^^Critical - P1^14/Feb/19 3:17 AM^Resolved^14/Nov/19 11:05 AM
-Improvement^ENG-206132^491859^"AHV Single User Mode | .184/.185"^prerna.saxena^AHV^^^Major - P2^13/Feb/19 10:03 PM^Resolved^16/Dec/19 3:50 PM
-Bug^ENG-205931^491505^"Checkout image task failed with error :  ""No Source location available to checkout file 1320ed7c-b7e9-4069-a77d-d39fcee7e00d"" "^suraj.kasi^AHV-Management^^^Major - P2^13/Feb/19 7:21 AM^Resolved^19/Apr/19 2:20 AM
-Bug^ENG-205012^489882^CatalogItemUpdate RPC fails with stale PE UUIDs^saurabh.dohare^AHV-Management^^^Major - P2^09/Feb/19 5:03 AM^Closed^21/Mar/19 2:44 AM
-Bug^ENG-204587^489189^"LCM ahv upgrade failed as ""LcmStagingError: Failed to find required modules"""^lcm-infra-core^AHV^AHV-Management^^Critical - P1^08/Feb/19 3:08 AM^Resolved^08/Feb/19 4:33 AM
-Bug^ENG-204549^489117^AHV host became unreachable by SSH due to memory errors^ahv-eng^AHV^^^Critical - P1^08/Feb/19 12:30 AM^Resolved^14/Feb/19 2:52 AM
-Improvement^ENG-204541^489090^Add ability to mount an ISO to existing CDROM drive^jsims^AHV-Management^^^Blocker - P0^07/Feb/19 11:32 PM^Open^
-Bug^ENG-204468^488937^Nutanix Files - Memory usage discrepancy in Prism and FSVM^soham.ghosh^AHV^^^Critical - P1^07/Feb/19 3:54 PM^Resolved^01/Apr/19 10:20 PM
-Bug^ENG-204137^488378^Typo in Prism 5.10.x when mounting an image from a remote console^jsims^AHV-Management^^^Trivial - P4^06/Feb/19 8:05 PM^Resolved^25/Oct/19 2:20 AM
-Improvement^ENG-204112^488332^[AHV] Improve NVIDIA GPU Driver Update Script to Target Hosts^kern.qian^AHV^^^Major - P2^06/Feb/19 5:23 PM^Open^
-Improvement^ENG-203810^487831^AHV Enter Exit maintenance mode command need clear information message while execution^monica.jeyachandran^AHV-Management^^^Major - P2^06/Feb/19 12:27 AM^Blocked^
-Bug^ENG-203549^487354^During Image Get/List check if PE registered before fanout^suraj.kasi^AHV-Management^^^Critical - P1^05/Feb/19 7:49 AM^Resolved^14/Mar/19 2:41 AM
-Bug^ENG-203439^487165^vm_checks transmitted packet drop rate threshold set to 0^acropolis^AHV^^^Major - P2^05/Feb/19 2:24 AM^Closed^27/Feb/19 6:42 PM
-Bug^ENG-203218^486743^[Scalability] Uhura master changed : Zookeeper session expired^Sai.Vishalk^Uhura^^^Critical - P1^04/Feb/19 2:12 PM^Closed^25/Apr/19 9:00 AM
-Bug^ENG-203008^486401^PC Role Assignments done with Categories does not work^andrey.zarovnyaev^AHV-Management^^^Critical - P1^03/Feb/19 11:58 AM^Resolved^20/Feb/19 7:15 AM
-Bug^ENG-203007^486399^"Labels in PC | When selecting multiples labels for vms not all of the vms are labeled "^chris.guan^AHV-Management^^^Major - P2^03/Feb/19 11:30 AM^Resolved^21/May/19 4:19 AM
-Bug^ENG-202659^485711^failed to power off UVMs related to wal_cassandra_backend.py:51 Sync rpc failed^igor.grobman^AHV-Management^^^Critical - P1^01/Feb/19 10:58 AM^Resolved^02/Feb/19 9:39 PM
-Bug^ENG-202594^485553^Prism Central 5.10.0.1 not sorting by NGT Status^bayley.mah^AHV-Management^^^Minor - P3^01/Feb/19 5:46 AM^Need Info^
-Bug^ENG-202593^485550^"Windows VM reboot to splash screen, unable to boot to OS"^eric.zhao^AHV^^^Critical - P1^01/Feb/19 5:42 AM^Resolved^05/Feb/19 10:41 AM
-Bug^ENG-202377^485124^Flash Mode Disable on Certain Disk^chris.guan^AHV-Management^^^Critical - P1^31/Jan/19 4:01 PM^Resolved^01/Oct/19 2:24 AM
-Bug^ENG-202143^484683^2-Node cluster Acropolis crash during AOS upgrade causes VMs to reboot^acropolis^AHV-Management^^^Major - P2^31/Jan/19 1:53 AM^Resolved^03/Feb/19 6:09 AM
-Bug^ENG-202000^484419^tap device leak observed when SATADOM full^jonathan.davies^AHV^^^Major - P2^30/Jan/19 5:11 PM^Resolved^15/Mar/19 5:15 PM
-Bug^ENG-201743^483874^Cannot delete images in PC and images appear to be duplicated^alejand.mier^AHV-Management^^^Critical - P1^30/Jan/19 1:58 AM^Closed^09/Apr/19 3:51 AM
-Bug^ENG-201401^483254^Only Single NIC was attached when creating a VM with multiple NICs from OpenStack (pike) via Nutanix OpenStack Driver^rajesh.battala^AHV-Management^^^Critical - P1^29/Jan/19 8:55 AM^Closed^12/Feb/19 5:23 PM
-Bug^ENG-201125^482701^"Libvirt: Catch all ""no such process"" errors to detect and notify a VM's demise."^shaju.abraham^AHV^^^Critical - P1^28/Jan/19 12:23 PM^Resolved^13/Mar/19 8:10 AM
-Bug^ENG-201071^482599^"[PC-LCM]PC inventory failed with error ""Operation failed. Reason: Failed to run LCM operation. error: ValueError('nothing to open',)"""^chaitanya.karlekar^AHV-Management^^^Major - P2^28/Jan/19 9:08 AM^Closed^13/Mar/19 2:04 AM
-Bug^ENG-200776^481974^Root cause why Acropolis master did not lose connection with AHV host until 5 minutes^shubham.agrawal^AHV-Management^^^Critical - P1^25/Jan/19 6:38 PM^Closed^19/Mar/19 12:59 PM
-Bug^ENG-200624^481670^Upgrading AHV reverts timezone^ahv-eng^AHV^^^Major - P2^25/Jan/19 9:00 AM^Closed^25/Jan/19 10:07 AM
-Bug^ENG-200562^481534^"If an image is deleted from PE, PC does not reflect the deletion"^shashank.kumar^AHV-Management^^^Critical - P1^25/Jan/19 4:03 AM^Closed^21/Mar/19 2:56 AM
-Improvement^ENG-200464^481308^Improve PC UI Deployment Tasks^soumik.patra^Ergon^^^Critical - P1^24/Jan/19 9:57 PM^Open^
-Bug^ENG-199666^479713^Windows 8+/2012R2+ VM reboot hang after uptime of over 60 days^malcolm.crossley^AHV^^^Critical - P1^22/Jan/19 9:48 PM^Resolved^29/Mar/19 12:21 AM
-Bug^ENG-199181^478503^Catalog service consuming 1GB memory on each PCVM^chaitanya.karlekar^AHV-Management^^^Critical - P1^19/Jan/19 4:19 AM^Resolved^28/May/19 10:58 PM
-Bug^ENG-198858^477761^Move meminfo stats and scheduler stats to a separate log file instead of dumping them in acropolis logs^prema.kolli^AHV-Management^^^Critical - P1^18/Jan/19 2:17 AM^Resolved^23/Mar/19 8:17 AM
-Bug^ENG-198719^477347^LCM catalog with complex proxy password failed due to passwd not enclose with quotes.^alejand.mier^AHV-Management^^^Major - P2^17/Jan/19 11:51 AM^Resolved^19/Jan/19 5:01 AM
-Bug^ENG-198608^477076^Single Heavily Loaded VM with Hourly Snapshots Migrated by ADS when it should not be.^fabien.hermenier^AHV-Management^^^Critical - P1^17/Jan/19 3:18 AM^Resolved^18/May/19 1:19 AM
-Improvement^ENG-198593^477043^Panacea: detect ISB 93 ^mohamed.ashiq^Panacea^^^Major - P2^17/Jan/19 2:32 AM^Resolved^20/Aug/19 9:46 AM
-Improvement^ENG-198154^475894^VM with frodo only allows memory hotplug up to 6 times^raphael.norwitz^AHV-Management^^^Major - P2^15/Jan/19 5:28 AM^Resolved^15/Mar/19 3:01 AM
-Bug^ENG-198071^475687^Incorrect set of CPU flags supplied to qemu after HA event^acropolis^AHV-Management^^^Critical - P1^14/Jan/19 11:48 PM^Closed^06/Feb/19 10:51 AM
-Bug^ENG-198029^475572^[categories-rbac-vm]: Change power state not displayed for vm with basic access role category^andrey.zarovnyaev^AHV-Management^^^Blocker - P0^14/Jan/19 6:18 PM^Resolved^24/Jan/19 12:16 AM
-Bug^ENG-198003^475487^LCM with proxy fails due to special character in the proxy password^alejand.mier^AHV-Management^^^Major - P2^14/Jan/19 3:12 PM^Closed^31/Jan/19 3:51 AM
-Bug^ENG-197906^475261^Total Care Auto - Unable to attach Virtual Canary 1MB VMDK file to VM using Prism^jsims^AHV-Management^^^Major - P2^14/Jan/19 1:56 AM^Resolved^15/May/19 9:42 PM
-Bug^ENG-197096^473332^Image deletion from PC fails with version mismatch  using script^alejand.mier^AHV-Management^^^Critical - P1^09/Jan/19 6:00 PM^Closed^09/Jan/19 11:25 PM
-Improvement^ENG-196940^472970^Design mechanism to allow physical network cards parameters to be changed^malcolm.crossley^AHV^^^Major - P2^09/Jan/19 3:24 AM^Open^
-Bug^ENG-196866^472825^AHV Host keeps looking to resolve itself creating additional DNS traffic^jonathan.davies^AHV^^^Major - P2^08/Jan/19 11:28 PM^Resolved^11/Mar/19 11:30 PM
-Bug^ENG-196657^472460^Cannot operate VMs on AHV via Prism with stuck Running tasks with 1%^suraj.kasi^AHV-Management^^^Major - P2^08/Jan/19 11:02 AM^Closed^31/Jan/19 6:31 AM
-Bug^ENG-196452^472059^High cluster wide IOPS due to stuck ergon image create tasks ^shashank.kumar^AHV-Management^^^Minor - P3^07/Jan/19 7:42 PM^Resolved^09/Jul/19 1:14 AM
-Bug^ENG-196316^471758^VM console not opening in Prism when VM names are in Chinese ( non ascii characters)^chris.guan^AHV-Management^^^Major - P2^06/Jan/19 11:42 PM^Resolved^01/Feb/19 4:54 AM
-Bug^ENG-196242^471547^VM hot add memory anything less than 1G will be rounded to 1G automatically^luke.congdon^AHV^^^Critical - P1^05/Jan/19 4:54 AM^Closed^09/Jan/19 7:38 AM
-Bug^ENG-196162^471383^AHV: ibrs logging spam^raphael.norwitz^AHV^^^Minor - P3^04/Jan/19 10:13 PM^Closed^19/Jan/19 8:39 AM
-Bug^ENG-196158^471377^AHV: lldpd log spew - unable to get system name^ahv-eng^AHV^^^Minor - P3^04/Jan/19 9:45 PM^Resolved^04/Jan/19 11:29 PM
-Bug^ENG-196072^471187^acropolis - scheduler failing to migrate VMs with 'NoneType' object has no attribute 'node_uuid'^prema.kolli^AHV-Management^^^Critical - P1^04/Jan/19 11:57 AM^Resolved^09/Jan/19 4:24 AM
-Bug^ENG-195974^470932^AHV upgrade by LCM is failing. Switching to maintenance mode issue.^acropolis^AHV^^^Critical - P1^03/Jan/19 11:54 PM^Resolved^14/May/19 5:30 AM
-Bug^ENG-195926^470774^"Acropolis: investigate the discrepancy between top, arithmos, lazan."^nevena.milinkovic^AHV-Management^^^Major - P2^03/Jan/19 4:50 PM^Resolved^14/Jan/20 5:28 PM
-Bug^ENG-195918^470749^Unicode characters in disk iso paths for ESX can cause stats not showing up in PRISM^acropolis^AHV-Management^^^Major - P2^03/Jan/19 3:36 PM^Closed^07/Jan/19 11:58 AM
-Bug^ENG-195883^470658^Acropolis in crash loop - Scheduler check failing^asa.frank^AHV-Management^^^Blocker - P0^03/Jan/19 11:46 AM^Resolved^03/Jan/19 3:52 PM
-Bug^ENG-195618^470079^[uhura][publisher] Handle unicode characters in disk iso paths for ESX VMs^shubham.agrawal^Uhura^^^Major - P2^02/Jan/19 12:53 PM^Closed^08/Jan/19 2:51 PM
-Bug^ENG-195594^470032^Image Update does not update the PE metadata if it does not have latest catalog item version is missing^shashank.kumar^AHV-Management^^^Major - P2^02/Jan/19 11:26 AM^Closed^13/Aug/19 11:37 AM
-Bug^ENG-195344^469312^VM : failed to get an IP - Nic is not assigned to the VM. ^raghu.rapole^Uhura^^^Blocker - P0^28/Dec/18 2:18 PM^Closed^08/Apr/19 2:28 PM
-Bug^ENG-195173^468976^[ADS workflows] Lazan failed to detect anomaly^scheduler-eng^AHV-Management^^^Critical - P1^27/Dec/18 5:32 PM^Resolved^08/Jan/19 11:36 AM
-Bug^ENG-195171^468972^FreeBSD 11 reports errors and sometimes fails to boot^^AHV^^^Major - P2^27/Dec/18 5:11 PM^Resolved^17/Jan/19 5:04 PM
-Bug^ENG-194676^467614^Saint Xavier University -- PC Add Image file upload is extremely slow ^acropolis-catalog^AHV-Management^Prism Gateway^^Major - P2^22/Dec/18 1:59 AM^Closed^10/Jan/19 11:00 AM
-Bug^ENG-194558^467331^"[UI PE] VMManagement, VM creation failed while waiting for popupvm to invisible"^jsims^AHV-Management^^^Critical - P1^21/Dec/18 10:31 AM^Resolved^08/Jan/19 10:42 PM
-Bug^ENG-194464^467185^[uhura] NTT SMARTCONNECT - Customer unable to get a response using RESTAPI for a GET request https://<PRISMELEMENTIP> Address:9440/api/nutanix/v2.0/vms/ ^deepanshu.singhal^AHV-Management^Uhura^^Major - P2^21/Dec/18 4:21 AM^Closed^01/Feb/19 8:40 PM
-Bug^ENG-194340^466903^AHV libvirt logroration is not restarting processes and might cause disk full issues on host^ani.sinha^AHV^^^Critical - P1^20/Dec/18 2:30 PM^Resolved^21/Jan/19 1:55 PM
-Bug^ENG-194125^466498^"Prism Central Reporting ""Unable to connect to vCenter"""^yenchieh.huang^Uhura^^^Critical - P1^19/Dec/18 8:00 PM^Closed^08/Feb/19 10:33 AM
-Bug^ENG-194019^466299^get_vm_cpu_stats: add logs for debug^raymond.yip^AHV-Management^^^Major - P2^19/Dec/18 12:43 PM^Closed^25/Jan/19 11:09 PM
-Bug^ENG-193926^466105^Grainger & Worrall Ltd - /root partition filled up to 100% on AHV host^phani.jayanthi^AHV^^^Major - P2^19/Dec/18 5:28 AM^Closed^21/Jan/19 3:34 PM
-Bug^ENG-193864^465994^Image download always uses proxy irrespective of whitelisting^alejand.mier^AHV-Management^^^Critical - P1^19/Dec/18 1:45 AM^Closed^11/Mar/19 9:48 AM
-Bug^ENG-193597^465495^Running gpu-z inside windows guest crashes guest^ani.sinha^AHV^^^Major - P2^18/Dec/18 6:44 AM^Resolved^18/Feb/19 3:12 PM
-Bug^ENG-193464^465028^[uhura][publisher] Acropolis was stuck for 65000 seconds while publishing host data to arithmos^shubham.agrawal^Uhura^^^Major - P2^17/Dec/18 4:15 PM^Closed^16/Sep/19 12:13 PM
-Bug^ENG-193294^464141^error fetchin image list on prism^pratap.tiwary^AHV-Management^^^Critical - P1^15/Dec/18 11:40 PM^Closed^10/Jan/19 4:21 AM
-Bug^ENG-193095^463628^Physical Usage in Virtual Disks in Prism VM is actually Logical Usage^glenn.ryan^AHV-Management^^^Major - P2^14/Dec/18 10:16 AM^Resolved^24/Oct/19 2:00 AM
-Bug^ENG-193094^463624^[uhura] Check failed: register_vm_ret.register_vm_ret().vm_result().size() == 1 (0 vs. 1) PD^ramashish.gaurav^Uhura^^^Critical - P1^14/Dec/18 9:51 AM^Closed^18/Nov/19 7:26 PM
-Bug^ENG-193023^463491^Create a warning message on swagger json page that tells the user to not try VM PUT operation without full status in the spec as that could lead to deletion of disks^chris.guan^AHV-Management^^^Critical - P1^14/Dec/18 3:42 AM^Resolved^14/Feb/19 5:31 AM
-Bug^ENG-193000^463407^v3 api implicitly deletes entities leading to unintentional data loss^sriniva.bandi^AHV-Management^^^Blocker - P0^14/Dec/18 1:50 AM^Resolved^28/Mar/19 5:20 AM
-Improvement^ENG-192865^462997^VM deletion UI from PC is not consistent in PE^jsims^AHV-Management^^^Minor - P3^13/Dec/18 2:17 PM^Open^
-Improvement^ENG-192567^462232^VMnic order is not same in Prism UI and ACLI output^acropolis^AHV-Management^^^Minor - P3^12/Dec/18 2:42 PM^Open^
-Bug^ENG-192514^462118^error : virProcessKillPainfully:423 : Failed to terminate process 17961 with SIGKILL: Device or resource busy^casey.williamssmith^AHV^AHV-Management^^Critical - P1^12/Dec/18 10:03 AM^Resolved^16/Feb/19 1:09 AM
-Bug^ENG-191569^459854^Wrong 'max_supported_virtual_hardware_versio' is published in Node entity type for ESX clusters.^vistaar.juneja^Uhura^^^Critical - P1^06/Dec/18 3:28 PM^Closed^10/Oct/19 3:36 PM
-Bug^ENG-191504^459687^VM failback failed with cerebro error kConflictingFiles^ramashish.gaurav^Uhura^^^Critical - P1^06/Dec/18 8:54 AM^Closed^24/Sep/19 6:31 PM
-Bug^ENG-191028^458354^panacea/ahv: track acropolis_max_http_client_sessions^nishant.verma^Panacea^^^Major - P2^04/Dec/18 10:41 AM^Open^
-Bug^ENG-190908^457980^Uhura validation limiting deployment of Nutanix Files on ESXi 6.5+ ^rajesh.battala^Uhura^^^Critical - P1^03/Dec/18 9:30 PM^Closed^21/Jan/19 9:24 PM
-Bug^ENG-190565^457252^LCM inventory fails with error message Operation failed. Reason: Pre-check 'test_catalog_workflows' failed (Failure reason: Failed to create catalog item. Error: Task b16de452586145f78db185c27327cd95 did not succeed)^alejand.mier^AHV-Management^^^Critical - P1^30/Nov/18 6:43 PM^Closed^31/Jan/19 3:52 AM
-Improvement^ENG-190469^457029^Periodically dump acropolis threads to sysstats^robert^AHV-Management^^^Major - P2^30/Nov/18 8:39 AM^Resolved^03/Apr/19 3:00 AM
-Bug^ENG-190417^456919^Ergon tasks with a completed time still listed as Running^russell.creech^Ergon^^^Major - P2^30/Nov/18 3:38 AM^Closed^20/Feb/19 1:45 AM
-Bug^ENG-190067^456083^Cache arithmos call for host_gpu in AHV arithmos publisher^anirban.roy^AHV-Management^^^Critical - P1^28/Nov/18 3:42 PM^Resolved^08/Jan/19 3:20 PM
-Bug^ENG-189908^455788^[AHV-PF] Unable to perform LCM inventory as pre-check is failing due to test_catalog_workflows failure^shashank.kumar^AHV-Management^^^Major - P2^28/Nov/18 4:51 AM^Resolved^12/Mar/19 11:55 AM
-Bug^ENG-189840^455628^"vnic creation failure in internal_vm_nic_create_op_handle during failback with error ""ClientError: Agnostic UUID already taken by key for kVNIC mapping type."""^raghu.rapole^Uhura^^^Blocker - P0^27/Nov/18 10:47 PM^Resolved^06/Nov/19 10:59 AM
-Bug^ENG-189352^454480^entity metrics details page perspective -Memory Swap(no data available)^^AHV-Management^^^Critical - P1^23/Nov/18 5:10 PM^Resolved^07/Jan/20 11:47 AM
-Improvement^ENG-188945^453505^"VM deletion from Prism UI is not refreshing after search, which is causing to delete wrong VM"^jsims^AHV-Management^^^Blocker - P0^21/Nov/18 5:55 PM^Resolved^08/Jul/19 11:56 PM
-Bug^ENG-188655^452942^ESXi to AHV VM conversion: Uhura Error 15 UUID has already been used^uhura-dev^Uhura^^^Major - P2^20/Nov/18 9:44 PM^Resolved^24/Jan/19 4:49 PM
-Bug^ENG-188177^451984^"[CFD]: Failure to power on VMs with error: ""Could not reserve enough space to protect this VM against node failure"""^asa.frank^AHV-Management^^^Critical - P1^19/Nov/18 3:01 PM^Resolved^24/May/19 1:12 AM
-Bug^ENG-187486^450537^"[DRaaS]: For a vm with a VG attached, V3 ops from PC fail with CONCURRENT_REQUESTS_NOT_ALLOWED"^lonnie.hutchinson^AHV-Management^^^Critical - P1^15/Nov/18 6:00 PM^Resolved^09/Feb/19 12:22 AM
-Improvement^ENG-186954^449451^"ahv: customize oom-killer to not kill ovs-vswitchd, libvirtd, qemu-kvm"^^AHV^^^Major - P2^14/Nov/18 1:22 AM^Resolved^06/Aug/19 11:10 AM
-Bug^ENG-186911^449387^Reflect Pacific\Auckland timezone correctly as UTC +13 in daylight savings time^jsims^AHV-Management^^^Major - P2^13/Nov/18 11:19 PM^Resolved^25/Oct/19 2:19 AM
-Bug^ENG-186718^449042^AHV host public IP becomes unreachable due to Linux ARP handling.^shaju.abraham^AHV^^^Blocker - P0^13/Nov/18 9:41 AM^Resolved^29/Jan/19 12:33 AM
-Bug^ENG-185684^447116^vsphere_cluster_configuration_check fails with IP x.x.x.x is not part of inventory^raghu.rapole^Uhura^^^Major - P2^07/Nov/18 4:06 PM^Closed^16/Jan/19 10:36 AM
-Improvement^ENG-185601^446934^Ship ccli^alejand.mier^AHV-Management^^^Major - P2^07/Nov/18 5:14 AM^Closed^31/Jan/19 3:00 AM
-Improvement^ENG-185146^445847^Need rollover rather than overwrite of NTNX.serial.out.0 for AHV^^AHV^^^Major - P2^05/Nov/18 2:54 PM^Open^
-Improvement^ENG-185072^445700^"[AHV] During a planned maintenance such as LCM, AHV upgrade, AHV should choose as migration target a host with the same bridge config. if possible"^shyam.rajendran^AHV-Management^^^Major - P2^04/Nov/18 9:34 PM^Resolved^08/Feb/19 6:30 AM
-Bug^ENG-183813^443224^Oracle RAC Drops the ora_pmon process during live migration.^shyam.rajendran^AHV^^^Critical - P1^29/Oct/18 11:23 PM^Resolved^17/Jan/19 6:42 PM
-Improvement^ENG-182924^441375^AHV pre-upgrade check for AHV timezone^casey.williamssmith^AHV^^^Minor - P3^25/Oct/18 8:45 AM^Closed^18/Apr/19 7:36 PM
-Bug^ENG-182738^440983^[Xi PC] Cannot create VM with multiple CDROMs^jsims^AHV-Management^^^Critical - P1^24/Oct/18 7:30 PM^Resolved^08/Feb/19 3:52 AM
-Bug^ENG-182399^440319^Duplicate triggering and improvements to alert A130068 (VM HA Status)^asa.frank^AHV-Management^^^Major - P2^23/Oct/18 8:42 PM^Closed^27/Feb/19 10:25 PM
-Improvement^ENG-182343^440220^acropolis: validate the mechanism of calculating the Guest Memory^prerna.saxena^AHV^AHV-Management^^Major - P2^23/Oct/18 4:34 PM^Pending Merge^
-Bug^ENG-181816^439259^Initial Placement of VMs when powering on can violate HA prerequisites causing HA to break^prema.kolli^AHV-Management^^^Critical - P1^21/Oct/18 1:15 AM^Resolved^16/Mar/19 8:15 AM
-Bug^ENG-181663^438946^CLONE - low network throughput for AHV on HPE^alex.defrutos^AHV^^^Major - P2^19/Oct/18 7:48 AM^Resolved^08/Jan/19 8:02 PM
-Bug^ENG-181599^438781^Frodo times out to quickly when connecting to an iSCSI adapter when Stargate crashes^raphael.norwitz^AHV^^^Major - P2^18/Oct/18 11:31 PM^Resolved^30/Aug/19 2:34 AM
-Improvement^ENG-181087^436998^Catalog should allow parallel checkouts^shashank.kumar^AHV-Management^^^Critical - P1^16/Oct/18 9:39 PM^Closed^23/May/19 5:20 AM
-Improvement^ENG-181082^436992^Catalog Checkout tasks are not listed in PC tasks during vm creation.^suraj.kasi^AHV-Management^^^Major - P2^16/Oct/18 9:28 PM^Blocked^
-Bug^ENG-180740^436225^AHV hypervisor preupgrade stuck after NOS upgrade to 5.5.6^manikandan.selvagane^AHV^^^Critical - P1^15/Oct/18 7:48 PM^Closed^07/Feb/19 8:01 PM
-Bug^ENG-179579^434021^panacea/ahv: capture the MC Errors by parsing dmesg^aaron.jones^Panacea^^^Major - P2^10/Oct/18 12:48 PM^Open^
-Improvement^ENG-178266^431457^Disable hardware NIC level LLDP in AHV^raphael.norwitz^AHV^^^Blocker - P0^04/Oct/18 11:13 PM^Resolved^16/Apr/19 3:30 AM
-Improvement^ENG-177881^429961^Ability to select multiple VMs in Prism Element^jsims^AHV-Management^^^Major - P2^03/Oct/18 8:09 PM^Open^
-Improvement^ENG-177457^429117^PC Image service - Allow Deletion from PC which does not own image.^shashank.kumar^AHV-Management^^^Critical - P1^01/Oct/18 11:38 PM^Resolved^17/May/19 10:33 PM
-Improvement^ENG-177445^429091^AHV pre-upgrade checks should check for bridges to ensure VMs can be migrated^shyam.rajendran^AHV-Management^^^Major - P2^01/Oct/18 10:36 PM^Closed^08/Feb/19 10:52 PM
-Bug^ENG-176882^428076^Guest VM Ip Address change is not properly reflected in Prism UI.^samrudhi^AHV-Management^^^Major - P2^28/Sep/18 3:29 AM^Resolved^16/May/19 1:55 AM
-Improvement^ENG-176755^427866^Allow flexible timeline for VM resource usage chart in SSP ^jsims^AHV-Management^^^Major - P2^27/Sep/18 4:53 PM^Open^
-Bug^ENG-175099^424714^Multiple errors and disconnections when opening the console on VMs^jsims^AHV-Management^^^Major - P2^20/Sep/18 6:03 PM^Resolved^13/Feb/19 2:25 AM
-Bug^ENG-174443^423368^clear affinity is called on all v2 calls ^jsims^AHV-Management^^^Critical - P1^18/Sep/18 9:49 PM^Closed^03/Dec/19 12:15 AM
-Improvement^ENG-173828^422303^[ADS workflows] It's taking a bit longer to detect a hotspot because of smoothing^nevena.milinkovic^AHV-Management^^^Critical - P1^17/Sep/18 1:13 PM^In Progress^
-Bug^ENG-173175^420918^Hypervisor IP can show as 192.168.5.1 in Prism Central^raja.thota^AHV-Management^^^Critical - P1^12/Sep/18 11:59 PM^Resolved^24/Jan/19 7:50 AM
-Bug^ENG-173077^420748^panacea/ahv: capture the stack trace in ONCALL-4505^akanshu.gupta^Panacea^^^Major - P2^12/Sep/18 5:49 PM^Resolved^31/May/19 12:07 PM
-Bug^ENG-172121^418368^"CVM pauses with ""KVM: entry failed, hardware error 0x5"" on AHV Host."^matt.berry^AHV^^^Minor - P3^08/Sep/18 5:21 AM^Resolved^17/Jan/19 6:46 PM
-Bug^ENG-171785^417624^Unable to update vdisk size in Prism^jsims^AHV-Management^^^Critical - P1^06/Sep/18 8:46 PM^Resolved^15/Feb/19 12:45 AM
-Improvement^ENG-170673^415377^Allow Prism Central users to use Catalog to deploy VMs^jsims^AHV-Management^^^Critical - P1^31/Aug/18 3:16 PM^Open^
-Improvement^ENG-170278^414639^Panacea - Add prettyinstance to panacea for analysing Lazan logs^buchiba.chennup^Panacea^^^Major - P2^30/Aug/18 8:29 AM^In Progress^
-Bug^ENG-170054^414136^UVM fails to migrate because of a bad USB controller^jonathan.davies^AHV^^^Critical - P1^29/Aug/18 1:57 PM^Closed^15/Jan/19 2:27 PM
-Bug^ENG-169942^413905^checkout_catalog for multiple destination^shashank.kumar^AHV-Management^^^Major - P2^29/Aug/18 2:43 AM^Closed^23/Apr/19 12:36 AM
-Improvement^ENG-169762^413592^hugepages value in AHV should be calculated automatically at every boot up time  ^florian.schmidt^AHV^AHV-Management^^Critical - P1^28/Aug/18 2:10 PM^Reopened^
-Improvement^ENG-169547^413134^Resumable API for image local file upload^alejand.mier^AHV-Management^^^Critical - P1^27/Aug/18 11:10 PM^Open^
-Improvement^ENG-169169^412503^Prism Central Image Management: Request to display state of images as ACTIVE or INACTIVE on PE clusters when PC syncs images to PE clusters^shashank.kumar^AHV-Management^^^Critical - P1^25/Aug/18 2:50 AM^Resolved^09/Jan/20 5:55 AM
-Bug^ENG-168207^410439^panacea/ahv: capture the Acropolis crash loop with unknown VmGroup error in traceback on leader^shubham.bhardwaj^Panacea^^^Trivial - P4^17/Aug/18 4:14 PM^Closed^22/Oct/19 4:49 PM
-Bug^ENG-214358^410394^AHV cluster running AOS v5.6.1/rsyslog v5.8 causing production issues due to the rsyslog server being unreachable/down.^ani.sinha^^^^Critical - P1^17/Aug/18 3:00 PM^Resolved^03/Apr/19 5:37 PM
-Bug^ENG-168129^410309^"[acropolis] Xi PC VM Create is stuck in Running State , See Xi PE acropolis in crash loop"^deepanshu.singhal^AHV-Management^^^Major - P2^17/Aug/18 10:07 AM^Resolved^14/Aug/19 11:44 PM
-Bug^ENG-167489^409069^Upload image failed with internal server error intermittent ^shashank.kumar^AHV-Management^^^Critical - P1^14/Aug/18 10:56 PM^Closed^05/Mar/19 11:25 AM
-Bug^ENG-166740^407720^"[3NL PC Systest PF] PC going OOM , seeing a tonne of hs_err* files "^shashank.kumar^AHV-Management^^^Major - P2^10/Aug/18 6:43 AM^Closed^19/Mar/19 12:09 AM
-Bug^ENG-166495^407311^"Acropolis in Crash loop, HAfailover failed during reconciliation"^asa.frank^AHV-Management^^^Critical - P1^09/Aug/18 10:14 AM^Resolved^04/Dec/19 6:54 AM
-Improvement^ENG-166030^406512^SSP: Add Power options in Console View of a VM in SSP^jsims^AHV-Management^^^Major - P2^07/Aug/18 4:25 PM^Open^
-Bug^ENG-165487^405588^Update VM dialog in prism is not re-sizable and truncating some content^jsims^AHV-Management^^^Major - P2^03/Aug/18 11:20 PM^Resolved^14/May/19 4:02 AM
-Bug^ENG-162452^397293^VM powered off after Acropolis restart during enter maintenance mode^asa.frank^AHV-Management^^^Critical - P1^21/Jul/18 4:05 AM^Resolved^30/Jan/19 10:10 PM
-Improvement^ENG-176390^396579^"AHV: Include ""HA status"" and ""Host in non-schedulable"" state as part of NCC or health check"^vistaar.juneja^AHV-Management^^^Major - P2^19/Jul/18 3:55 PM^Resolved^04/Sep/19 4:22 PM
-Bug^ENG-161802^395966^ovs-vswitchd crash leads to UVM network unavailability ^ani.sinha^AHV^^^Critical - P1^18/Jul/18 4:05 PM^Resolved^26/Feb/19 1:58 PM
-Bug^ENG-162178^395450^cloud-init user-data payload limit too small^ramashish.gaurav^^^^Critical - P1^17/Jul/18 7:49 PM^Resolved^26/Mar/19 10:05 AM
-Bug^ENG-161396^395228^Improve Error Message in AHV: Could not reserve enough space to protect this VM against node failure^asa.frank^AHV-Management^^^Major - P2^17/Jul/18 11:35 AM^Resolved^05/Mar/19 5:26 AM
-Bug^ENG-160636^393862^AHV Not releasing HA token after hypervisor upgrade^shaju.abraham^AHV^^^Major - P2^13/Jul/18 1:51 AM^Closed^05/Feb/19 11:22 AM
-Bug^ENG-158874^390286^Ergon wasn't able to commit LCM requests to update task due to cassandra being inundated^monica.jeyachandran^Ergon^^^Critical - P1^03/Jul/18 5:55 PM^Closed^24/Apr/19 11:07 AM
-Improvement^ENG-158077^388733^unregistration_cleanup.py script to handle cleanup of catalogue migrate tasks on PC^chaitanya.karlekar^AHV-Management^Prism Gateway^^Critical - P1^28/Jun/18 4:13 PM^Resolved^07/Aug/19 10:47 PM
-Improvement^ENG-157739^388165^AHV - Disable changing timezone ^^AHV^^^Minor - P3^27/Jun/18 3:06 PM^Reopened^
-Improvement^ENG-212697^387155^In REST API v3 cannot specify container for the VM^chirag.jamadagni^AHV-Management^^^Critical - P1^25/Jun/18 9:24 PM^Resolved^30/Mar/19 5:15 AM
-Bug^ENG-156512^385828^"PC Image service | Image creation should be disabled , when PC is not connected to PE"^jsims^AHV-Management^^^Major - P2^21/Jun/18 11:46 AM^Blocked^
-Improvement^ENG-155084^383127^ADS - Include information about the entity causing contention and resolution plan generated by solver in alert^aramesh^AHV-Management^^^Major - P2^14/Jun/18 9:48 AM^Open^
-Improvement^ENG-154272^381701^Delete Powered On VM in PC warning^jsims^AHV-Management^^^Major - P2^11/Jun/18 5:10 PM^Open^
-Bug^ENG-153961^381098^PC auto checkouts working with v3 chosen as API and not 3.1^chaitanya.karlekar^API Infra^^^Major - P2^08/Jun/18 5:50 PM^Closed^03/Apr/19 12:13 AM
-Improvement^ENG-243652^379570^size attribute under vm_disk_create section in VM creation REST API template^^AHV-Management^^^Minor - P3^05/Jun/18 7:22 PM^Resolved^09/Aug/19 4:52 AM
-Improvement^ENG-152900^379154^Checkout Improvements^shashank.kumar^AHV-Management^^^Critical - P1^05/Jun/18 3:00 AM^Closed^10/Sep/19 8:25 AM
-Bug^ENG-151776^376963^Metadata related to image creation not deleted from IDF when image creation fails^mohammed^AHV-Management^^^Major - P2^30/May/18 9:22 AM^Reopened^
-Improvement^ENG-150668^374739^AHV memory usage reporting in PE is misleading^jsims^AHV-Management^^^Critical - P1^23/May/18 11:32 PM^Reopened^
-Improvement^ENG-150611^374608^"The UVM vNICs order in Prism ""Update VM"" tab is Bottom-to-Top instead of Top-to-bottom "^jsims^AHV-Management^^^Major - P2^23/May/18 5:13 PM^Open^
-Bug^ENG-150486^374414^[openstack] Image create/upload from empty volume is allowed in OpenStack but corresponding task fails on acropolis - with error: ZeroDivisionError: long division or modulo by zero^mladen.drobnjakovic^AHV-Management^^^Major - P2^23/May/18 10:41 AM^Open^
-Bug^ENG-149483^372524^Unable to view container options in add disk window.^jsims^AHV-Management^^^Minor - P3^17/May/18 11:57 PM^Resolved^14/May/19 10:28 PM
-Bug^ENG-149469^372499^libvirtError: internal error: timed out waiting for disk tray status update^shaju.abraham^AHV^^^Critical - P1^17/May/18 10:52 PM^Resolved^29/Jan/19 12:18 AM
-Bug^ENG-149243^372131^Create a Guardrail to Prevent HA Update during MM.^bhuvnesh.jain^AHV-Management^^^Major - P2^17/May/18 5:19 AM^Closed^31/Mar/19 1:39 PM
-Improvement^ENG-148930^371513^Feature request for AOS and AHV logs to be consolidated into one log during an upgrade^luke.congdon^AHV^AHV-Management^Infrastructure^Major - P2^15/May/18 11:12 PM^Closed^12/Feb/19 6:49 AM
-Bug^ENG-147545^368697^Function keys don't map into Windows 10 VM console^chris.guan^AHV-Management^^^Major - P2^08/May/18 1:44 AM^Closed^24/Oct/19 12:22 AM
-Bug^ENG-146635^366965^"[ADS workflows] Lazan failed to detect anomaly due to solver error ""SolverModel.isRequestValid:840 Entity already exists vm""  "^fabien.hermenier^AHV-Management^^^Critical - P1^02/May/18 2:40 PM^Resolved^26/Mar/19 11:36 PM
-Improvement^ENG-146400^366548^AHV: Add snapshot exclusive usage size (aka: reclaimable space) to snapshot details^jsims^AHV-Management^^^Minor - P3^01/May/18 9:23 PM^Open^
-Bug^ENG-143888^361712^Acropolis: Update boot_device_order to actually set the boot order as entered^robert^AHV-Management^^^Major - P2^18/Apr/18 1:52 AM^Closed^08/Aug/19 1:41 AM
-Bug^ENG-141500^357319^Unable to register extension causes vCenter registration to fail^raghu.rapole^Uhura^^^Major - P2^06/Apr/18 3:15 AM^Closed^20/Mar/19 10:41 AM
-Improvement^ENG-257571^354329^RBAC-Allow End Users to manage Snapshot/Restores of AHV VMs^zankhana.pathak^AHV-Management^Cerebro^^Critical - P1^28/Mar/18 9:50 PM^In Progress^
-Bug^ENG-139513^353620^VMs migrated with protection domain in a new cluster keep host affinities from previous source cluster^blaise.cacciola^AHV-Management^^^Critical - P1^27/Mar/18 4:24 PM^Closed^29/Jan/19 11:00 PM
-Improvement^ENG-138958^352658^NCC - Check to determine the DRS rules applied to VMs in a metro/witness configuration.^manan.shah^Cerebro^Uhura^^Major - P2^24/Mar/18 3:26 AM^Open^
-Bug^ENG-138764^352289^Image create using https url fails^saurabh.dohare^AHV-Management^^^Major - P2^23/Mar/18 9:09 AM^Closed^16/May/19 6:37 AM
-Improvement^ENG-138565^351921^Windows Server 2016 Hot Add CPU Support for AHV^jitendra.singh^AHV^^^Critical - P1^22/Mar/18 2:01 PM^Closed^01/Mar/19 11:55 PM
-Bug^ENG-137075^349146^Selected VM changes to another VM without selection change^chris.guan^AHV-Management^^^Major - P2^14/Mar/18 11:12 PM^Resolved^20/Aug/19 3:29 AM
-Improvement^ENG-136245^347653^"NCC should detect ""schedulable: False"""^scheduler-eng^AHV-Management^^^Critical - P1^11/Mar/18 5:23 PM^Open^
-Improvement^ENG-135406^346191^Failed image upload to not populate image tab in PC^jsims^AHV-Management^^^Major - P2^06/Mar/18 10:33 PM^Open^
-Bug^ENG-133668^335608^"PC create image via URL upload fails due to whitespace in URL, encoding fails"^alejand.mier^AHV-Management^^^Minor - P3^24/Feb/18 1:28 AM^Closed^19/Apr/19 1:08 AM
-Bug^ENG-131364^331488^Metropolis needs to map recovery points and other attributes to cluster affinity^raja.thota^AHV-Management^^^Blocker - P0^10/Feb/18 4:28 AM^Closed^07/Feb/19 1:24 AM
-Improvement^ENG-130097^329161^"Some customers are likely setting ""tsc"" clocksource"^kenneth.whittaker^AHV^^^Minor - P3^03/Feb/18 4:26 AM^Need Info^
-Bug^ENG-129579^328183^NCC: uvm_ide_disk_check results in Error occurred when trying to get vmdk info^raghu.rapole^Uhura^^^Major - P2^31/Jan/18 10:07 PM^Closed^04/Jun/19 10:15 AM
-Improvement^ENG-128693^326594^Lazan: Usage of virtual resource controller_cpu on nodes exceeds their capacity ^aramesh^AHV-Management^^^Critical - P1^26/Jan/18 4:20 AM^Open^
-Improvement^ENG-127718^324964^Should include an option to cancel an upload while in progress^jsims^AHV-Management^^^Major - P2^22/Jan/18 10:07 PM^Open^
-Bug^ENG-127237^324083^'Take screenshot' button in VNC console does not work^chris.guan^AHV-Management^^^Major - P2^18/Jan/18 9:15 PM^Resolved^20/May/19 10:52 PM
-Improvement^ENG-126683^323078^Big files upload to Image Services using Internet Explorer/Edge may fail^jsims^AHV-Management^^^Critical - P1^16/Jan/18 8:37 PM^Blocked^
-Bug^ENG-126676^323062^Acropolis in crash loop due to inconsistent image catalogue state^robert^AHV-Management^^^Critical - P1^16/Jan/18 6:23 PM^Closed^22/May/19 12:10 AM
-Improvement^ENG-126539^322861^Allow the creation of VM templates from images^jsims^AHV-Management^^^Major - P2^16/Jan/18 5:00 AM^Open^
-Improvement^ENG-126275^322358^Add option to pass authentication details for the source_url when creating image - I^shashank.kumar^AHV-Management^^^Critical - P1^12/Jan/18 2:45 AM^Open^
-Improvement^ENG-124113^318332^Can't power on VMs when one AHV host enter maintenance mode.^scheduler-eng^AHV-Management^^^Major - P2^22/Dec/17 7:23 AM^Open^
-Improvement^ENG-124102^318305^Request for  VMware Proactive HA Plugin on Nutanix^luke.congdon^AHV-Management^^^Trivial - P4^22/Dec/17 5:08 AM^Closed^03/Jan/19 11:55 PM
-Bug^ENG-124046^318192^Need a way to timeout and/or cancel hypervisor pre-upgrade tasks^supreet.sriniva^Ergon^Infrastructure^^Major - P2^21/Dec/17 10:29 PM^Resolved^21/Jan/19 3:49 PM
-Improvement^ENG-192753^317245^Power ops for PC^lonnie.hutchinson^AHV-Management^^^Critical - P1^19/Dec/17 10:18 AM^Open^
-Bug^ENG-122595^315429^Mounting an iso to an already added empty cdrom doesn't work from v3^chirag.jamadagni^AHV-Management^^^Critical - P1^12/Dec/17 7:40 PM^Closed^20/Jun/19 3:29 AM
-Improvement^ENG-121877^314287^Catalog item checkout does not compress bits - Part 1^shashank.kumar^AHV-Management^^^Critical - P1^08/Dec/17 12:57 AM^Closed^01/May/19 6:16 AM
-Improvement^ENG-120954^312394^AHV: documentation on how to add new physical NIC for AHV^mbelef^AHV^Documentation^^Major - P2^01/Dec/17 9:00 AM^Closed^29/Jan/19 2:07 PM
-Improvement^ENG-118084^307402^ Release Process Improvement -- Automate generation of metadata file for AHV ^dli^AHV^^^Major - P2^13/Nov/17 8:48 AM^Closed^09/Jul/19 2:28 AM
-Bug^ENG-117594^306510^Make catalog checkout best effort per destination basis^suraj.kasi^AHV-Management^^^Major - P2^09/Nov/17 3:53 AM^Resolved^19/Jun/19 12:26 AM
-Bug^ENG-116994^305331^"Deselecting the "" Use this VM as an agent VM"" checkbox does not work as expected"^asa.frank^AHV-Management^^^Major - P2^04/Nov/17 4:44 AM^Closed^16/Nov/19 6:14 AM
-Bug^ENG-116792^304954^Missing check for image create file permissions ^partha.goswami^AHV-Management^^^Major - P2^03/Nov/17 3:49 AM^Resolved^17/May/19 11:10 PM
-Bug^ENG-115863^302905^AHV: WARNING: CPU: 37 PID: 16264 at arch/x86/kvm/vmx.c:10660 vmx_pre_block.part.48+0x150/0x1e0 [kvm_intel]()^malcolm.crossley^AHV^^^Major - P2^26/Oct/17 7:08 PM^Resolved^08/Nov/19 9:24 PM
-Improvement^ENG-116582^302620^AHV: Expose vcpu placement / pinning as knob^karan.talreja^AHV-Management^^^Major - P2^25/Oct/17 9:12 AM^Closed^19/Oct/19 12:46 AM
-Improvement^ENG-115735^302619^AHV: Update NIC ring buffers on all supported NICs^^AHV^^^Major - P2^25/Oct/17 8:59 AM^Open^
-Improvement^ENG-113499^298117^PC side does not cleanup/add-back catalog item metadata for PE un-register/re-register events^suraj.kasi^AHV-Management^^^Critical - P1^07/Oct/17 6:22 AM^Open^
-Bug^ENG-112385^295954^[Shire of Harvey] [AHV] Unable to clone a VM when managed network is present^sherry.li^AHV-Management^^^Critical - P1^29/Sep/17 2:59 PM^Resolved^15/May/19 11:43 PM
-Bug^ENG-110674^292929^Could not restore VM High Availability.^nitin.badam^AHV-Management^^^Critical - P1^20/Sep/17 1:21 AM^Resolved^08/Feb/19 5:11 AM
-Bug^ENG-109733^291284^Need better error message when scheduling VMs on hosts that are not schedulable^asa.frank^AHV-Management^^^Major - P2^14/Sep/17 8:43 AM^Closed^09/Jan/19 3:23 AM
-Bug^ENG-109517^290868^[Lenovo HW] Prism does not show correct information until other tabs are visited and come back to the page.^jsims^AHV-Management^^^Major - P2^13/Sep/17 9:46 AM^Resolved^15/May/19 12:56 AM
-Bug^ENG-107959^288104^Keyboard wrong mapping/dead characters in VM console^chris.guan^AHV-Management^^^Minor - P3^02/Sep/17 5:07 AM^Open^
-Improvement^ENG-104469^281979^[AHV Only] Snapshot http://<Acropolis Master>:2030/sched page every 30 minutes under sysstat directory ^scheduler-eng^AHV-Management^^^Major - P2^11/Aug/17 1:20 PM^Resolved^18/Jan/19 6:15 AM
-Bug^ENG-102185^277872^Cannot adjust resolution on Windows 2012 R2 UEFI based VM^prerna.saxena^AHV^^^Critical - P1^28/Jul/17 6:34 PM^Resolved^26/Feb/19 11:40 AM
-Improvement^ENG-101745^277124^Images in a unsupported format (qcow2.xz) can be created but are unusable^shashank.kumar^AHV-Management^^^Minor - P3^26/Jul/17 11:45 PM^Resolved^05/Sep/19 1:08 AM
-Bug^ENG-98987^272148^[AHV-PF] VM entered in to paused state in the middle of AHV upgrade.^prerna.saxena^AHV^^^Major - P2^08/Jul/17 2:08 AM^Resolved^17/Jan/19 12:55 PM
-Improvement^ENG-97108^268737^Ignore access() calls in our libnfs^aman.nijhawan^AHV-Management^^^Major - P2^21/Jun/17 11:33 PM^Open^
-Improvement^ENG-96456^267420^Add ability to mount VMware tools/NGT to all VMs^nandini.ps^AHV-Management^^^Major - P2^16/Jun/17 7:55 PM^Resolved^16/May/19 4:16 PM
-Improvement^ENG-198556^267024^System hostname and Operating system wrongly displayed in IDRAC for AHV^prerna.saxena^AHV^^^Minor - P3^15/Jun/17 4:10 PM^Reopened^
-Bug^ENG-93393^261883^NVMe/RDMA clusters: PCI bus numbering changes [leading to wrong device being passed to CVM for passthru devices]^suresh.gumpula^AHV^^^Critical - P1^25/May/17 11:05 PM^Resolved^23/Apr/19 9:31 PM
-Bug^ENG-93050^261194^VM with frodo blocks memory hotplug with GPU assigned^raphael.norwitz^AHV^^^Major - P2^23/May/17 7:10 PM^Closed^29/Jan/19 12:33 AM
-Bug^ENG-92645^260353^"XenServer || Prism VM view inconsistent || DOM0"^jsims^AHV-Management^^^Major - P2^19/May/17 11:44 AM^Resolved^15/May/19 12:52 AM
-Improvement^ENG-89456^254261^Set host OS RX buffers to 2048 for improved throughput under load^felipe.franciosi^AHV^^^Critical - P1^26/Apr/17 2:50 AM^Resolved^20/Feb/19 11:28 PM
-Improvement^ENG-88057^251490^Prism -> VM page -> Export to json/csv file should include additional details^jsims^AHV-Management^^^Critical - P1^17/Apr/17 9:02 PM^Need Info^
-Improvement^ENG-87167^249669^[AHV] Add option to clone and deploy from image service to specific container^ramana.murthy^AHV-Management^^^Major - P2^10/Apr/17 11:32 PM^Reopened^
-Bug^ENG-85692^247199^Host was removed from AHV cluster though VM's were still running^hmantri^AHV-Management^^^Critical - P1^03/Apr/17 9:20 AM^Closed^23/Aug/19 2:48 AM
-Improvement^ENG-98537^246144^uvm_ide_disk_check - Need Improved output on GUI and CLI^monica.jeyachandran^Uhura^^^Critical - P1^29/Mar/17 12:10 PM^Closed^17/Jun/19 11:16 AM
-Bug^ENG-76412^231375^"NX-1465-G4: Host upgrade hang because CVM failed to boot up after host restart“vfio: Error: Failed to setup INTx fd: No such device"""^malcolm.crossley^AHV^^^Critical - P1^03/Feb/17 1:38 PM^Resolved^23/Mar/19 2:23 AM
-Bug^ENG-74189^224297^Mouse operation not working in Console tab when creating new VM^ivy.wang^AHV-Management^^^Minor - P3^09/Jan/17 6:10 AM^Resolved^26/Feb/19 11:14 PM
-Improvement^ENG-73756^222798^Customer would like to be able to *reduce* the size of a virtual disk on AHV^^AHV^^^Minor - P3^29/Dec/16 1:55 AM^Closed^11/Jan/19 4:46 AM
-Improvement^ENG-72773^219520^UI for all v3 power operations in PC^glenn.ryan^AHV-Management^^^Critical - P1^09/Dec/16 2:50 AM^Resolved^30/Oct/19 10:15 PM
-Improvement^ENG-72258^218139^The VM snapshots which are taken from VM page needs to be listed on Prism after Vm delete^jsims^AHV-Management^^^Major - P2^03/Dec/16 1:39 AM^Reopened^
-Bug^ENG-71753^216712^AHV reporting inconsistent hypervisor id - need to report correct one ^malcolm.crossley^AHV^^^Major - P2^25/Nov/16 4:09 PM^Resolved^23/May/19 10:13 PM
-Bug^ENG-66930^205040^Ability to Eject the VirtIO drivers from a running Windows VM on AHV^peter.turschm^AHV^^^Major - P2^07/Oct/16 12:22 PM^Resolved^10/Jan/19 1:26 AM
-Improvement^ENG-61611^192996^Need MD5SUM of Image Configuration Files^jsims^AHV-Management^^^Major - P2^13/Aug/16 2:50 AM^Open^
-Improvement^ENG-61420^192632^There is no way to cancel image upload for a prism UI user^jsims^AHV-Management^^^Major - P2^11/Aug/16 3:43 PM^Reopened^
-Bug^ENG-60865^191545^AHV Charts Not Added to the Analysis Page in Prism^jsims^AHV-Management^^^Major - P2^05/Aug/16 10:00 PM^Resolved^14/May/19 3:56 AM
-Improvement^ENG-60557^190839^"PT Sistech Kharisma || Generate the chart for a time period for a VM or group of VMs."^mahesh.patil^AHV-Management^^^Major - P2^03/Aug/16 5:11 PM^Open^
-Improvement^ENG-56262^180060^Add columns to acli task.list output^russell.creech^AHV-Management^^^Minor - P3^28/May/16 4:33 AM^Closed^10/May/19 2:20 AM
-Improvement^ENG-117332^175288^Edit VM tab - VLAN canonical name column^jsims^AHV-Management^^^Minor - P3^03/May/16 11:36 PM^Open^
-Improvement^ENG-54328^175081^Regular Expression Matching in ACLI^luke.congdon^AHV-Management^^^Major - P2^03/May/16 1:21 AM^Reopened^
-Improvement^ENG-52637^169749^"acropolis: simplify ""switch vmdisk to SCSI"" operation"^raymond.yip^AHV-Management^^^Minor - P3^06/Apr/16 8:57 PM^Resolved^07/Mar/19 3:45 AM
-Improvement^ENG-50759^163448^Request to speed up the refresh rate of VM info tabs in Prism^thomas.sha^AHV-Management^^^Minor - P3^05/Mar/16 12:38 AM^Resolved^08/Oct/19 1:54 AM
-Improvement^ENG-50462^162162^[AHV] Need to have option on GUI to change hostname^^AHV^^^Major - P2^27/Feb/16 3:00 AM^Blocked^
-Bug^ENG-50451^162117^Upload a disk image should not be timed out. ^samrudhi^AHV-Management^^^Critical - P1^27/Feb/16 12:11 AM^Resolved^07/Mar/19 12:57 AM
-Bug^ENG-42650^115563^Windows guest VM performance poor for 1M sequential write^^AHV^AHV-Management^^Minor - P3^11/Nov/15 10:42 PM^Closed^17/Jan/19 11:50 AM
-Bug^ENG-42231^114553^Acropolis 4.5.0.x dialogs in Prism stuck at 'Loading data' indefinitely^jsims^AHV-Management^^^Major - P2^06/Nov/15 1:03 AM^Resolved^06/Mar/19 10:44 PM
-Improvement^ENG-40667^110733^Show Image names being used for CDROM/DISKs in UI^jsims^AHV-Management^^^Major - P2^19/Oct/15 12:47 PM^Resolved^28/Jun/19 3:09 AM
-Improvement^ENG-35345^94715^Automated VirtIO Driver Injection^luke.congdon^AHV^AHV-Management^^Critical - P1^17/Jul/15 9:59 PM^Open^
-Improvement^ENG-27075^67199^Show space utilized by live VM and snapshot^curator^AHV-Management^^^Minor - P3^10/Jan/15 4:08 AM^Open^
+Issue Type^Issue key^Issue id^Summary^Assignee^Component/s^Component/s^Component/s^Priority^Created^Status^Resolved^Resolution
+Bug^ENG-282170^682313^"Host unable to exit maintenance mode due to Acropolis leader ""ERROR scheduler.py:984 Could not get hypervisor memory overhead on host <PHANTOM_UUID>"""^ahv-eng^AHV^^^Major - P2^25/Jan/20 5:08 AM^Open^^
+Improvement^ENG-282150^682509^Improve logic to quickly GC the entry for VMs deleted from vCenter^chandan.thakur^Uhura^^^Major - P2^25/Jan/20 2:38 AM^Open^^
+Improvement^ENG-281620^680776^Raise an alert in Prism for VM description longer than 1000 characters^acropolis^AHV-Management^^^Minor - P3^23/Jan/20 9:36 PM^Open^^
+Improvement^ENG-281184^680360^Acropolis: Improve the workflow of updating the VM boot device in Prism.^jsims^AHV-Management^^^Major - P2^22/Jan/20 8:57 PM^Need Info^^
+Improvement^ENG-280914^680008^Panacea: Highlight known and suspected causes for host reboots^ahv-eng^Panacea^^^Major - P2^22/Jan/20 3:06 AM^Open^^
+Bug^ENG-280849^679547^device_index field in VM creation spec caused Uhura to go into a crash loop^syam.mohan^Uhura^^^Major - P2^21/Jan/20 9:04 PM^Open^^
+Bug^ENG-280329^678276^AHV - Update NetKVM Tx/Rx buffers^peter.turschm^AHV^^^Major - P2^18/Jan/20 4:51 PM^Open^^
+Bug^ENG-280328^678274^VirtIO - NetKVM should adjust m_nReusedRxBuffersLimit if allocation of all RX buffers fails^^AHV^^^Critical - P1^18/Jan/20 1:24 PM^Open^^
+Bug^ENG-280246^678160^"Attempting to power on VMs fails with ""ValueError: need more than 1 value to unpack"""^bhuvnesh.jain^AHV-Management^^^Major - P2^18/Jan/20 2:39 AM^In Progress^^
+Bug^ENG-279980^677465^[ncc] raise warning for ahv_read_only_fs_check alerts^raymond.yip^AHV-Management^^^Major - P2^16/Jan/20 10:25 PM^Closed^18/Jan/20 12:36 AM^Fixed
+Bug^ENG-279650^676585^LCM does not offer 20190916.96 when using offline bundle^viswanathan.vaidyana^AHV^^^Critical - P1^15/Jan/20 5:16 PM^In Progress^^
+Bug^ENG-279167^675790^EnterMaintenanceMode task failed with message: Timed out waiting for HA status to become protected.^fabien.hermenier^AHV-Management^^^Major - P2^14/Jan/20 12:01 AM^Open^^
+Improvement^ENG-279051^675183^Need to map tap interfaces with UVM UUID in ovsdb logs^shrinivasa.kini^AHV^Networking^^Major - P2^13/Jan/20 1:39 PM^Open^^
+Bug^ENG-278582^673690^Cannot put a vm into new project in PC^abhiram.parvatharedd^AHV-Management^^^Critical - P1^10/Jan/20 5:17 AM^In Progress^^
+Bug^ENG-278548^673325^Boot order lost after changing affinity rules^acropolis^AHV-Management^Uhura^^Major - P2^10/Jan/20 2:42 AM^Open^^
+Bug^ENG-278231^672415^Dual Mellanox Connect-X cards do not have interfaces on 8035 G7'^ahv-eng^AHV^Networking^^Critical - P1^08/Jan/20 11:20 PM^Resolved^09/Jan/20 1:02 AM^Fixed
+Improvement^ENG-277971^671814^Panacea: Highlight suspected instances of ENG-269432^russell.creech^Panacea^^^Major - P2^07/Jan/20 10:53 PM^Pending Review^^
+Bug^ENG-277931^671745^Networking broken on el7 AHV because multiple devices want to be called eno1^jonathan.davies^AHV^^^Critical - P1^07/Jan/20 5:10 PM^Resolved^23/Jan/20 10:33 PM^Fixed
+Bug^ENG-277038^669577^acli host.enter_maintenance_mode should work with either IP or hostname^shruthi.racha^AHV-Management^^^Major - P2^03/Jan/20 7:31 AM^Open^^
+Improvement^ENG-276917^669408^Increase frequency of AHV SAR logs^ani.sinha^AHV^^^Major - P2^02/Jan/20 5:23 PM^Pending Merge^^
+Bug^ENG-276873^669236^ha: change ha state from highlyAvailable when num_remaining_host_failures_to_tolerate changes to 1^asa.frank^AHV-Management^^^Major - P2^02/Jan/20 2:26 PM^Open^^
+Improvement^ENG-276853^669230^acropolis guardrail for kNewNode^scheduler-eng^AHV-Management^^^Major - P2^02/Jan/20 12:56 PM^Open^^
+Improvement^ENG-276707^668855^AHV: Add VM migration progress details in logs^ivan.teterevkov^AHV^^^Major - P2^31/Dec/19 2:40 AM^Open^^
+Improvement^ENG-276476^667925^Panacea: Detect ISB-094^nishant.verma^Panacea^^^Minor - P3^28/Dec/19 2:16 AM^Open^^
+Bug^ENG-276358^667440^Ergon crash due to IDF having 2 Lac+ tasks^asifali.jamadar^Ergon^^^Critical - P1^27/Dec/19 11:01 AM^Need Info^^
+Improvement^ENG-275967^666819^Remove core dumps older than 3 months^ani.sinha^AHV^^^Major - P2^24/Dec/19 5:53 PM^In Progress^^
+Bug^ENG-275952^666686^"Image List API call fails with ""message"": ""Internal Server Error. list index out of range"""^shashank.kumar^AHV-Management^^^Major - P2^24/Dec/19 3:37 PM^Open^^
+Bug^ENG-275781^666357^VirtIO - Lack of VPD_BLOCK_LIMITS support breaks BitLocker in 2019^peter.turschm^AHV^^^Critical - P1^23/Dec/19 8:11 PM^Open^^
+Bug^ENG-274959^664359^AHV: Investigate possible causes for VM migrate task returning before migration completes^ivan.teterevkov^AHV^^^Major - P2^19/Dec/19 2:40 AM^Open^^
+Improvement^ENG-274854^664122^"Gyldendal A/S | Need ""Power off Actions"" option to be available on multiple VMs at once"^jsims^AHV-Management^^^Minor - P3^18/Dec/19 6:21 PM^Open^^
+Bug^ENG-274301^662866^Out-of-Memory failure on firstboot due to pressure-d issue.^asheesh.kwatra^AHV^^^Blocker - P0^17/Dec/19 4:27 AM^Closed^18/Jan/20 3:05 AM^Fixed
+Bug^ENG-274248^662625^Improve messaging when a UVM has vga_console is set to false^glenn.ryan^AHV-Management^^^Major - P2^16/Dec/19 11:44 PM^Resolved^11/Jan/20 11:10 AM^Fixed
+Bug^ENG-273600^660816^[GPU HA] Test failed to restart the VMs as apart of HAfailover^nitin.badam^AHV-Management^^^Critical - P1^12/Dec/19 5:01 PM^Closed^13/Dec/19 11:59 PM^Fixed
+Bug^ENG-273008^659357^X722 firmware with LLDP disabled causes AHV crash on boot^raphael.norwitz^AHV^^^Blocker - P0^11/Dec/19 12:40 AM^Resolved^21/Jan/20 5:43 PM^Fixed
+Improvement^ENG-273000^659262^Nutanix Virt-who not pushing AHV host to Satellite when having config files for both  ESXi and AHV under /etc/virt-who.d/^amir.eibagi^AHV-Management^^^Major - P2^11/Dec/19 12:23 AM^Open^^
+Bug^ENG-272607^658268^Acropolis deadlock during initialisation (telemetry manager and host manager)^robert^AHV-Management^^^Critical - P1^09/Dec/19 10:59 PM^Closed^20/Dec/19 9:29 AM^Fixed
+Bug^ENG-272245^657230^[Logrhythm] AHV host not schedulable due to inadvertent corruption^ahv-eng^AHV^^^Major - P2^07/Dec/19 6:08 AM^Resolved^09/Dec/19 5:39 PM^Physical Hardware Failure
+Bug^ENG-271242^655121^NFS client object in _poll_loop causing Genesis to consume roughly 100% CPU  ^mladen.drobnjakovic^AHV-Management^Infrastructure^LCM^Critical - P1^03/Dec/19 7:06 PM^In Progress^^
+Improvement^ENG-271232^655113^Enable HA reservation page shows a wrong value for reserved memory^jsims^AHV-Management^^^Major - P2^03/Dec/19 5:30 PM^Open^^
+Bug^ENG-270655^653809^"[Uhura] Uhura crashing with ""CRITICAL vm_base_task.py: Found duplicate VM entity in task entity list"""^syam.mohan^Uhura^^^Critical - P1^29/Nov/19 1:06 PM^Resolved^31/Dec/19 10:08 AM^Fixed
+Bug^ENG-270645^653799^[ERGON] dispatcher libraries should use task iterator for listing^monica.jeyachandran^AHV-Management^Ergon^^Critical - P1^29/Nov/19 12:30 PM^Closed^26/Dec/19 1:27 PM^Fixed
+Bug^ENG-270376^652862^"Acropolis stats_publisher stuck after node down for multiple days, failing to publish virtual_network data to arithmos"^amit.singh^AHV-Management^^^Critical - P1^28/Nov/19 1:13 AM^Need Info^^
+Improvement^ENG-270027^652298^Ergon Task should have basic attributes indexed in IDF^vistaar.juneja^AHV-Management^Ergon^^Critical - P1^26/Nov/19 4:41 PM^Reopened^^
+Bug^ENG-269432^650760^Fix for host_gpu entity publishing (ENG-222034) causes acropolis master initialization deadlock^shyam.rajendran^AHV-Management^^^Critical - P1^23/Nov/19 1:58 AM^Resolved^24/Jan/20 9:10 PM^Fixed
+Bug^ENG-269333^650525^Typo in printing usage section of the script - remove_image_catalog^suraj.kasi^AHV-Management^^^Major - P2^22/Nov/19 3:30 PM^Open^^
+Improvement^ENG-269157^650065^Customer requests for the ability to schedule certain VMs to restart automatically based on a configurable schedule^luke.congdon^AHV^Prism Central^^Minor - P3^22/Nov/19 4:27 AM^Open^^
+Bug^ENG-268795^649563^[AHV-PF] AHV upgrade from el6 to el7 failed due to satadom IO errors^daniel.shubin^AHV^^^Critical - P1^21/Nov/19 5:11 AM^Closed^09/Dec/19 11:41 PM^Fixed
+Improvement^ENG-268677^649350^NCC check for EXT4 corruption signature on AHV boot device. Maybe we can improvise and use ENG-231407?^^AHV^NCC^^Minor - P3^20/Nov/19 5:36 PM^Open^^
+Improvement^ENG-268672^649345^PXE UEFI improvement^prerna.saxena^AHV^^^Critical - P1^20/Nov/19 4:55 PM^Open^^
+Improvement^ENG-268595^649291^acropolis: acropolis master should FATAL when it cannot connect to local ssh to the host for a long time^manikandan.selvagane^AHV-Management^^^Critical - P1^20/Nov/19 12:59 PM^Open^^
+Bug^ENG-268562^648965^acropolis: improve logging in vmdisk scanner code path^raghu.rapole^AHV-Management^^^Major - P2^20/Nov/19 10:57 AM^Open^^
+Bug^ENG-268559^648964^acropolis: improve vmdisk scanner logic for validating vm/vg config ^Sai.Vishalk^AHV-Management^^^Major - P2^20/Nov/19 10:45 AM^Open^^
+Improvement^ENG-268510^649050^Panacea: parse log bundle to report on life cycle of VMs and hosts^nishant.verma^Panacea^^^Major - P2^20/Nov/19 4:05 AM^Open^^
+Bug^ENG-268375^648643^Uhura VmDestroy task should succeed if the VM is already deleted.^syam.mohan^Uhura^^^Critical - P1^19/Nov/19 4:26 PM^Resolved^19/Dec/19 10:14 PM^Fixed
+Bug^ENG-266745^644592^AHV upgrade - Software is not compatible error^bruce.gao^AHV^Prism UI^^Critical - P1^13/Nov/19 12:23 AM^Closed^14/Nov/19 1:31 AM^Customer Config Issue
+Improvement^ENG-266615^644073^Request for Proactive HA on Nutanix^scheduler-eng^AHV-Management^^^Major - P2^12/Nov/19 1:08 PM^Open^^
+Bug^ENG-266320^643285^acropolis: fix UEFI clone^prerna.saxena^AHV-Management^^^Blocker - P0^11/Nov/19 4:26 PM^Resolved^15/Jan/20 8:08 PM^Fixed
+Bug^ENG-266177^643213^VM powering ON on the host having hotspot.^aramesh^AHV-Management^^^Major - P2^11/Nov/19 11:15 AM^Open^^
+Bug^ENG-266083^642186^[ESX] UhuraManagementServerConnectionError: vCenter connection could not be established^acropolis^Uhura^^^Critical - P1^09/Nov/19 9:24 AM^Closed^17/Jan/20 1:25 PM^Cannot Reproduce
+Improvement^ENG-265778^640874^AHV: Log image conversion progress^abhijit.khopkar^AHV-Management^^^Minor - P3^08/Nov/19 3:11 AM^Open^^
+Improvement^ENG-265749^640940^Reduce IDF calls and memory in task_scanner^vistaar.juneja^Ergon^^^Major - P2^07/Nov/19 11:59 PM^Open^^
+Bug^ENG-265678^640437^Guardrail Needed: A bad response from libvirtd on a single host should be prevented from bringing down an entire cluster^manikandan.selvagane^AHV-Management^^^Critical - P1^07/Nov/19 6:42 PM^Open^^
+Bug^ENG-265260^640006^Traceback received while running Panacea on cluster^tao.guan^Panacea^^^Critical - P1^06/Nov/19 12:59 PM^Reopened^^
+Improvement^ENG-265255^640001^[AHV-mgmt][AHV] Have a watchdog daemon or monitor service to bring up iscsi_redirector if it goes down ^^AHV^AHV-Management^^Critical - P1^06/Nov/19 12:40 PM^Open^^
+Improvement^ENG-264989^639034^PRISM VM creation uses hot-add by default without being able to uncheck^chandan.thakur^AHV-Management^Uhura^^Critical - P1^05/Nov/19 4:49 PM^Open^^
+Improvement^ENG-264825^638903^Augment RPCs and acli commands for adjusting vNIC rx_queue_size^gasmith^AHV-Management^^^Major - P2^05/Nov/19 7:09 AM^Pending Merge^^
+Bug^ENG-264397^637889^OVS active-standby bond sometimes sends traffic out standby interface^ivan.teterevkov^AHV^^^Critical - P1^01/Nov/19 10:57 PM^Resolved^09/Jan/20 6:51 PM^Fixed
+Bug^ENG-263988^636933^AHV 20170830.171 is missing in host-bundle-el6.nutanix.20170830.337-metadata.json. ^bruce.gao^AHV^^^Critical - P1^30/Oct/19 8:46 PM^Resolved^01/Nov/19 10:18 PM^Fixed
+Bug^ENG-263286^635168^Image update for Quest KACE SMA fails on AHV with invalid footer^amandeep.chabra^AHV-Management^^^Major - P2^25/Oct/19 3:05 PM^Need Info^^
+Bug^ENG-262991^634433^ahv: rpmdb error: db3 error(30974) from dbenv>open: DB_RUNRECOVERY: Fatal^jonathan.davies^AHV^^^Critical - P1^24/Oct/19 4:27 PM^Resolved^19/Dec/19 3:05 PM^WorkAround Provided
+Bug^ENG-262848^634134^LCM AHV el6->el7 upgrade failed on CO cluster:  lcm_ops_by_host encountered exception ^bruce.gao^AHV^^^Critical - P1^24/Oct/19 5:55 AM^Closed^07/Nov/19 6:36 AM^Fixed
+Bug^ENG-269813^634078^Simpson Thacher & Bartlett- Adding VM to project (post ESXi to AHV conversion)  fails with - Edit Conflict :please retry change.^Sai.Vishalk^AHV-Management^^^Major - P2^24/Oct/19 3:02 AM^Pending Merge^^
+Improvement^ENG-262382^633137^HA in healing because of EMM needs to trigger and alert immediately after it knows EMM cannot succeed.^infra_torch_bearer^AHV-Management^^^Critical - P1^22/Oct/19 11:19 PM^In Progress^^
+Bug^ENG-262118^632378^API v3 returns 500 internal error when creating the image with the 'X-Nutanix-Checksum' option^mladen.drobnjakovic^AHV-Management^^^Major - P2^22/Oct/19 2:28 AM^Open^^
+Bug^ENG-261700^631762^volume_group GET APIs should not create charges on PE^lonnie.hutchinson^AHV-Management^^^Critical - P1^19/Oct/19 4:52 AM^Closed^10/Jan/20 3:13 AM^Fixed
+Bug^ENG-261593^631473^acropolis times out on reaching max number of http connections. ^amir.eibagi^AHV-Management^^^Critical - P1^18/Oct/19 4:21 PM^Resolved^24/Jan/20 2:23 AM^Fixed
+Bug^ENG-261310^630647^"5.11 PC Image service - Image Deletion needs to be improved , should be able to allow the deletion irrespective of the owner_cluster_uuid"^srinivas.pakala^AHV-Management^^^Critical - P1^17/Oct/19 9:54 PM^Closed^22/Oct/19 2:29 PM^Released
+Improvement^ENG-260981^629887^[New] AOS Pre-upgrade Check: AHV - AOS Pre-upgrade Check to verify the compatibility of the current AHV with the AHV bundled with AOS trying to upgrade to.^yunting.xiang^AHV^^^Major - P2^16/Oct/19 7:25 PM^In Progress^^
+Improvement^ENG-260797^629459^Flip the UI logic to fetch for all images not owned by PC in Image Import PC^jsims^AHV-Management^^^Major - P2^16/Oct/19 5:41 AM^Resolved^19/Oct/19 2:38 AM^Fixed
+Bug^ENG-259882^627422^"Remove x86 drivers for Windows Server 2008 r2, 2012, 2012 r2 and 2016 from virtio iso"^peter.turschm^AHV^^^Major - P2^11/Oct/19 7:27 PM^Open^^
+Improvement^ENG-259446^626641^Need better mechanism to determine Acropolis master and Libvirt timeout for HA actions ^scheduler-eng^AHV-Management^^^Critical - P1^10/Oct/19 2:30 PM^Open^^
+Improvement^ENG-259312^626363^Additional field options while taking VM snapshot^luke.congdon^AHV-Management^^^Minor - P3^10/Oct/19 3:32 AM^Open^^
+Bug^ENG-259141^625641^"Image list fails -- ""message"": ""Internal Server Error. kNotFound: Could not find images: <IMAGE_UUID>"^mladen.drobnjakovic^AHV-Management^^^Critical - P1^09/Oct/19 12:54 PM^Resolved^23/Jan/20 4:15 AM^Fixed
+Bug^ENG-259029^625194^Image creation fails if source_url points to local NFS container and contains a space^mladen.drobnjakovic^AHV-Management^Stargate^^Minor - P3^09/Oct/19 3:02 AM^Pending Merge^^
+Bug^ENG-258868^624660^Panacea only extracts one host into report for logbay uploads^nishant.verma^Panacea^^^Blocker - P0^08/Oct/19 1:45 AM^Closed^25/Oct/19 3:42 PM^Fixed
+Bug^ENG-258807^624601^CVMs for the Nodes with node_type set to kAhvNeverSchedulable missing in the Prism VM list^amir.eibagi^AHV-Management^Nutanix Insights^^Critical - P1^07/Oct/19 6:18 PM^Pending Review^^
+Bug^ENG-258694^623787^"""Morgans financial Pty LTD"" - can not open vm console when connect to PE via PC"^jsims^AHV-Management^^^Major - P2^07/Oct/19 6:47 AM^Need Info^^
+Improvement^ENG-258234^622652^Add visual indication in Prism for Agent VMs^team-pm^AHV-Management^^^Major - P2^03/Oct/19 2:37 PM^Open^^
+Improvement^ENG-257967^622125^Add Guest OS as custom focus element in PE^jsims^AHV-Management^^^Minor - P3^02/Oct/19 9:31 PM^Open^^
+Bug^ENG-257450^620429^AHV 1-click upgrade stalled due to files with no owner (follow up from ENG-56191)^^AHV^^^Critical - P1^30/Sep/19 6:08 PM^Closed^07/Oct/19 7:29 PM^Cannot Reproduce
+Improvement^ENG-257317^619686^Feature to regulate bandwidth usage between CVM and vCenter. ^parth.gupta1^Uhura^^^Critical - P1^30/Sep/19 10:08 AM^Open^^
+Bug^ENG-257104^619590^"Granular VM permission like 'Update VM memory', 'Update VM CPU' doesn't work. "^chris.guan^AHV-Management^^^Critical - P1^27/Sep/19 3:55 PM^Resolved^06/Dec/19 4:53 AM^Resolved
+Bug^ENG-256869^618953^Uhura Code Incorrect on AOS 5.10.x^syam.mohan^Uhura^^^Major - P2^27/Sep/19 2:38 AM^Resolved^05/Nov/19 11:50 AM^Fixed
+Bug^ENG-256601^618708^uhura need to gracefully handle host down situation ^syam.mohan^Uhura^^^Major - P2^26/Sep/19 11:07 AM^Closed^14/Nov/19 3:41 PM^Fixed
+Bug^ENG-256455^618249^Modification of KEX Algorithms used by Paramiko for Image SFTP Server^robert^AHV-Management^Security^^Critical - P1^26/Sep/19 12:36 AM^Resolved^02/Jan/20 11:10 PM^Fixed
+Improvement^ENG-256421^618205^We should warn customers when they try to delete VMs that have 3rd party snapshots present^team-pm^AHV-Management^^^Major - P2^25/Sep/19 10:02 PM^Open^^
+Improvement^ENG-255763^616357^PXE boot support for UEFI-enabled guest VMs on AHV^dli^AHV^^^Major - P2^23/Sep/19 11:42 PM^Open^^
+Bug^ENG-254757^614114^Mitigate CVE-2019-14835 vhost-net error during migration^malcolm.crossley^AHV^^^Major - P2^18/Sep/19 8:14 PM^Resolved^04/Oct/19 3:35 AM^Fixed
+Bug^ENG-254380^613143^Incorrect virtual disk uuid sent in v2.0 vms/uuid/disks/update api^chris.guan^AHV-Management^^^Critical - P1^17/Sep/19 3:01 PM^Resolved^21/Oct/19 11:22 PM^Resolved
+Improvement^ENG-253358^611044^Logbay: Additional AHV logs to collect^russell.creech^AHV^NCC^^Major - P2^13/Sep/19 3:52 AM^Closed^30/Dec/19 12:33 PM^Fixed
+Bug^ENG-253319^611096^Remove restriction to filter image by type when creating VMs.^chris.guan^AHV-Management^^^Critical - P1^13/Sep/19 1:04 AM^Resolved^06/Nov/19 4:25 AM^Fixed
+Bug^ENG-252511^608520^Cosmetic: wrong translation of Japanese on Prism UI^chris.guan^AHV-Management^^^Minor - P3^10/Sep/19 11:29 AM^Resolved^18/Sep/19 3:07 AM^Fixed
+Bug^ENG-252277^608048^AHV Pressured updates erroneous nr_hugepages ^shyam.rajendran^AHV^^^Critical - P1^09/Sep/19 10:52 PM^Resolved^11/Jan/20 3:03 AM^Fixed
+Bug^ENG-252058^607733^ahv: lenovo HX7521 with intel x722 panic loop after .319/5.11.1 upgrade^jonatha.kohler^AHV^^^Critical - P1^09/Sep/19 10:57 AM^Closed^17/Sep/19 10:39 PM^Cannot Reproduce
+Improvement^ENG-252014^607607^NCC check vm_vhw_remote_check fails for VMs virtual with hw version 15 ^syam.mohan^Uhura^^^Critical - P1^08/Sep/19 6:57 PM^Reopened^^
+Improvement^ENG-251898^607501^Investigate resource usage of salt-call on AHV^shyam.rajendran^AHV^^^Major - P2^07/Sep/19 12:15 AM^Resolved^20/Sep/19 9:39 PM^False Alarm 
+Bug^ENG-251461^606543^AHV crash due to Redhat bug BZ1251577^ivan.teterevkov^AHV^^^Major - P2^05/Sep/19 6:44 PM^Resolved^09/Jan/20 4:10 PM^Fixed
+Bug^ENG-251382^606249^"PC 5.11 | VM update on removing CD-ROM not working"^chris.guan^AHV-Management^^^Critical - P1^05/Sep/19 1:00 PM^Resolved^21/Oct/19 10:38 PM^Resolved
+Bug^ENG-251109^605960^Add guardrails when fencing storage during HA failover^dhruv.jogi^AHV-Management^^^Critical - P1^04/Sep/19 8:48 PM^Resolved^26/Oct/19 10:39 AM^Fixed
+Bug^ENG-250083^603355^Intel X722 [i40e] - CVM goes dead during NIC Macro Testing^suresh.gumpula^AHV^^^Blocker - P0^29/Aug/19 10:22 PM^Closed^04/Oct/19 3:35 AM^Fixed
+Bug^ENG-250009^603170^Avoid ha_priority field checks in VM creates/updates^bhuvnesh.jain^AHV-Management^^^Critical - P1^29/Aug/19 2:21 PM^Closed^08/Sep/19 9:48 AM^Fixed
+Bug^ENG-248617^600078^No Error message when incorrect file type is uploaded in the custom script option while creating a VM^jsims^AHV-Management^^^Trivial - P4^23/Aug/19 4:39 PM^Resolved^24/Oct/19 10:56 PM^Fixed
+Improvement^ENG-248367^599949^Enhance qemu log parsing to detect unexpected shutdowns during reconciliation^prema.kolli^AHV-Management^^^Critical - P1^23/Aug/19 2:52 AM^Closed^28/Nov/19 5:01 AM^Fixed
+Bug^ENG-247729^598711^UncaughtException unable to map backing store for guest RAM: Cannot allocate memory^dhruv.jogi^AHV-Management^^^Critical - P1^21/Aug/19 4:32 AM^Open^^
+Bug^ENG-247630^598413^[PC/SSP] Incorrect networks are observed in SSP for the projects in PC UI ^chris.guan^AHV-Management^^^Critical - P1^20/Aug/19 5:37 PM^Open^^
+Bug^ENG-247623^598133^[AHV] BUG: soft lockup - CPU#X stuck for xxs!^shaju.abraham^AHV^^^Critical - P1^20/Aug/19 5:10 PM^Closed^03/Dec/19 3:34 PM^Physical Hardware Failure
+Bug^ENG-247296^597752^ngt: investigate why ngt created flood of kUpdateVmDbState tasks ^annie.pillai^AHV-Management^NGT^^Critical - P1^19/Aug/19 5:11 PM^Open^^
+Bug^ENG-246822^596746^"After vm migration, stale VM still be displayed. Delete stale VM through PC UI will delete both stale vm and new migrate live vm"^shubham.agrawal^Arithmos^Uhura^^Critical - P1^16/Aug/19 1:07 AM^Resolved^28/Oct/19 11:19 AM^Fixed
+Bug^ENG-246741^596623^VM disk add fails for disks smaller than 0.0001GB^chris.guan^AHV-Management^^^Major - P2^15/Aug/19 4:38 AM^Resolved^09/Jan/20 11:42 PM^Fixed
+Bug^ENG-246616^596272^acropolis: boot device read only leads to cluster wide control plane outages^robert^AHV-Management^^^Critical - P1^14/Aug/19 7:56 PM^Resolved^20/Dec/19 11:31 PM^Fixed
+Bug^ENG-246229^594744^When Unmarking the VM as Agent VM the ha_priority is not changed^bhuvnesh.jain^AHV-Management^^^Major - P2^13/Aug/19 2:39 PM^Closed^16/Nov/19 6:12 AM^Fixed
+Bug^ENG-246165^594725^AHV Guest OS not populated^jsims^AHV-Management^^^Major - P2^13/Aug/19 11:30 AM^Resolved^30/Aug/19 10:09 PM^Fixed
+Improvement^ENG-245700^593571^[AHV] Create script to rename AHV hosts^prerna.saxena^AHV^AHV-Management^Infrastructure^Critical - P1^09/Aug/19 7:35 PM^Open^^
+Bug^ENG-245637^593701^SSP User: Only One Disk/ISO selected if search is used^glenn.ryan^AHV-Management^^^Major - P2^09/Aug/19 1:43 PM^Resolved^05/Dec/19 9:30 PM^Fixed
+Bug^ENG-245034^592194^Unable to launch Virtual machine console when launching PE from PC^chris.guan^AHV-Management^^^Blocker - P0^07/Aug/19 8:17 AM^Resolved^21/Oct/19 10:35 PM^Resolved
+Improvement^ENG-245003^592111^Acropolis should explicitly check for node state during host_removal callback.^bhuvnesh.jain^AHV-Management^^^Critical - P1^07/Aug/19 4:48 AM^Closed^30/Dec/19 11:41 PM^Fixed
+Improvement^ENG-245002^592110^Acropolis host_removal_watch should watch for non-AHV hosts too^bhuvnesh.jain^AHV-Management^^^Critical - P1^07/Aug/19 4:44 AM^Closed^31/Dec/19 12:45 AM^Fixed
+Bug^ENG-244707^591440^Uhura should give up leadership when node is marked as degraded ^infra_torch_bearer^Uhura^^^Major - P2^06/Aug/19 4:06 AM^Need Info^^
+Bug^ENG-244397^590592^Hard lock in wait_lapic_expire^suresh.gumpula^AHV^^^Major - P2^04/Aug/19 1:59 PM^Resolved^20/Aug/19 11:36 PM^Fixed
+Bug^ENG-244356^590246^VM names can end in blank space^jsims^AHV-Management^^^Major - P2^03/Aug/19 3:52 AM^Resolved^28/Aug/19 8:16 PM^Fixed
+Improvement^ENG-244335^590216^Host upgrade pre-check to warn customer about ENG-209770^suresh.gumpula^AHV^AHV-Management^^Major - P2^03/Aug/19 2:22 AM^Open^^
+Improvement^ENG-242390^585412^CPU ready percent for VM on Prism is different with Vcenter^parth.gupta1^Uhura^^^Critical - P1^26/Jul/19 2:24 PM^Closed^26/Sep/19 7:57 PM^Fixed
+Improvement^ENG-241033^581903^Show pop-up on Prism UI whenever anti-affinity rules for a set of VMs are violated ^scheduler-eng^AHV-Management^^^Critical - P1^19/Jul/19 5:39 PM^Open^^
+Bug^ENG-241022^581889^VM Type for FSVM changes to kGuestVM after upgrade to 3.5.1^deepanshu.singhal^Uhura^^^Critical - P1^19/Jul/19 4:29 PM^Closed^07/Aug/19 11:19 AM^Fixed
+Bug^ENG-240893^581609^"AHV Upgrade hangs with ""stderr: chmod: changing permissions of `/mnt/DRACRW': Operation not permitted """^ani.sinha^AHV^^^Critical - P1^19/Jul/19 4:25 AM^Resolved^20/Aug/19 11:36 PM^Fixed
+Bug^ENG-240491^580484^[Xi-CHDR] Failback from xi to onprem resulted in 95/100 vms being deleted^raja.thota^Uhura^^^Critical - P1^17/Jul/19 12:42 PM^Closed^12/Nov/19 4:37 AM^Fixed
+Bug^ENG-240409^580405^[Smartbox Experience] Nodes having issues after expand cluster due to acropolis service on Master Node^robert^AHV-Management^^^Major - P2^17/Jul/19 5:02 AM^Closed^13/Aug/19 5:44 AM^Fixed
+Bug^ENG-239999^579476^Unable to change VM boot type from UEFI to BIOS: AttributeError: 'AcropolisVm' object has no attribute 'delete_nvram_vmdisk'^prerna.saxena^AHV-Management^^^Critical - P1^16/Jul/19 1:26 AM^Resolved^09/Sep/19 10:18 AM^Fixed
+Bug^ENG-239950^579274^iSCSI Failover Enhancement: Make it deterministic and under five seconds^raphael.norwitz^AHV^^^Critical - P1^15/Jul/19 6:35 PM^Resolved^04/Oct/19 3:35 AM^Fixed
+Bug^ENG-239921^579363^Uhura looking for AHV node in Vcenter in case of mixed hypervisor setup^shubham.agrawal^Uhura^^^Critical - P1^15/Jul/19 4:47 PM^Resolved^16/Sep/19 12:17 PM^Fixed
+Bug^ENG-239468^578302^Shows 500 error when create VM button is selected^suraj.kasi^AHV-Management^^^Critical - P1^12/Jul/19 2:22 AM^Resolved^11/Sep/19 11:32 PM^Fixed
+Bug^ENG-238788^575889^acropolis: limit the outstanding migrations to 1 on a 1G link^Sai.Vishalk^AHV-Management^^^Critical - P1^09/Jul/19 5:21 PM^Resolved^28/Oct/19 11:07 AM^Fixed
+Bug^ENG-238228^569242^LCM Update to upgrade Karbon from 0.8.2 to 1.0.1 is failing with Catalog creation failure^alejand.mier^AHV-Management^^^Major - P2^05/Jul/19 12:00 PM^Closed^22/Aug/19 10:26 AM^Fixed
+Bug^ENG-238206^568638^AHV crash - kernel/futex.c - AOS 5.10.3.2 - AHV 20170830.270^ani.sinha^AHV^^^Critical - P1^05/Jul/19 10:03 AM^Closed^20/Aug/19 11:36 PM^Fixed
+Bug^ENG-237733^566599^PC LCM Inventory Failing with Failed to stage catalog item^chaitanya.karlekar^AHV-Management^^^Major - P2^03/Jul/19 2:22 AM^Closed^30/Aug/19 12:42 AM^Incomplete
+Bug^ENG-237525^566045^Mount ISO not listing the available disk in the cluster^chris.guan^AHV-Management^^^Critical - P1^02/Jul/19 12:31 PM^Closed^11/Oct/19 3:09 AM^Fixed
+Improvement^ENG-237341^565583^Optimize lazan queries for non-AHV managed VMs^nevena.milinkovic^AHV-Management^^^Major - P2^01/Jul/19 11:42 PM^Open^^
+Bug^ENG-237320^565568^Prism Central local image upload does not offer image on all clusters.^tyler.pope^AHV-Management^^^Major - P2^01/Jul/19 10:18 PM^Resolved^07/Jul/19 10:48 PM^False Alarm 
+Bug^ENG-237235^565334^acropolis: restore Locality task did not kick in after exiting the host out of maintenance mode^bhuvnesh.jain^AHV-Management^^^Critical - P1^01/Jul/19 4:17 PM^Closed^20/Dec/19 9:31 AM^Cannot Reproduce
+Bug^ENG-237230^565329^uhura: high network traffic between CVMs and vcenter^parth.gupta1^Uhura^^^Critical - P1^01/Jul/19 3:58 PM^Closed^14/Aug/19 9:54 AM^Fixed
+Bug^ENG-236742^563245^Windows crash due to StatWorkItem of balloon device context is null^peter.turschm^AHV^^^Critical - P1^27/Jun/19 3:52 PM^Open^^
+Improvement^ENG-236457^562726^Part 3: Reduce Ergon Memory consumption & improve efficiency^monica.jeyachandran^AHV-Management^Ergon^^Critical - P1^26/Jun/19 3:08 PM^Open^^
+Improvement^ENG-236026^561412^Export VM list should have a higher hard limit^Raj^AHV-Management^^^Minor - P3^24/Jun/19 7:11 PM^Resolved^09/Jul/19 9:46 PM^Disqualified
+Bug^ENG-235930^561061^"ahv: investigate the yum traceback - ""sqlite3.DatabaseError: file is encrypted or is not a database"""^jonathan.davies^AHV^^^Major - P2^24/Jun/19 12:15 PM^Resolved^25/Jun/19 4:21 PM^Cannot Reproduce
+Improvement^ENG-235748^560430^acropolis: ha tasks are stuck because of not being able to post an alert.^sudhakar.kamanboina^AHV-Management^^^Critical - P1^21/Jun/19 11:37 PM^Resolved^05/Oct/19 4:40 AM^Fixed
+Improvement^ENG-235269^559381^Panacea: Detect if an image file is not present leading to image list failing in UI^shubham.bhardwaj^Panacea^^^Major - P2^20/Jun/19 2:01 AM^Resolved^11/Sep/19 11:56 AM^Fixed
+Improvement^ENG-235141^559105^"alert message for ""Power on VM after failover recovery"" to have list for all the VMs impacted"^Infra_NCC_Torch_Bearer_Mailing_List^AHV-Management^Alerts^NCC^Critical - P1^19/Jun/19 3:12 PM^Open^^
+Improvement^ENG-234673^557943^Acropolis task based RPCs should not be master only^monica.jeyachandran^AHV-Management^^^Major - P2^17/Jun/19 9:03 PM^Closed^30/Sep/19 8:19 PM^Fixed
+Bug^ENG-233694^555361^"[cfd][uhura] http_rpc.py, https, wsman: python2.7 processes do an absurd amount of syscalls for RPC recv's"^vistaar.juneja^Uhura^^^Critical - P1^12/Jun/19 9:07 AM^Closed^19/Jun/19 11:07 PM^Fixed
+Bug^ENG-233661^555333^"After domrename the autostart is not applied, so the CVM does not start"^jonathan.davies^AHV^^^Major - P2^12/Jun/19 4:46 AM^Resolved^20/Aug/19 11:36 PM^Fixed
+Improvement^ENG-233516^555163^Add support for opaque networks (exposed via NSXT for ex.) in Uhura^raja.thota^Uhura^^^Blocker - P0^11/Jun/19 10:08 PM^Resolved^07/Dec/19 6:41 AM^Fixed
+Bug^ENG-233362^554809^Duplicate or stale CVMs found running in Prism Central after converting ESXi cluster to AHV ^parth.gupta1^AHV-Management^^^Major - P2^11/Jun/19 10:28 AM^Closed^04/Nov/19 12:11 PM^Fixed
+Bug^ENG-233064^554098^AHV upgrade failed on one node due to Failed to upgrade packages^prerna.saxena^AHV^^^Critical - P1^10/Jun/19 2:35 PM^Closed^15/Jul/19 2:05 PM^Physical Hardware Failure
+Bug^ENG-233042^553686^[cfd][uhura][publisher] consuming a lot of cpu cycles while publishing vm^shubham.agrawal^Uhura^^^Critical - P1^10/Jun/19 12:10 PM^Resolved^18/Jun/19 10:03 PM^Fixed
+Bug^ENG-232675^553390^[OVA/OVF]: Disk conversion fails with Read failed with NFS3ERR_STALE^deepanshu.singhal^AHV-Management^^^Critical - P1^07/Jun/19 10:47 AM^Closed^04/Jul/19 11:06 AM^Fixed
+Bug^ENG-232484^552862^VmForcePowerOff task causing acropolis crash (ONCALL-6484)^prema.kolli^AHV-Management^^^Critical - P1^06/Jun/19 10:22 PM^Resolved^15/Jun/19 3:53 AM^Fixed
+Bug^ENG-232023^551900^Race between ACPI shutdown and a migrate task created by enter maintenance mode^acropolis^AHV-Management^^^Critical - P1^05/Jun/19 1:48 AM^Resolved^16/Aug/19 2:43 AM^Cannot Reproduce
+Improvement^ENG-231673^551054^Prism Alert for Disk Space Usage on User VMs ^luke.congdon^AHV-Management^^^Major - P2^03/Jun/19 10:14 PM^Open^^
+Bug^ENG-231536^550813^[AHV-PF] HA failover triggered during AHV upgrade to 20170830.279^asa.frank^AHV-Management^^^Major - P2^03/Jun/19 4:14 AM^Open^^
+Bug^ENG-231332^550159^qemu-kvm: hw/ide/core.c:668: ide_cancel_dma_sync: Assertion s->bus->dma->aiocb == ((void *)0) failed.^shaju.abraham^AHV^^^Critical - P1^31/May/19 2:01 PM^Resolved^03/Oct/19 3:10 PM^Fixed
+Bug^ENG-231204^550064^hypervisor upgrade failed and node was down^felipe.franciosi^AHV^^^Blocker - P0^31/May/19 5:49 AM^Resolved^27/Jun/19 12:13 AM^Fixed
+Bug^ENG-230673^548142^AHV 201708030.273 crashes when powering on a 2.3TiB RAM VM^ani.sinha^AHV^^^Blocker - P0^29/May/19 8:31 AM^Closed^09/Jul/19 9:44 PM^Fixed
+Improvement^ENG-230658^547980^Single script to clean-up image metadata^mladen.drobnjakovic^AHV-Management^^^Critical - P1^29/May/19 5:46 AM^Resolved^30/Dec/19 11:11 PM^Fixed
+Bug^ENG-229877^546179^VmHighAvailabilityFailure alert immediately after acropolis master change^prema.kolli^AHV-Management^^^Critical - P1^24/May/19 3:38 AM^Resolved^29/May/19 11:42 PM^Fixed
+Improvement^ENG-229864^546171^Make acli default to avoid doing DNS lookups^shruthi.racha^AHV-Management^^^Critical - P1^24/May/19 2:12 AM^Closed^24/Jun/19 7:02 AM^Fixed
+Bug^ENG-229327^544977^ADS migrates VMs frequently because of Stargate CPU usage periodically shows 0%^amit.singh^AHV-Management^Stargate^^Critical - P1^22/May/19 9:13 AM^Resolved^06/Aug/19 10:43 PM^Cannot Reproduce
+Improvement^ENG-229154^544840^VM creation Timestamp to be available/retained on the Prism for all the VM's on the VM tasks.^jsims^AHV-Management^^^Major - P2^21/May/19 6:53 PM^Blocked^^
+Bug^ENG-228132^540505^"AHV: Corrupted disk bootloader causes Windows VM is in paused state, and does not boot due to ""emulation failure"""^prerna.saxena^AHV^^^Major - P2^16/May/19 11:19 AM^Closed^29/Nov/19 9:46 AM^RCA Provided
+Improvement^ENG-228072^540257^Improve logging on Acropolis to detect greenlet starvation^lonnie.hutchinson^AHV-Management^^^Critical - P1^16/May/19 5:21 AM^Open^^
+Bug^ENG-228008^540202^RTC state change events spamming Acropolis^soham.ghosh^AHV-Management^^^Critical - P1^16/May/19 1:07 AM^Resolved^11/Jun/19 2:33 PM^Fixed
+Improvement^ENG-227716^539312^Provide link to the Catalog page from the error message when no VM templates are available during VM creation ^jsims^AHV-Management^^^Critical - P1^15/May/19 4:40 AM^Open^^
+Bug^ENG-227247^538327^Stale VMs present on Uhura master arithmos agent^shubham.agrawal^Uhura^^^Major - P2^13/May/19 4:23 PM^Resolved^28/Oct/19 11:16 AM^Fixed
+Bug^ENG-226761^535832^KVM : Fix corruption of blocked_vcpu_list in linux kernel during VM power on^ani.sinha^AHV^^^Major - P2^09/May/19 3:01 PM^Resolved^09/May/19 5:05 PM^Fixed
+Bug^ENG-226570^535420^Sansha Electric Manufacturing - Unable to power on VM from Prism Web Console^acropolis^AHV-Management^^^Minor - P3^08/May/19 6:09 PM^Resolved^10/May/19 10:59 AM^Cannot Reproduce
+Bug^ENG-226350^535016^'NoneType' object has no attribute 'container_uuid'^shashank.kumar^AHV-Management^^^Critical - P1^07/May/19 10:49 PM^Pending Merge^^
+Improvement^ENG-226331^534998^Support FileAnalytics as a VM type ^abhiram.parvatharedd^AHV-Management^^^Critical - P1^07/May/19 7:14 PM^Open^^
+Improvement^ENG-225427^532959^Checkout Queueing can make vm create operations delayed for a very long time^shashank.kumar^AHV-Management^^^Critical - P1^03/May/19 1:43 AM^Open^^
+Improvement^ENG-225184^532317^Image task cancel / pause / resume^shashank.kumar^AHV-Management^^^Major - P2^02/May/19 2:58 AM^Blocked^^
+Bug^ENG-225072^531966^[5.11][Prism] Cannot mount iso from VM console window on cloned VMs^chris.guan^AHV-Management^^^Critical - P1^01/May/19 2:58 PM^Resolved^13/Jun/19 4:42 AM^Fixed
+Improvement^ENG-224891^531518^Prism should report when migration fails due to maintenance mode^abhiram.parvatharedd^AHV-Management^^^Major - P2^30/Apr/19 9:01 PM^Open^^
+Improvement^ENG-224123^529904^Prism VM Table Column Adjustments Should Be Save-able & Default View Should Be Improved to Always Show VM IPs^jsims^AHV-Management^^^Major - P2^26/Apr/19 9:54 PM^Blocked^^
+Improvement^ENG-224062^529780^Failback of VMs failed when an affinity rule for the VM was present before migration^Sai.Vishalk^AHV-Management^^^Critical - P1^26/Apr/19 2:14 PM^Open^^
+Bug^ENG-223901^529371^VM migration failed after upgrade from AHV 20170830.151 to AHV 20180802.97^vistaar.juneja^AHV^AHV-Management^^Critical - P1^26/Apr/19 2:05 AM^Closed^12/Nov/19 10:54 AM^Fixed
+Improvement^ENG-222995^527399^Cannot add a IDE CDROM device if there are more than 3 scsi disks attached to VM^chris.guan^AHV-Management^^^Major - P2^23/Apr/19 4:17 AM^Open^^
+Bug^ENG-222780^526859^[cfd][uhura][cherry-pick][systest-cdp-smoke] Not listing all the vm entities after PD restore^shubham.agrawal^Uhura^^^Critical - P1^22/Apr/19 1:05 PM^Resolved^12/Jun/19 11:51 AM^Fixed
+Bug^ENG-222732^526642^(ahv_version_check) false positive in NCC 3.7.1^sonny.li^AHV^^^Critical - P1^22/Apr/19 10:18 AM^Closed^11/Sep/19 3:39 PM^Fixed
+Bug^ENG-222369^525934^Able to Delete VM but not Create until Acropolis Restart^acropolis^AHV-Management^Ergon^^Major - P2^18/Apr/19 8:27 PM^Resolved^08/May/19 12:58 AM^Cannot Reproduce
+Bug^ENG-222344^525747^AHV: Disks deleted from Windows guests online are still accessible in the Windows explorer until a rescan^peter.turschm^AHV^^^Major - P2^18/Apr/19 12:09 PM^Reopened^^
+Bug^ENG-222144^525418^"Failed to mount cdrom at the first boot after installation, but succeeded at next attempt"^shaju.abraham^AHV^^^Minor - P3^17/Apr/19 2:22 PM^Resolved^11/Jul/19 11:52 AM^Fixed
+Improvement^ENG-222068^525113^Catalog should fail a download if curl returns a partially downloaded return code (was:LCM should retry download when checksum doesn't match)^alejand.mier^AHV-Management^^^Critical - P1^17/Apr/19 6:57 AM^Resolved^13/Nov/19 9:05 PM^Fixed
+Bug^ENG-222064^525285^Fix is_connected watch_disconnect behavior and audit callback registrations for is_connected^robert^AHV-Management^^^Critical - P1^17/Apr/19 6:22 AM^Closed^03/May/19 4:58 AM^Fixed
+Bug^ENG-222005^525194^Images created using clone from vmdisk cannot be updated using v3 APIs^suraj.kasi^AHV-Management^^^Critical - P1^17/Apr/19 1:59 AM^Resolved^25/Oct/19 10:45 PM^Fixed
+Bug^ENG-221603^524370^V3 - VM creation failed with - Error reading file item from Catalog^alejand.mier^AHV-Management^Prism Gateway^^Critical - P1^15/Apr/19 9:57 PM^Resolved^15/Aug/19 9:14 PM^Fixed
+Bug^ENG-221577^524353^VM's manageability is lost when the node goes into degraded state^shruthi.racha^AHV-Management^^^Critical - P1^15/Apr/19 7:46 PM^In Progress^^
+Bug^ENG-221101^523315^"Lazan is in crash loop ""CRITICAL zookeeper_session.py:548 Zookeeper session expired"""^aramesh^AHV-Management^^^Blocker - P0^12/Apr/19 3:20 AM^Closed^22/Apr/19 1:23 PM^Fixed
+Bug^ENG-221089^523086^handle kernel crash seen in ONCALL-5948^peter.turschm^AHV^^^Major - P2^12/Apr/19 2:23 AM^Closed^19/Apr/19 11:45 PM^Fixed
+Bug^ENG-220937^522916^Don't set complete_time while creating a task in legacy task service.^bhuvnesh.jain^AHV-Management^Ergon^^Critical - P1^11/Apr/19 2:27 PM^Closed^19/Apr/19 1:43 AM^Fixed
+Bug^ENG-220835^522650^Unnecessary v1/utils/entities REST calls are making prism ui unusable^jsims^AHV-Management^^^Blocker - P0^11/Apr/19 6:43 AM^Resolved^17/Apr/19 10:20 PM^Fixed
+Bug^ENG-220760^522520^Catalog checkout task needs to be restartable for _byte_offset^suraj.kasi^AHV-Management^^^Major - P2^11/Apr/19 2:36 AM^Closed^30/Apr/19 4:39 AM^Fixed
+Improvement^ENG-220751^522507^[ADS] VGPU scheduling^karan.talreja^AHV-Management^^^Critical - P1^11/Apr/19 2:15 AM^Pending Review^^
+Bug^ENG-220628^522179^Acropolis Master initialization took longer than expected as a consequence of post AOS upgrade VM publishing activity.^shyam.rajendran^AHV^AHV-Management^^Blocker - P0^10/Apr/19 5:18 PM^Resolved^22/Apr/19 9:43 PM^Fixed
+Improvement^ENG-220523^521956^Provide dry run ADS plan execution in Acropolis to avoid false positives^abhishek.kumar1^AHV-Management^^^Major - P2^10/Apr/19 9:51 AM^Open^^
+Bug^ENG-220318^521530^ Genesis fails to report the 25G Speed and get the 25G NIC as part of bonding.Unable to perform cluster conversion with 25G NIC's On Intel DCB Platforms.^prerna.saxena^AHV^^^Major - P2^09/Apr/19 7:29 PM^Closed^22/Oct/19 3:56 PM^Fixed
+Bug^ENG-220291^521350^ZETT CORPORATION - 1st key is always ignored when using 10key in full size keyboard^peter.turschm^AHV-Management^^^Minor - P3^09/Apr/19 4:42 PM^Open^^
+Bug^ENG-220169^521306^AHV upgrade (EMM) fails seen after cluster expansion with a storage node and kAhvNeverSchedulable^prema.kolli^AHV-Management^^^Critical - P1^09/Apr/19 10:49 AM^Resolved^10/Apr/19 12:58 AM^Fixed
+Bug^ENG-220157^521251^EMM on kAhvNeverSchedulable node is failing^asa.frank^AHV-Management^^^Critical - P1^09/Apr/19 10:10 AM^Resolved^24/May/19 1:09 AM^Fixed
+Bug^ENG-219685^520203^Image list fails since the the backing .file_repo entry was missing^suraj.kasi^AHV-Management^^^Critical - P1^06/Apr/19 4:56 AM^Closed^17/Aug/19 4:03 AM^Cannot Reproduce
+Improvement^ENG-219412^519471^Allow Guest Customization in V3 vms clone API^parth.gupta1^AHV-Management^^^Critical - P1^05/Apr/19 2:30 PM^Open^^
+Bug^ENG-218729^518434^"For task based updates, have dcheck if IDF entity logical timestamp is greater than pithos's"^Sai.Vishalk^AHV-Management^^^Major - P2^03/Apr/19 7:23 PM^Resolved^15/May/19 2:03 PM^Fixed
+Bug^ENG-218631^518144^_get_remote_file_size could get better at handling curl failure^alejand.mier^AHV-Management^^^Minor - P3^03/Apr/19 12:07 PM^Resolved^22/May/19 2:58 AM^Fixed
+Bug^ENG-217912^516827^"v3 VM PUT fails when boot order is enabled, but boot config is not set"^shruthi.racha^AHV-Management^^^Critical - P1^01/Apr/19 7:39 PM^Resolved^18/Apr/19 1:45 AM^Fixed
+Bug^ENG-217882^516786^"RCA Acropolis crash loop - CRITICAL set_power_state_task.py:653 2 == 1 failed, Stack"^scheduler-eng^AHV-Management^^^Major - P2^01/Apr/19 4:23 PM^Open^^
+Improvement^ENG-217338^515512^Log spam: ERROR stats_util.py:272 Could not get stat controller.vdisk_cpu_time_usecs^aramesh^AHV-Management^^^Major - P2^29/Mar/19 12:52 AM^Open^^
+Bug^ENG-217153^515113^acropolis: crash on the zktimeout while assigning backplane params^robert^AHV-Management^^^Critical - P1^28/Mar/19 12:11 PM^Closed^18/Apr/19 3:20 AM^Fixed
+Bug^ENG-216806^514634^Node removal is stuck on kAcropolisOkToRemove after cleanly entering maintenance mode^igor.grobman^AHV-Management^^^Major - P2^27/Mar/19 11:21 PM^Resolved^12/Jun/19 9:19 AM^Cannot Reproduce
+Improvement^ENG-216648^514329^"[Uhura] Detect multi writer disks as ""shared"" on ESX"^syam.mohan^Uhura^^^Major - P2^27/Mar/19 12:04 PM^Open^^
+Bug^ENG-216078^512785^Uploaded Image created from Image volume is showing zero bytes size^rajesh.battala^AHV-Management^^^Major - P2^25/Mar/19 3:43 PM^Resolved^14/Jun/19 12:41 PM^Fixed
+Bug^ENG-215561^511371^uefi_boot attribute publishing was introduced in 5.10.2 but corresponding entry missing from IDF template ^soham.ghosh^AHV-Management^^^Blocker - P0^22/Mar/19 10:34 AM^Resolved^23/Mar/19 11:18 AM^Fixed
+Bug^ENG-215412^511329^Traceback instead of appropriate response if the attempt to power on VM with enable_migration was failed.^karan.talreja^AHV-Management^^^Major - P2^21/Mar/19 9:33 PM^Closed^28/Mar/19 1:36 AM^Fixed
+Bug^ENG-215364^511126^VM IDF entity for Xen is missing '_arithmos_id_' field.^shubham.agrawal^AHV-Management^^^Blocker - P0^21/Mar/19 4:06 PM^Closed^10/Apr/19 5:23 PM^Fixed
+Improvement^ENG-215140^510386^Provide mechanism to update hardware_version in VmUpdateArg.^vistaar.juneja^Uhura^^^Major - P2^20/Mar/19 10:59 PM^Closed^22/Apr/19 11:30 AM^Fixed
+Bug^ENG-214823^510068^"After AOS upgrade, ""update vm db state"" tasks appears in prism, customers have no context to understand these."^monica.jeyachandran^AHV-Management^^^Critical - P1^20/Mar/19 1:47 AM^Closed^23/Apr/19 10:15 PM^Fixed
+Bug^ENG-214816^509982^"[Uhura] When using DIAL to convert from ESXi to AHV, Uhura publisher does not display AHV networks correctly"^shubham.agrawal^AHV-Management^^^Major - P2^20/Mar/19 1:21 AM^Resolved^07/Nov/19 12:04 PM^Fixed
+Bug^ENG-214378^509132^"VM update operation from UI on PC throwing error ""Given input is invalid. 'LEARNED' not allowed"""^jsims^AHV-Management^^^Major - P2^18/Mar/19 10:49 PM^Resolved^17/Apr/19 11:02 PM^Fixed
+Bug^ENG-214328^509100^frodo repeatedly reconnecting to stargate^raphael.norwitz^AHV^^^Critical - P1^18/Mar/19 6:10 PM^Resolved^01/Aug/19 12:54 AM^Fixed
+Improvement^ENG-213688^507844^Lift memory slots limits imposed by vhost-user's implementation in Qemu (cannot increase memory of VM in XI)^raphael.norwitz^AHV^^^Critical - P1^15/Mar/19 2:51 AM^Open^^
+Bug^ENG-213655^507817^get_kvmclock_ns vs kvm_gen_update_masterclock race could lead to hard lockup of AHV^ani.sinha^AHV^^^Blocker - P0^15/Mar/19 12:35 AM^Closed^29/Mar/19 12:34 PM^Fixed
+Bug^ENG-213356^506971^After removed a CO node and added it back. This CO node is not schedulable ^robert^AHV-Management^^^Critical - P1^14/Mar/19 4:09 AM^Closed^12/Aug/19 10:33 PM^Fixed
+Improvement^ENG-212992^506211^AHV: sysstat configuration improvements^russell.creech^AHV^^^Major - P2^13/Mar/19 12:01 AM^Resolved^23/Jul/19 10:29 PM^Resolved
+Bug^ENG-212901^505853^NCC - uvm_ide_disk_check ncc check gives an error^casey.williamssmith^AHV^^^Critical - P1^12/Mar/19 4:45 PM^Resolved^30/Apr/19 6:31 PM^Cannot Reproduce
+Bug^ENG-211912^504118^Network Adapter is not added after create a VM with Admin User^andrey.zarovnyaev^AHV-Management^^^Critical - P1^08/Mar/19 3:53 AM^Resolved^23/Aug/19 11:21 PM^Fixed
+Bug^ENG-211055^502494^[cfd][uhura] Port attributes in management_server_info of IDF entity won't allow more than three digits^raghu.rapole^Uhura^^^Major - P2^05/Mar/19 6:34 PM^Closed^29/Mar/19 9:53 AM^Fixed
+Bug^ENG-210832^502028^VM does not appear in Prism for days after Xtract migration^raymond.yip^AHV-Management^^^Major - P2^05/Mar/19 6:44 AM^Closed^13/Aug/19 2:13 AM^Fixed
+Bug^ENG-210711^501670^Drift between reference TSC and sythentic timer clocksource causing performance degradation on AHV .184/.185^malcolm.crossley^AHV^^^Critical - P1^05/Mar/19 1:45 AM^Resolved^11/Mar/19 3:49 PM^Fixed
+Bug^ENG-210580^501544^"Unable to map an iso or disk smaller then 0,01 GiB"^chris.guan^AHV-Management^^^Critical - P1^04/Mar/19 4:46 PM^Resolved^21/Oct/19 11:30 PM^Resolved
+Improvement^ENG-210262^500860^Create a tool to look up VM to which vdisk belongs.^luke.congdon^AHV-Management^Stargate^^Minor - P3^01/Mar/19 7:55 PM^Open^^
+Bug^ENG-209952^500334^Physical ethernet interfaces that have two digits(ethxx) and more in their name are not visible/displayed in Prism.	^vistaar.juneja^AHV-Management^Arithmos^Infrastructure^Major - P2^28/Feb/19 9:46 PM^Resolved^10/Mar/19 10:28 PM^Fixed
+Bug^ENG-209770^499454^AHV should allow live migration of a VM with memory hotplugged upto hotplug limit^suresh.gumpula^AHV^^^Critical - P1^28/Feb/19 8:04 AM^Resolved^12/Apr/19 5:27 AM^Resolved
+Bug^ENG-209696^499424^Error message is too generic when power on vm failed during failover operation^abhishek.kumar1^AHV-Management^^^Major - P2^28/Feb/19 4:54 AM^Closed^22/Nov/19 2:29 AM^Fixed
+Improvement^ENG-208888^497784^Pre-upgrade Check for AHV to Warn About Potential Memory Implications^^AHV^^^Major - P2^26/Feb/19 2:17 AM^Open^^
+Bug^ENG-208504^496518^Improve error reporting in the EMM task when its aborted due to not enough resources^dhruv.jogi^AHV-Management^^^Critical - P1^23/Feb/19 3:49 AM^Closed^22/Dec/19 10:24 PM^Fixed
+Bug^ENG-208211^495884^RCA for INCDT-5188^asa.frank^AHV-Management^^^Critical - P1^22/Feb/19 2:49 AM^Closed^09/Mar/19 12:29 PM^Fixed
+Bug^ENG-207113^493652^AHV - support over 64 vCPUs for Windows guests^malcolm.crossley^AHV^^^Major - P2^17/Feb/19 6:28 PM^Resolved^11/Mar/19 3:50 PM^Fixed
+Bug^ENG-206944^493415^Fix extraneous ssh_host_dsa_key syslog entries on AHV and CVM^ani.sinha^AHV^^^Critical - P1^16/Feb/19 3:06 AM^Resolved^13/Jan/20 1:21 PM^Fixed
+Improvement^ENG-206735^493018^ImageGet operations are time taking with increasing number of images resulting in delayed page load(s)^shashank.kumar^AHV-Management^^^Critical - P1^15/Feb/19 11:54 AM^Resolved^14/Jan/20 3:25 AM^Fixed
+Bug^ENG-206365^492367^[acropolis] VM's update menu and console is not opening^vistaar.juneja^AHV-Management^^^Critical - P1^14/Feb/19 12:15 PM^Closed^27/Jun/19 12:09 AM^Fixed
+Bug^ENG-206229^492080^[acropolis] Node added on AHV cluster is not schedulable^vistaar.juneja^AHV-Management^^^Critical - P1^14/Feb/19 3:17 AM^Resolved^14/Nov/19 11:05 AM^Fixed
+Improvement^ENG-206132^491859^"AHV Single User Mode | .184/.185"^prerna.saxena^AHV^^^Major - P2^13/Feb/19 10:03 PM^Resolved^16/Dec/19 3:50 PM^Qualified
+Bug^ENG-205931^491505^"Checkout image task failed with error :  ""No Source location available to checkout file 1320ed7c-b7e9-4069-a77d-d39fcee7e00d"" "^suraj.kasi^AHV-Management^^^Major - P2^13/Feb/19 7:21 AM^Resolved^19/Apr/19 2:20 AM^Fixed
+Bug^ENG-205012^489882^CatalogItemUpdate RPC fails with stale PE UUIDs^saurabh.dohare^AHV-Management^^^Major - P2^09/Feb/19 5:03 AM^Closed^21/Mar/19 2:44 AM^Fixed
+Improvement^ENG-204541^489090^Add ability to mount an ISO to existing CDROM drive^jsims^AHV-Management^^^Blocker - P0^07/Feb/19 11:32 PM^Open^^
+Bug^ENG-204137^488378^Typo in Prism 5.10.x when mounting an image from a remote console^jsims^AHV-Management^^^Trivial - P4^06/Feb/19 8:05 PM^Resolved^25/Oct/19 2:20 AM^Fixed
+Improvement^ENG-204112^488332^[AHV] Improve NVIDIA GPU Driver Update Script to Target Hosts^kern.qian^AHV^^^Major - P2^06/Feb/19 5:23 PM^Open^^
+Improvement^ENG-203810^487831^AHV Enter Exit maintenance mode command need clear information message while execution^monica.jeyachandran^AHV-Management^^^Major - P2^06/Feb/19 12:27 AM^Blocked^^
+Bug^ENG-203549^487354^During Image Get/List check if PE registered before fanout^suraj.kasi^AHV-Management^^^Critical - P1^05/Feb/19 7:49 AM^Resolved^14/Mar/19 2:41 AM^Fixed
+Bug^ENG-203218^486743^[Scalability] Uhura master changed : Zookeeper session expired^Sai.Vishalk^Uhura^^^Critical - P1^04/Feb/19 2:12 PM^Closed^25/Apr/19 9:00 AM^Fixed
+Bug^ENG-203007^486399^"Labels in PC | When selecting multiples labels for vms not all of the vms are labeled "^chris.guan^AHV-Management^^^Major - P2^03/Feb/19 11:30 AM^Resolved^21/May/19 4:19 AM^Fixed
+Bug^ENG-202594^485553^Prism Central 5.10.0.1 not sorting by NGT Status^bayley.mah^AHV-Management^^^Minor - P3^01/Feb/19 5:46 AM^Need Info^^
+Bug^ENG-201743^483874^Cannot delete images in PC and images appear to be duplicated^alejand.mier^AHV-Management^^^Critical - P1^30/Jan/19 1:58 AM^Closed^09/Apr/19 3:51 AM^Fixed
+Bug^ENG-201401^483254^Only Single NIC was attached when creating a VM with multiple NICs from OpenStack (pike) via Nutanix OpenStack Driver^rajesh.battala^AHV-Management^^^Critical - P1^29/Jan/19 8:55 AM^Closed^12/Feb/19 5:23 PM^Fixed
+Bug^ENG-201125^482701^"Libvirt: Catch all ""no such process"" errors to detect and notify a VM's demise."^shaju.abraham^AHV^^^Critical - P1^28/Jan/19 12:23 PM^Resolved^13/Mar/19 8:10 AM^Fixed
+Bug^ENG-200776^481974^Root cause why Acropolis master did not lose connection with AHV host until 5 minutes^shubham.agrawal^AHV-Management^^^Critical - P1^25/Jan/19 6:38 PM^Closed^19/Mar/19 12:59 PM^Cannot Reproduce
+Improvement^ENG-200464^481308^Improve PC UI Deployment Tasks^soumik.patra^Ergon^^^Critical - P1^24/Jan/19 9:57 PM^Open^^
+Bug^ENG-199666^479713^Windows 8+/2012R2+ VM reboot hang after uptime of over 60 days^malcolm.crossley^AHV^^^Critical - P1^22/Jan/19 9:48 PM^Resolved^29/Mar/19 12:21 AM^Fixed
+Bug^ENG-199181^478503^Catalog service consuming 1GB memory on each PCVM^chaitanya.karlekar^AHV-Management^^^Critical - P1^19/Jan/19 4:19 AM^Resolved^28/May/19 10:58 PM^Fixed
+Bug^ENG-198858^477761^Move meminfo stats and scheduler stats to a separate log file instead of dumping them in acropolis logs^prema.kolli^AHV-Management^^^Critical - P1^18/Jan/19 2:17 AM^Resolved^23/Mar/19 8:17 AM^Fixed
+Bug^ENG-198608^477076^Single Heavily Loaded VM with Hourly Snapshots Migrated by ADS when it should not be.^fabien.hermenier^AHV-Management^^^Critical - P1^17/Jan/19 3:18 AM^Resolved^18/May/19 1:19 AM^Fixed
+Improvement^ENG-198593^477043^Panacea: detect ISB 93 ^mohamed.ashiq^Panacea^^^Major - P2^17/Jan/19 2:32 AM^Resolved^20/Aug/19 9:46 AM^Fixed
+Bug^ENG-198071^475687^Incorrect set of CPU flags supplied to qemu after HA event^acropolis^AHV-Management^^^Critical - P1^14/Jan/19 11:48 PM^Closed^06/Feb/19 10:51 AM^Fixed
+Bug^ENG-198029^475572^[categories-rbac-vm]: Change power state not displayed for vm with basic access role category^andrey.zarovnyaev^AHV-Management^^^Blocker - P0^14/Jan/19 6:18 PM^Resolved^24/Jan/19 12:16 AM^Fixed
+Bug^ENG-198003^475487^LCM with proxy fails due to special character in the proxy password^alejand.mier^AHV-Management^^^Major - P2^14/Jan/19 3:12 PM^Closed^31/Jan/19 3:51 AM^Fixed
+Improvement^ENG-196940^472970^Design mechanism to allow physical network cards parameters to be changed^malcolm.crossley^AHV^^^Major - P2^09/Jan/19 3:24 AM^Open^^
+Bug^ENG-196866^472825^AHV Host keeps looking to resolve itself creating additional DNS traffic^jonathan.davies^AHV^^^Major - P2^08/Jan/19 11:28 PM^Resolved^11/Mar/19 11:30 PM^Fixed
+Bug^ENG-196657^472460^Cannot operate VMs on AHV via Prism with stuck Running tasks with 1%^suraj.kasi^AHV-Management^^^Major - P2^08/Jan/19 11:02 AM^Closed^31/Jan/19 6:31 AM^Cannot Reproduce
+Bug^ENG-196452^472059^High cluster wide IOPS due to stuck ergon image create tasks ^shashank.kumar^AHV-Management^^^Minor - P3^07/Jan/19 7:42 PM^Resolved^09/Jul/19 1:14 AM^Incomplete
+Bug^ENG-196316^471758^VM console not opening in Prism when VM names are in Chinese ( non ascii characters)^chris.guan^AHV-Management^^^Major - P2^06/Jan/19 11:42 PM^Resolved^01/Feb/19 4:54 AM^Fixed
+Bug^ENG-196162^471383^AHV: ibrs logging spam^raphael.norwitz^AHV^^^Minor - P3^04/Jan/19 10:13 PM^Closed^19/Jan/19 8:39 AM^Fixed
+Bug^ENG-195926^470774^"Acropolis: investigate the discrepancy between top, arithmos, lazan."^nevena.milinkovic^AHV-Management^^^Major - P2^03/Jan/19 4:50 PM^Resolved^14/Jan/20 5:28 PM^Fixed
+Bug^ENG-195618^470079^[uhura][publisher] Handle unicode characters in disk iso paths for ESX VMs^shubham.agrawal^Uhura^^^Major - P2^02/Jan/19 12:53 PM^Closed^08/Jan/19 2:51 PM^Fixed
+Bug^ENG-195594^470032^Image Update does not update the PE metadata if it does not have latest catalog item version is missing^shashank.kumar^AHV-Management^^^Major - P2^02/Jan/19 11:26 AM^Closed^13/Aug/19 11:37 AM^Resolved
+Bug^ENG-195344^469312^VM : failed to get an IP - Nic is not assigned to the VM. ^raghu.rapole^Uhura^^^Blocker - P0^28/Dec/18 2:18 PM^Closed^08/Apr/19 2:28 PM^Fixed
+Bug^ENG-194558^467331^"[UI PE] VMManagement, VM creation failed while waiting for popupvm to invisible"^jsims^AHV-Management^^^Critical - P1^21/Dec/18 10:31 AM^Resolved^08/Jan/19 10:42 PM^Fixed
+Bug^ENG-194464^467185^[uhura] NTT SMARTCONNECT - Customer unable to get a response using RESTAPI for a GET request https://<PRISMELEMENTIP> Address:9440/api/nutanix/v2.0/vms/ ^deepanshu.singhal^AHV-Management^Uhura^^Major - P2^21/Dec/18 4:21 AM^Closed^01/Feb/19 8:40 PM^Fixed
+Bug^ENG-194125^466498^"Prism Central Reporting ""Unable to connect to vCenter"""^yenchieh.huang^Uhura^^^Critical - P1^19/Dec/18 8:00 PM^Closed^08/Feb/19 10:33 AM^Fixed
+Bug^ENG-194019^466299^get_vm_cpu_stats: add logs for debug^raymond.yip^AHV-Management^^^Major - P2^19/Dec/18 12:43 PM^Closed^25/Jan/19 11:09 PM^Fixed
+Bug^ENG-193926^466105^Grainger & Worrall Ltd - /root partition filled up to 100% on AHV host^phani.jayanthi^AHV^^^Major - P2^19/Dec/18 5:28 AM^Closed^21/Jan/19 3:34 PM^False Alarm 
+Bug^ENG-193864^465994^Image download always uses proxy irrespective of whitelisting^alejand.mier^AHV-Management^^^Critical - P1^19/Dec/18 1:45 AM^Closed^11/Mar/19 9:48 AM^Fixed
+Bug^ENG-193597^465495^Running gpu-z inside windows guest crashes guest^ani.sinha^AHV^^^Major - P2^18/Dec/18 6:44 AM^Resolved^18/Feb/19 3:12 PM^Fixed
+Bug^ENG-193464^465028^[uhura][publisher] Acropolis was stuck for 65000 seconds while publishing host data to arithmos^shubham.agrawal^Uhura^^^Major - P2^17/Dec/18 4:15 PM^Closed^16/Sep/19 12:13 PM^Fixed
+Bug^ENG-193095^463628^Physical Usage in Virtual Disks in Prism VM is actually Logical Usage^glenn.ryan^AHV-Management^^^Major - P2^14/Dec/18 10:16 AM^Resolved^24/Oct/19 2:00 AM^Fixed
+Bug^ENG-193094^463624^[uhura] Check failed: register_vm_ret.register_vm_ret().vm_result().size() == 1 (0 vs. 1) PD^ramashish.gaurav^Uhura^^^Critical - P1^14/Dec/18 9:51 AM^Closed^18/Nov/19 7:26 PM^Fixed
+Improvement^ENG-192865^462997^VM deletion UI from PC is not consistent in PE^jsims^AHV-Management^^^Minor - P3^13/Dec/18 2:17 PM^Open^^
+Improvement^ENG-192567^462232^VMnic order is not same in Prism UI and ACLI output^acropolis^AHV-Management^^^Minor - P3^12/Dec/18 2:42 PM^Open^^
+Bug^ENG-191569^459854^Wrong 'max_supported_virtual_hardware_versio' is published in Node entity type for ESX clusters.^vistaar.juneja^Uhura^^^Critical - P1^06/Dec/18 3:28 PM^Closed^10/Oct/19 3:36 PM^Fixed
+Bug^ENG-191504^459687^VM failback failed with cerebro error kConflictingFiles^ramashish.gaurav^Uhura^^^Critical - P1^06/Dec/18 8:54 AM^Closed^24/Sep/19 6:31 PM^Fixed
+Bug^ENG-191028^458354^panacea/ahv: track acropolis_max_http_client_sessions^nishant.verma^Panacea^^^Major - P2^04/Dec/18 10:41 AM^Open^^
+Bug^ENG-190908^457980^Uhura validation limiting deployment of Nutanix Files on ESXi 6.5+ ^rajesh.battala^Uhura^^^Critical - P1^03/Dec/18 9:30 PM^Closed^21/Jan/19 9:24 PM^Fixed
+Bug^ENG-190565^457252^LCM inventory fails with error message Operation failed. Reason: Pre-check 'test_catalog_workflows' failed (Failure reason: Failed to create catalog item. Error: Task b16de452586145f78db185c27327cd95 did not succeed)^alejand.mier^AHV-Management^^^Critical - P1^30/Nov/18 6:43 PM^Closed^31/Jan/19 3:52 AM^Fixed
+Improvement^ENG-190469^457029^Periodically dump acropolis threads to sysstats^robert^AHV-Management^^^Major - P2^30/Nov/18 8:39 AM^Resolved^03/Apr/19 3:00 AM^Fixed
+Bug^ENG-190417^456919^Ergon tasks with a completed time still listed as Running^russell.creech^Ergon^^^Major - P2^30/Nov/18 3:38 AM^Closed^20/Feb/19 1:45 AM^Cannot Reproduce
+Bug^ENG-190067^456083^Cache arithmos call for host_gpu in AHV arithmos publisher^anirban.roy^AHV-Management^^^Critical - P1^28/Nov/18 3:42 PM^Resolved^08/Jan/19 3:20 PM^Fixed
+Bug^ENG-189840^455628^"vnic creation failure in internal_vm_nic_create_op_handle during failback with error ""ClientError: Agnostic UUID already taken by key for kVNIC mapping type."""^raghu.rapole^Uhura^^^Blocker - P0^27/Nov/18 10:47 PM^Resolved^06/Nov/19 10:59 AM^Fixed
+Bug^ENG-188177^451984^"[CFD]: Failure to power on VMs with error: ""Could not reserve enough space to protect this VM against node failure"""^asa.frank^AHV-Management^^^Critical - P1^19/Nov/18 3:01 PM^Resolved^24/May/19 1:12 AM^Fixed
+Bug^ENG-186911^449387^Reflect Pacific\Auckland timezone correctly as UTC +13 in daylight savings time^jsims^AHV-Management^^^Major - P2^13/Nov/18 11:19 PM^Resolved^25/Oct/19 2:19 AM^Fixed
+Bug^ENG-186718^449042^AHV host public IP becomes unreachable due to Linux ARP handling.^shaju.abraham^AHV^^^Blocker - P0^13/Nov/18 9:41 AM^Resolved^29/Jan/19 12:33 AM^Fixed
+Bug^ENG-185684^447116^vsphere_cluster_configuration_check fails with IP x.x.x.x is not part of inventory^raghu.rapole^Uhura^^^Major - P2^07/Nov/18 4:06 PM^Closed^16/Jan/19 10:36 AM^Fixed
+Improvement^ENG-185601^446934^Ship ccli^alejand.mier^AHV-Management^^^Major - P2^07/Nov/18 5:14 AM^Closed^31/Jan/19 3:00 AM^Fixed
+Improvement^ENG-185146^445847^Need rollover rather than overwrite of NTNX.serial.out.0 for AHV^^AHV^^^Major - P2^05/Nov/18 2:54 PM^Open^^
+Bug^ENG-183813^443224^Oracle RAC Drops the ora_pmon process during live migration.^shyam.rajendran^AHV^^^Critical - P1^29/Oct/18 11:23 PM^Resolved^17/Jan/19 6:42 PM^Fixed
+Improvement^ENG-182924^441375^AHV pre-upgrade check for AHV timezone^casey.williamssmith^AHV^^^Minor - P3^25/Oct/18 8:45 AM^Closed^18/Apr/19 7:36 PM^Fixed
+Improvement^ENG-182343^440220^acropolis: validate the mechanism of calculating the Guest Memory^prerna.saxena^AHV^AHV-Management^^Major - P2^23/Oct/18 4:34 PM^Pending Merge^^
+Bug^ENG-181816^439259^Initial Placement of VMs when powering on can violate HA prerequisites causing HA to break^prema.kolli^AHV-Management^^^Critical - P1^21/Oct/18 1:15 AM^Resolved^16/Mar/19 8:15 AM^Cannot Reproduce
+Bug^ENG-181599^438781^Frodo times out to quickly when connecting to an iSCSI adapter when Stargate crashes^raphael.norwitz^AHV^^^Major - P2^18/Oct/18 11:31 PM^Resolved^30/Aug/19 2:34 AM^Fixed
+Improvement^ENG-181082^436992^Catalog Checkout tasks are not listed in PC tasks during vm creation.^suraj.kasi^AHV-Management^^^Major - P2^16/Oct/18 9:28 PM^Blocked^^
+Bug^ENG-179579^434021^panacea/ahv: capture the MC Errors by parsing dmesg^aaron.jones^Panacea^^^Major - P2^10/Oct/18 12:48 PM^Open^^
+Improvement^ENG-178266^431457^Disable hardware NIC level LLDP in AHV^raphael.norwitz^AHV^^^Blocker - P0^04/Oct/18 11:13 PM^Resolved^16/Apr/19 3:30 AM^Fixed
+Improvement^ENG-177881^429961^Ability to select multiple VMs in Prism Element^jsims^AHV-Management^^^Major - P2^03/Oct/18 8:09 PM^Open^^
+Improvement^ENG-177457^429117^PC Image service - Allow Deletion from PC which does not own image.^shashank.kumar^AHV-Management^^^Critical - P1^01/Oct/18 11:38 PM^Resolved^17/May/19 10:33 PM^Fixed
+Improvement^ENG-177445^429091^AHV pre-upgrade checks should check for bridges to ensure VMs can be migrated^shyam.rajendran^AHV-Management^^^Major - P2^01/Oct/18 10:36 PM^Closed^08/Feb/19 10:52 PM^Fixed
+Improvement^ENG-176755^427866^Allow flexible timeline for VM resource usage chart in SSP ^jsims^AHV-Management^^^Major - P2^27/Sep/18 4:53 PM^Open^^
+Bug^ENG-174443^423368^clear affinity is called on all v2 calls ^jsims^AHV-Management^^^Critical - P1^18/Sep/18 9:49 PM^Closed^03/Dec/19 12:15 AM^Fixed
+Improvement^ENG-173828^422303^[ADS workflows] It's taking a bit longer to detect a hotspot because of smoothing^nevena.milinkovic^AHV-Management^^^Critical - P1^17/Sep/18 1:13 PM^In Progress^^
+Bug^ENG-173175^420918^Hypervisor IP can show as 192.168.5.1 in Prism Central^raja.thota^AHV-Management^^^Critical - P1^12/Sep/18 11:59 PM^Resolved^24/Jan/19 7:50 AM^Fixed
+Bug^ENG-173077^420748^panacea/ahv: capture the stack trace in ONCALL-4505^akanshu.gupta^Panacea^^^Major - P2^12/Sep/18 5:49 PM^Resolved^31/May/19 12:07 PM^Fixed
+Bug^ENG-172121^418368^"CVM pauses with ""KVM: entry failed, hardware error 0x5"" on AHV Host."^matt.berry^AHV^^^Minor - P3^08/Sep/18 5:21 AM^Resolved^17/Jan/19 6:46 PM^Physical Hardware Failure
+Bug^ENG-171785^417624^Unable to update vdisk size in Prism^jsims^AHV-Management^^^Critical - P1^06/Sep/18 8:46 PM^Resolved^15/Feb/19 12:45 AM^Fixed
+Improvement^ENG-170673^415377^Allow Prism Central users to use Catalog to deploy VMs^jsims^AHV-Management^^^Critical - P1^31/Aug/18 3:16 PM^Open^^
+Improvement^ENG-170278^414639^Panacea - Add prettyinstance to panacea for analysing Lazan logs^buchiba.chennup^Panacea^^^Major - P2^30/Aug/18 8:29 AM^In Progress^^
+Bug^ENG-170054^414136^UVM fails to migrate because of a bad USB controller^jonathan.davies^AHV^^^Critical - P1^29/Aug/18 1:57 PM^Closed^15/Jan/19 2:27 PM^Fixed
+Improvement^ENG-169762^413592^hugepages value in AHV should be calculated automatically at every boot up time  ^florian.schmidt^AHV^AHV-Management^^Critical - P1^28/Aug/18 2:10 PM^In Progress^^
+Improvement^ENG-169547^413134^Resumable API for image local file upload^alejand.mier^AHV-Management^^^Critical - P1^27/Aug/18 11:10 PM^Open^^
+Bug^ENG-168207^410439^panacea/ahv: capture the Acropolis crash loop with unknown VmGroup error in traceback on leader^shubham.bhardwaj^Panacea^^^Trivial - P4^17/Aug/18 4:14 PM^Closed^22/Oct/19 4:49 PM^Fixed
+Bug^ENG-214358^410394^AHV cluster running AOS v5.6.1/rsyslog v5.8 causing production issues due to the rsyslog server being unreachable/down.^ani.sinha^^^^Critical - P1^17/Aug/18 3:00 PM^Resolved^03/Apr/19 5:37 PM^Fixed
+Bug^ENG-168129^410309^"[acropolis] Xi PC VM Create is stuck in Running State , See Xi PE acropolis in crash loop"^deepanshu.singhal^AHV-Management^^^Major - P2^17/Aug/18 10:07 AM^Resolved^14/Aug/19 11:44 PM^Fixed
+Bug^ENG-167489^409069^Upload image failed with internal server error intermittent ^shashank.kumar^AHV-Management^^^Critical - P1^14/Aug/18 10:56 PM^Closed^05/Mar/19 11:25 AM^Cannot Reproduce
+Bug^ENG-166740^407720^"[3NL PC Systest PF] PC going OOM , seeing a tonne of hs_err* files "^shashank.kumar^AHV-Management^^^Major - P2^10/Aug/18 6:43 AM^Closed^19/Mar/19 12:09 AM^Fixed
+Bug^ENG-166495^407311^"Acropolis in Crash loop, HAfailover failed during reconciliation"^asa.frank^AHV-Management^^^Critical - P1^09/Aug/18 10:14 AM^Resolved^04/Dec/19 6:54 AM^Fixed
+Improvement^ENG-166030^406512^SSP: Add Power options in Console View of a VM in SSP^jsims^AHV-Management^^^Major - P2^07/Aug/18 4:25 PM^Open^^
+Improvement^ENG-176390^396579^"AHV: Include ""HA status"" and ""Host in non-schedulable"" state as part of NCC or health check"^vistaar.juneja^AHV-Management^^^Major - P2^19/Jul/18 3:55 PM^Resolved^04/Sep/19 4:22 PM^Fixed
+Bug^ENG-161802^395966^ovs-vswitchd crash leads to UVM network unavailability ^ani.sinha^AHV^^^Critical - P1^18/Jul/18 4:05 PM^Resolved^26/Feb/19 1:58 PM^Fixed
+Bug^ENG-162178^395450^cloud-init user-data payload limit too small^ramashish.gaurav^^^^Critical - P1^17/Jul/18 7:49 PM^Resolved^26/Mar/19 10:05 AM^Fixed
+Bug^ENG-161396^395228^Improve Error Message in AHV: Could not reserve enough space to protect this VM against node failure^asa.frank^AHV-Management^^^Major - P2^17/Jul/18 11:35 AM^Resolved^05/Mar/19 5:26 AM^Fixed
+Bug^ENG-160636^393862^AHV Not releasing HA token after hypervisor upgrade^shaju.abraham^AHV^^^Major - P2^13/Jul/18 1:51 AM^Closed^05/Feb/19 11:22 AM^Cannot Reproduce
+Bug^ENG-158874^390286^Ergon wasn't able to commit LCM requests to update task due to cassandra being inundated^monica.jeyachandran^Ergon^^^Critical - P1^03/Jul/18 5:55 PM^Closed^24/Apr/19 11:07 AM^Fixed
+Improvement^ENG-157739^388165^AHV - Disable changing timezone ^^AHV^^^Minor - P3^27/Jun/18 3:06 PM^Reopened^^
+Improvement^ENG-212697^387155^In REST API v3 cannot specify container for the VM^chirag.jamadagni^AHV-Management^^^Critical - P1^25/Jun/18 9:24 PM^Resolved^30/Mar/19 5:15 AM^Fixed
+Bug^ENG-156512^385828^"PC Image service | Image creation should be disabled , when PC is not connected to PE"^jsims^AHV-Management^^^Major - P2^21/Jun/18 11:46 AM^Blocked^^
+Improvement^ENG-155084^383127^ADS - Include information about the entity causing contention and resolution plan generated by solver in alert^aramesh^AHV-Management^^^Major - P2^14/Jun/18 9:48 AM^Open^^
+Improvement^ENG-154272^381701^Delete Powered On VM in PC warning^jsims^AHV-Management^^^Major - P2^11/Jun/18 5:10 PM^Open^^
+Bug^ENG-153961^381098^PC auto checkouts working with v3 chosen as API and not 3.1^chaitanya.karlekar^API Infra^^^Major - P2^08/Jun/18 5:50 PM^Closed^03/Apr/19 12:13 AM^Incomplete
+Improvement^ENG-152900^379154^Checkout Improvements^shashank.kumar^AHV-Management^^^Critical - P1^05/Jun/18 3:00 AM^Closed^10/Sep/19 8:25 AM^Fixed
+Bug^ENG-151776^376963^Metadata related to image creation not deleted from IDF when image creation fails^mohammed^AHV-Management^^^Major - P2^30/May/18 9:22 AM^Reopened^^
+Improvement^ENG-150668^374739^AHV memory usage reporting in PE is misleading^jsims^AHV-Management^^^Critical - P1^23/May/18 11:32 PM^Reopened^^
+Improvement^ENG-150611^374608^"The UVM vNICs order in Prism ""Update VM"" tab is Bottom-to-Top instead of Top-to-bottom "^jsims^AHV-Management^^^Major - P2^23/May/18 5:13 PM^Open^^
+Bug^ENG-150486^374414^[openstack] Image create/upload from empty volume is allowed in OpenStack but corresponding task fails on acropolis - with error: ZeroDivisionError: long division or modulo by zero^mladen.drobnjakovic^AHV-Management^^^Major - P2^23/May/18 10:41 AM^Open^^
+Bug^ENG-149469^372499^libvirtError: internal error: timed out waiting for disk tray status update^shaju.abraham^AHV^^^Critical - P1^17/May/18 10:52 PM^Resolved^29/Jan/19 12:18 AM^Fixed
+Bug^ENG-149243^372131^Create a Guardrail to Prevent HA Update during MM.^bhuvnesh.jain^AHV-Management^^^Major - P2^17/May/18 5:19 AM^Closed^31/Mar/19 1:39 PM^Fixed
+Improvement^ENG-148930^371513^Feature request for AOS and AHV logs to be consolidated into one log during an upgrade^luke.congdon^AHV^AHV-Management^Infrastructure^Major - P2^15/May/18 11:12 PM^Closed^12/Feb/19 6:49 AM^Fixed
+Bug^ENG-147545^368697^Function keys don't map into Windows 10 VM console^chris.guan^AHV-Management^^^Major - P2^08/May/18 1:44 AM^Closed^24/Oct/19 12:22 AM^Resolved
+Improvement^ENG-146400^366548^AHV: Add snapshot exclusive usage size (aka: reclaimable space) to snapshot details^jsims^AHV-Management^^^Minor - P3^01/May/18 9:23 PM^Open^^
+Bug^ENG-143888^361712^Acropolis: Update boot_device_order to actually set the boot order as entered^robert^AHV-Management^^^Major - P2^18/Apr/18 1:52 AM^Closed^08/Aug/19 1:41 AM^Fixed
+Bug^ENG-141500^357319^Unable to register extension causes vCenter registration to fail^raghu.rapole^Uhura^^^Major - P2^06/Apr/18 3:15 AM^Closed^20/Mar/19 10:41 AM^Fixed
+Improvement^ENG-257571^354329^RBAC-Allow End Users to manage Snapshot/Restores of AHV VMs^zankhana.pathak^AHV-Management^Cerebro^^Critical - P1^28/Mar/18 9:50 PM^In Progress^^
+Bug^ENG-139513^353620^VMs migrated with protection domain in a new cluster keep host affinities from previous source cluster^blaise.cacciola^AHV-Management^^^Critical - P1^27/Mar/18 4:24 PM^Closed^29/Jan/19 11:00 PM^Fixed
+Improvement^ENG-138958^352658^NCC - Check to determine the DRS rules applied to VMs in a metro/witness configuration.^manan.shah^Cerebro^Uhura^^Major - P2^24/Mar/18 3:26 AM^Open^^
+Bug^ENG-138764^352289^Image create using https url fails^saurabh.dohare^AHV-Management^^^Major - P2^23/Mar/18 9:09 AM^Closed^16/May/19 6:37 AM^Fixed
+Improvement^ENG-138565^351921^Windows Server 2016 Hot Add CPU Support for AHV^jitendra.singh^AHV^^^Critical - P1^22/Mar/18 2:01 PM^Closed^01/Mar/19 11:55 PM^Fixed
+Improvement^ENG-136245^347653^"NCC should detect ""schedulable: False"""^scheduler-eng^AHV-Management^^^Critical - P1^11/Mar/18 5:23 PM^Open^^
+Improvement^ENG-135406^346191^Failed image upload to not populate image tab in PC^jsims^AHV-Management^^^Major - P2^06/Mar/18 10:33 PM^Open^^
+Bug^ENG-133668^335608^"PC create image via URL upload fails due to whitespace in URL, encoding fails"^alejand.mier^AHV-Management^^^Minor - P3^24/Feb/18 1:28 AM^Closed^19/Apr/19 1:08 AM^Cannot Reproduce
+Bug^ENG-131364^331488^Metropolis needs to map recovery points and other attributes to cluster affinity^raja.thota^AHV-Management^^^Blocker - P0^10/Feb/18 4:28 AM^Closed^07/Feb/19 1:24 AM^Fixed
+Improvement^ENG-130097^329161^"Some customers are likely setting ""tsc"" clocksource"^kenneth.whittaker^AHV^^^Minor - P3^03/Feb/18 4:26 AM^Need Info^^
+Bug^ENG-129579^328183^NCC: uvm_ide_disk_check results in Error occurred when trying to get vmdk info^raghu.rapole^Uhura^^^Major - P2^31/Jan/18 10:07 PM^Closed^04/Jun/19 10:15 AM^Fixed
+Improvement^ENG-128693^326594^Lazan: Usage of virtual resource controller_cpu on nodes exceeds their capacity ^aramesh^AHV-Management^^^Critical - P1^26/Jan/18 4:20 AM^Open^^
+Improvement^ENG-127718^324964^Should include an option to cancel an upload while in progress^jsims^AHV-Management^^^Major - P2^22/Jan/18 10:07 PM^Open^^
+Bug^ENG-127237^324083^'Take screenshot' button in VNC console does not work^chris.guan^AHV-Management^^^Major - P2^18/Jan/18 9:15 PM^Resolved^20/May/19 10:52 PM^Fixed
+Improvement^ENG-126683^323078^Big files upload to Image Services using Internet Explorer/Edge may fail^jsims^AHV-Management^^^Critical - P1^16/Jan/18 8:37 PM^Blocked^^
+Improvement^ENG-126539^322861^Allow the creation of VM templates from images^jsims^AHV-Management^^^Major - P2^16/Jan/18 5:00 AM^Open^^
+Improvement^ENG-126275^322358^Add option to pass authentication details for the source_url when creating image - I^shashank.kumar^AHV-Management^^^Critical - P1^12/Jan/18 2:45 AM^Open^^
+Improvement^ENG-124113^318332^Can't power on VMs when one AHV host enter maintenance mode.^scheduler-eng^AHV-Management^^^Major - P2^22/Dec/17 7:23 AM^Open^^
+Improvement^ENG-192753^317245^Power ops for PC^lonnie.hutchinson^AHV-Management^^^Critical - P1^19/Dec/17 10:18 AM^Open^^
+Bug^ENG-122595^315429^Mounting an iso to an already added empty cdrom doesn't work from v3^chirag.jamadagni^AHV-Management^^^Critical - P1^12/Dec/17 7:40 PM^Closed^20/Jun/19 3:29 AM^Fixed
+Improvement^ENG-118084^307402^ Release Process Improvement -- Automate generation of metadata file for AHV ^dli^AHV^^^Major - P2^13/Nov/17 8:48 AM^Closed^09/Jul/19 2:28 AM^Fixed
+Bug^ENG-117594^306510^Make catalog checkout best effort per destination basis^suraj.kasi^AHV-Management^^^Major - P2^09/Nov/17 3:53 AM^Resolved^19/Jun/19 12:26 AM^Fixed
+Bug^ENG-116994^305331^"Deselecting the "" Use this VM as an agent VM"" checkbox does not work as expected"^asa.frank^AHV-Management^^^Major - P2^04/Nov/17 4:44 AM^Closed^16/Nov/19 6:14 AM^Fixed
+Bug^ENG-116792^304954^Missing check for image create file permissions ^partha.goswami^AHV-Management^^^Major - P2^03/Nov/17 3:49 AM^Resolved^17/May/19 11:10 PM^Fixed
+Improvement^ENG-116582^302620^AHV: Expose vcpu placement / pinning as knob^karan.talreja^AHV-Management^^^Major - P2^25/Oct/17 9:12 AM^Closed^19/Oct/19 12:46 AM^No Response
+Improvement^ENG-115735^302619^AHV: Update NIC ring buffers on all supported NICs^^AHV^^^Major - P2^25/Oct/17 8:59 AM^Open^^
+Improvement^ENG-113499^298117^PC side does not cleanup/add-back catalog item metadata for PE un-register/re-register events^suraj.kasi^AHV-Management^^^Critical - P1^07/Oct/17 6:22 AM^Open^^
+Bug^ENG-110674^292929^Could not restore VM High Availability.^nitin.badam^AHV-Management^^^Critical - P1^20/Sep/17 1:21 AM^Resolved^08/Feb/19 5:11 AM^Fixed
+Bug^ENG-109733^291284^Need better error message when scheduling VMs on hosts that are not schedulable^asa.frank^AHV-Management^^^Major - P2^14/Sep/17 8:43 AM^Closed^09/Jan/19 3:23 AM^Fixed
+Bug^ENG-107959^288104^Keyboard wrong mapping/dead characters in VM console^chris.guan^AHV-Management^^^Minor - P3^02/Sep/17 5:07 AM^Open^^
+Bug^ENG-102185^277872^Cannot adjust resolution on Windows 2012 R2 UEFI based VM^prerna.saxena^AHV^^^Critical - P1^28/Jul/17 6:34 PM^Resolved^26/Feb/19 11:40 AM^Fixed
+Improvement^ENG-97108^268737^Ignore access() calls in our libnfs^aman.nijhawan^AHV-Management^^^Major - P2^21/Jun/17 11:33 PM^Open^^
+Improvement^ENG-198556^267024^System hostname and Operating system wrongly displayed in IDRAC for AHV^prerna.saxena^AHV^^^Minor - P3^15/Jun/17 4:10 PM^Reopened^^
+Bug^ENG-93050^261194^VM with frodo blocks memory hotplug with GPU assigned^raphael.norwitz^AHV^^^Major - P2^23/May/17 7:10 PM^Closed^29/Jan/19 12:33 AM^Fixed
+Bug^ENG-92645^260353^"XenServer || Prism VM view inconsistent || DOM0"^jsims^AHV-Management^^^Major - P2^19/May/17 11:44 AM^Resolved^15/May/19 12:52 AM^Cannot Reproduce
+Improvement^ENG-88057^251490^Prism -> VM page -> Export to json/csv file should include additional details^jsims^AHV-Management^^^Critical - P1^17/Apr/17 9:02 PM^Need Info^^
+Improvement^ENG-87167^249669^[AHV] Add option to clone and deploy from image service to specific container^ramana.murthy^AHV-Management^^^Major - P2^10/Apr/17 11:32 PM^Reopened^^
+Bug^ENG-85692^247199^Host was removed from AHV cluster though VM's were still running^hmantri^AHV-Management^^^Critical - P1^03/Apr/17 9:20 AM^Closed^23/Aug/19 2:48 AM^Moved to ENG ticket
+Improvement^ENG-98537^246144^uvm_ide_disk_check - Need Improved output on GUI and CLI^monica.jeyachandran^Uhura^^^Critical - P1^29/Mar/17 12:10 PM^Closed^17/Jun/19 11:16 AM^Fixed
+Bug^ENG-74189^224297^Mouse operation not working in Console tab when creating new VM^ivy.wang^AHV-Management^^^Minor - P3^09/Jan/17 6:10 AM^Resolved^26/Feb/19 11:14 PM^Cannot Reproduce
+Improvement^ENG-73756^222798^Customer would like to be able to *reduce* the size of a virtual disk on AHV^^AHV^^^Minor - P3^29/Dec/16 1:55 AM^Closed^11/Jan/19 4:46 AM^WorkAround Provided
+Improvement^ENG-72773^219520^UI for all v3 power operations in PC^glenn.ryan^AHV-Management^^^Critical - P1^09/Dec/16 2:50 AM^Resolved^30/Oct/19 10:15 PM^Fixed
+Improvement^ENG-72258^218139^The VM snapshots which are taken from VM page needs to be listed on Prism after Vm delete^jsims^AHV-Management^^^Major - P2^03/Dec/16 1:39 AM^Reopened^^
+Bug^ENG-71753^216712^AHV reporting inconsistent hypervisor id - need to report correct one ^malcolm.crossley^AHV^^^Major - P2^25/Nov/16 4:09 PM^Resolved^23/May/19 10:13 PM^Fixed
+Bug^ENG-66930^205040^Ability to Eject the VirtIO drivers from a running Windows VM on AHV^peter.turschm^AHV^^^Major - P2^07/Oct/16 12:22 PM^Resolved^10/Jan/19 1:26 AM^WorkAround Provided
+Improvement^ENG-61611^192996^Need MD5SUM of Image Configuration Files^jsims^AHV-Management^^^Major - P2^13/Aug/16 2:50 AM^Open^^
+Improvement^ENG-61420^192632^There is no way to cancel image upload for a prism UI user^jsims^AHV-Management^^^Major - P2^11/Aug/16 3:43 PM^Reopened^^
+Bug^ENG-60865^191545^AHV Charts Not Added to the Analysis Page in Prism^jsims^AHV-Management^^^Major - P2^05/Aug/16 10:00 PM^Resolved^14/May/19 3:56 AM^Cannot Reproduce
+Improvement^ENG-60557^190839^"PT Sistech Kharisma || Generate the chart for a time period for a VM or group of VMs."^mahesh.patil^AHV-Management^^^Major - P2^03/Aug/16 5:11 PM^Open^^
+Improvement^ENG-117332^175288^Edit VM tab - VLAN canonical name column^jsims^AHV-Management^^^Minor - P3^03/May/16 11:36 PM^Open^^
+Improvement^ENG-54328^175081^Regular Expression Matching in ACLI^luke.congdon^AHV-Management^^^Major - P2^03/May/16 1:21 AM^Reopened^^
+Improvement^ENG-50462^162162^[AHV] Need to have option on GUI to change hostname^^AHV^^^Major - P2^27/Feb/16 3:00 AM^Blocked^^
+Bug^ENG-42650^115563^Windows guest VM performance poor for 1M sequential write^^AHV^AHV-Management^^Minor - P3^11/Nov/15 10:42 PM^Closed^17/Jan/19 11:50 AM^Fixed
+Improvement^ENG-35345^94715^Automated VirtIO Driver Injection^luke.congdon^AHV^AHV-Management^^Critical - P1^17/Jul/15 9:59 PM^Open^^
+Improvement^ENG-27075^67199^Show space utilized by live VM and snapshot^curator^AHV-Management^^^Minor - P3^10/Jan/15 4:08 AM^Open^^
