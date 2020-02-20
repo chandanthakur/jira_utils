@@ -25,7 +25,7 @@ let isP2P3 = function(priority) {
 }
 
 let isBug = function(type) {
-    return type == "Bug";
+    return type == "Bug" || type == "Test";
 }
 
 let isImprovement = function(type) {
