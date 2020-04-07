@@ -10,7 +10,7 @@
     "event-stream": "^3.3.4",
     "extract-zip": "^1.6.6",
     "gulp": "^4.0.2",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "moment": "^2.20.0",
     "natives": "^1.1.6",
     "request": "^2.83.0",
