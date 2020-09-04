@@ -6,7 +6,7 @@
     "azure-storage": "^2.10.3",
     "colors": "^1.1.2",
     "dateformat": "^3.0.2",
-    "decompress": "^4.2.0",
+    "decompress": "^4.2.1",
     "event-stream": "^3.3.4",
     "express": "^4.17.1",
     "express-error-handler": "^1.1.0",
