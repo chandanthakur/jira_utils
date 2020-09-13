@@ -72,7 +72,7 @@ let getSummaryByManager = function(data) {
 
     let rows = [];
     Object.keys(result).forEach(function(item){
-        result[item].OwnerCount = Object.keys(result[item].OwnerMap).length;
+        result[item].Developers = Object.keys(result[item].OwnerMap).length;
         delete result[item]["OwnerMap"];
         rows.push(result[item]);
     });
@@ -88,12 +88,13 @@ let outputStats = function(rows, fileName) {
 
 let main = function() {
     let managerMap = {};
-    loadManagerMap().then(function(map){
-        managerMap = map;
-        utils.log("Downloading data from jarvis: " + jarvisUrl);
-        return utils.getNetworkResponseForUrl(jarvisUrl, {"rejectUnauthorized": false });
-    }).then(function(response){
-        return getClusterResponse(response, managerMap);
+    let p1 = loadManagerMap();
+    //let p2 = utils.getNetworkResponseForUrl(jarvisUrl, {"rejectUnauthorized": false });
+    let p2 = utils.readFile("./data/cluster_usage_jarvis.1600016727373.json");
+    utils.log("Downloading data from jarvis: " + jarvisUrl);
+    Promise.all([p1, p2]).then(function(result){
+        managerMap = result[0];
+        return getClusterResponse(result[1], managerMap);
     }).then(function(response){
         let o1 = outputStats(response, "cluster_age_stats.csv");
         let o2 = outputStats(getSummaryByManager(response), "manager_usage_summary.csv");

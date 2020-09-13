@@ -111,6 +111,26 @@ utils = module.exports = {
         return promise;
     },
 
+    readFile: function (fileName) {
+        var promise = new Promise(function (resolve, reject) {
+            if (!fileName) {
+                reject("Can't handle null file name");
+                return;
+            }
+
+            fs.readFile(fileName, 'utf8', function (err, data) {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+
+                resolve(data);
+            });
+        });
+
+        return promise;
+    },
+
     getTableRows: function (csvFileName, seperator) {
         let sep = seperator || ",";
         console.log(utils.getTS() + ":LOADING csv: " + csvFileName);
@@ -750,5 +770,9 @@ utils = module.exports = {
 
     log: function(text){
         console.log(utils.getTS() + ":" + text);
+    },
+
+    hashCode: function(s) {
+        return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);              
     }
 }
