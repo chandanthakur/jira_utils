@@ -2,7 +2,7 @@ var fs = require('fs');
 var os = require('os');
 var readline = require('readline');
 var colors = require('colors/safe');
-var request = require('request');
+var request = require("request").defaults({rejectUnauthorized:false});
 var parseArgs = require('minimist')
 var es = require('event-stream');
 var utf8 = require('to-utf-8')
@@ -182,7 +182,7 @@ utils = module.exports = {
                     rowList.push(rowData);
                 }
 
-                console.log(utils.getTS() + ":Processed: " + csvFileName + ":" + (utils.getTS() - startTime) + " ms");
+                //console.log(utils.getTS() + ":Processed: " + csvFileName + ":" + (utils.getTS() - startTime) + " ms");
                 resolve(rowList);
             }, function () {
                 resolve(null)
@@ -736,5 +736,19 @@ utils = module.exports = {
 
     strip: function(value) {
         return value.replace(/^\s+|\s+$/g, '');
+    },
+
+    fmt1: function(text, v1) {
+        return text.replace("{0}", v1);
+    },
+
+    fmt2: function(text, v1, v2) {
+        text = text.replace("{0}", v1);
+        text = text.replace("{1}", v2);
+        return text;
+    },
+
+    log: function(text){
+        console.log(utils.getTS() + ":" + text);
     }
 }
