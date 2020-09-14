@@ -11,17 +11,26 @@ urls.push({ url: jarvisUrl, id: "cluster_usage_jarvis"});
 
 let main = function() {
     let parr = [];
-    urls.forEach(url => parr.push(utils.getNetworkResponseForUrl(url.url, {"rejectUnauthorized": false })));
-    utils.log("Downloading at " + new Date().toUTCString() + " ...");
+    urls.forEach(url => {
+        utils.log("Starting download " + url.url);
+        let p = utils.getNetworkResponseForUrl(url.url, {"rejectUnauthorized": false }); 
+        parr.push(p)
+    });
+
+    
     Promise.all(parr).then(function(resArr){
         let p = [];
         resArr.forEach((res, i) => {
-            let fileName = urls[i].id + "." + utils.getTS() + ".json";
+            let fileName = urls[i].id + "." + utils.getISOTS() + ".json";
+            let resSize = Math.floor(res.length/1024);//KB
+            utils.log("Downloaded Url: " + urls[i].url);
+            utils.log("Downloaded Size: " + resSize + " KB");
             p.push(utils.writeToFile("./data/" + fileName, res));
         });
 
         return Promise.all(p);
-    }).then(function(){
+    }).then(function(resArr){
+        resArr.forEach((filePath) => utils.log("Saved Url to " + filePath));
         utils.log("Done.All Good.");
     }).catch(function(err){
         utils.log(err);

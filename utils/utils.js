@@ -716,6 +716,10 @@ utils = module.exports = {
         return new Date().getTime();
     },
 
+    getISOTS: function() {
+        return new Date().toISOString();
+    },
+
     getLogTS: function() {
         return utils.formatDate(new Date(), 'DD-MM-YYYY HH:mm:ss');
     },
@@ -769,7 +773,7 @@ utils = module.exports = {
     },
 
     log: function(text){
-        console.log(utils.getTS() + ":" + text);
+        console.log("[" + utils.getISOTS() + "]: " + text);
     },
 
     hashCode: function(s) {
