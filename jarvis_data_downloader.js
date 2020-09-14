@@ -12,7 +12,7 @@ urls.push({ url: jarvisUrl, id: "cluster_usage_jarvis"});
 let main = function() {
     let parr = [];
     urls.forEach(url => parr.push(utils.getNetworkResponseForUrl(url.url, {"rejectUnauthorized": false })));
-    utils.log("Downloading...");
+    utils.log("Downloading at " + new Date().toUTCString() + " ...");
     Promise.all(parr).then(function(resArr){
         let p = [];
         resArr.forEach((res, i) => {
