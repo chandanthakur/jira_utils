@@ -17,7 +17,6 @@ let main = function() {
         let p = [];
         resArr.forEach((res, i) => {
             let fileName = urls[i].id + "." + utils.getTS() + ".json";
-            console.log(res);
             p.push(utils.writeToFile("./data/" + fileName, res));
         });
 
