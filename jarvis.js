@@ -89,8 +89,8 @@ let outputStats = function(rows, fileName) {
 let main = function() {
     let managerMap = {};
     let p1 = loadManagerMap();
-    //let p2 = utils.getNetworkResponseForUrl(jarvisUrl, {"rejectUnauthorized": false });
-    let p2 = utils.readFile("./data/cluster_usage_jarvis.1600016727373.json");
+    let p2 = utils.getNetworkResponseForUrl(jarvisUrl, {"rejectUnauthorized": false });
+    //let p2 = utils.readFile("./data/cluster_usage_jarvis.1600016727373.json");
     utils.log("Downloading data from jarvis: " + jarvisUrl);
     Promise.all([p1, p2]).then(function(result){
         managerMap = result[0];
