@@ -41,7 +41,7 @@ let downloadUrlsUsingWorkerPool = function(urlList) {
 }
 
 let loadUrlsFromCsv = function() {
-    return utils.getTableRowsV2("./config/node-pool-stats.csv", "#").then(function(r){
+    return utils.getTableRowsV2("./config/qp-test-meta-urls.csv", "#").then(function(r){
         r.shift();// skip the header
         return r;
     });
