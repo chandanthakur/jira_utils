@@ -65,8 +65,8 @@ let main = function() {
     p1.then(function(result){
         return getResponse(result);
     }).then(function(response){
-        let o1 = outputStats(response, "ahv_functional_test_meta.csv");
-        let o2 = outputStats(getSummaryByComponent(response), "summary_by_component.csv");
+        let o1 = outputStats(response, "./config/ahv_functional_test_meta.gen.csv");
+        let o2 = outputStats(getSummaryByComponent(response), "./config/ahv_functional_test_summary.gen.csv");
         return Promise.all([o1, o2]);
     }).then(function() {
         utils.log("Done.All Good.");
