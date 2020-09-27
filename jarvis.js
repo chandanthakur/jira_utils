@@ -6,6 +6,7 @@ var utils = require('./utils/utils');
 
 let baseUrl = "https://jarvis.eng.nutanix.com/api/";
 let jarvisUrl = utils.fmt1("{0}/v1/clusters?limit=1000&search=acropolis", baseUrl);
+let poolName = "Acropolis";// Acropolis
 let clusterAge = function(createdAt) {
     return Math.floor((new Date().getTime() - createdAt)/(1000*60*60*24));
 }
@@ -13,7 +14,7 @@ let clusterAge = function(createdAt) {
 let getClusterResponse = function(response, managerMap){
     let json = JSON.parse(response);
     let data = json.data;
-    const acropolisPool = data.filter(row => row.pools_cache[0] == "Acropolis");
+    const acropolisPool = data.filter(row => row.pools_cache[0] == poolName);
     acropolisPool.sort((a,b) => clusterAge(b.created_at.$date) - clusterAge(a.created_at.$date));
     let op = [];
     for(let kk = 0; kk < acropolisPool.length; kk++) {

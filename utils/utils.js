@@ -2,16 +2,12 @@ var fs = require('fs');
 var os = require('os');
 var readline = require('readline');
 var colors = require('colors/safe');
-var request = require("request").defaults({rejectUnauthorized:false});
 var parseArgs = require('minimist')
 var es = require('event-stream');
 var utf8 = require('to-utf-8')
 var path = require('path');
-utils = module.exports = {
-    getLocalCache: function () {
-        return localCache;
-    },
 
+utils = module.exports = {
     fileReadLineByLine: function (fileName, onLineRead, onFileClose) {
         var lineReader = readline.createInterface({
             input: fs.createReadStream(fileName)
@@ -173,10 +169,10 @@ utils = module.exports = {
             var rowList = [];
             var rowIndex = 0;
             var colNames = [];
-            console.log(utils.getTS() + ":Loading:" + csvFileName);
+            utils.log("Loading:" + csvFileName);
             let startTime = utils.getTS();
             utils.getFileLinesV2(csvFileName).then(function (lineList) {
-                console.log(utils.getTS() + ":Loaded: " + csvFileName + ":" + (utils.getTS() - startTime) + " ms");
+                utils.log("Loaded: " + csvFileName + ":" + (utils.getTS() - startTime) + " ms");
                 for (var mm = 0; mm < lineList.length; mm++) {
                     var line = lineList[mm];
                     if (!line) continue;
@@ -269,6 +265,53 @@ utils = module.exports = {
         return groupRows;
     },
 
+    groupCountByColumn: function (tableRows, groupKey, sortKey) {
+        var groupKeyHash = {};
+        for (var kk = 0; tableRows && kk < tableRows.length; kk++) {
+            var row = tableRows[kk];
+            var groupKeyValue = typeof groupKey === "function"? groupKey(row): row[groupKey];
+            if (!groupKeyHash[groupKeyValue]) {
+                groupKeyHash[groupKeyValue] = [];
+            }
+
+            groupKeyHash[groupKeyValue].push(row);
+        }
+
+        let countMap = {};
+        Object.keys(groupKeyHash).forEach(r => {
+            countMap[r] = groupKeyHash[r].length;
+        });
+
+        return countMap;
+    },
+
+    groupCountByColumns: function (rows, groupKeys) {
+        var groupKeyHash = {};
+        for (let kk = 0; rows && kk < rows.length; kk++) {
+            let row = rows[kk];
+            let groupValues = [];
+            groupKeys.forEach(key => groupValues.push(row[key]));
+            let groupKeyValue = groupValues.join("_");
+            if(!groupKeyHash[groupKeyValue]) {
+                groupKeyHash[groupKeyValue] = { rows: [] };
+                groupKeys.forEach(key => groupKeyHash[groupKeyValue][key] = row[key]);
+                groupKeyHash[groupKeyValue].count = 0; //here for ordering reasons
+            }
+
+            groupKeyHash[groupKeyValue].rows.push(row);
+            groupKeyHash[groupKeyValue].count = groupKeyHash[groupKeyValue].rows.length;
+        }
+
+        let result = [];
+        Object.keys(groupKeyHash).forEach(r => {
+            delete groupKeyHash[r].rows;
+            result.push(groupKeyHash[r]);
+        });
+
+        result = result.sort((a,b) => b.count - a.count);
+        return result;
+    },
+
     getHashForGroupedRows: function (groupedRowList, groupKey, groupKeyHash) {
         groupKeyHash = groupKeyHash || {};
         for (var kk = 0; groupedRowList && kk < groupedRowList.length; kk++) {
@@ -359,6 +402,19 @@ utils = module.exports = {
 
             console.log("Percentile:(" + percentile + "): " + durationList[kk] + " " + durationUnit);
         }
+    },
+
+    getPercentiles: function (values) {
+        values.sort(function (a, b) { return a - b });
+        let l = values.length;
+        let l50 = Math.floor(l*5/10);
+        let l80 = Math.floor(l*8/10);
+        let l90 = Math.floor(l*9/10);
+        return {
+            p50: values[l50],
+            p80: values[l80],
+            p90: values[l90]
+        };
     },
 
     consoleHighlightText: function (text, prominentTextList, warnTextList, hlColor) {
@@ -461,69 +517,6 @@ utils = module.exports = {
 
     getDateTs: function(date) {
         return Date.parse(date);
-    },
-
-    getResponseForUrl: function (url, headers, isValidFn) {
-        let result = null;
-        let skipCache = true;
-        let cacheKey = headers ? url + ":" + JSON.stringify(headers) : url;
-        return utils.getLocalCache().getKey(cacheKey).then(function (value) {
-            if (!skipCache && value && (!isValidFn || isValidFn(value))) {
-                return value;
-            } else {
-                return utils.getNetworkResponseForUrl(url, headers)
-            }
-        }).then(function (value) {
-            result = value;
-            return utils.getLocalCache().putKey(cacheKey, value);
-        }).then(function () {
-            return result;
-        });
-    },
-
-    getNetworkResponseForUrl: function (url, headers) {
-        //if(VERBOSE_LOGS) console.log(colors.bold("Requesting:" + url));
-        var promise = new Promise(function (resolve, reject) {
-            request({ uri: url, headers: headers }, function (error, response, body) {
-                if (error) {
-                    //if(VERBOSE_LOGS) console.log(colors.red("Requesting:" + url + "[FAILED]"));
-                    reject(error);
-                    return;
-                }
-
-                //if(VERBOSE_LOGS) console.log(colors.bold("Requesting:" + url + "[SUCCESS]"));
-                resolve(body);
-            });
-        });
-
-        return promise;
-    },
-
-    getJsonResponseForUrl: function (url, headers) {
-        return utils.getResponseForUrl(url, headers).then(function (response) {
-            try {
-                var jsonObject = JSON.parse(response);
-                return jsonObject;
-            } catch (ex) {
-                return null;
-            }
-        });
-    },
-
-    downloadFile: function (url, headers, filePath) {
-        console.log("Downloading: " + url + " to " + filePath);
-        var promise = new Promise(function (resolve, reject) {
-            request({ uri: url, headers: headers }, function (error, response, body) {
-                if (error) {
-                    reject(error);
-                    return;
-                }
-
-                resolve(filePath);
-            }).pipe(fs.createWriteStream(filePath));
-        });
-
-        return promise;
     },
 
     writeToFile: function (filePath, content) {
@@ -770,6 +763,11 @@ utils = module.exports = {
         text = text.replace("{0}", v1);
         text = text.replace("{1}", v2);
         return text;
+    },
+
+    fmt3: function(text, v1, v2, v3) {
+        text = text.replace("{2}", v3);
+        return utils.fmt2(text, v1, v2);
     },
 
     log: function(text){

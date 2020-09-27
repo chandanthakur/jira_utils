@@ -1,40 +1,80 @@
 var utils = require('./utils/utils');
+var networkUtils = require('./utils/network-utils')
+const { Task } = require('./utils/worker_pool');
+const { WorkerPool } = require('./utils/worker_pool');
 
-// users nodes
-// https://jarvis.eng.nutanix.com/api/v2/pools/562f1d0a7e6e21292f14e729/user_details
-// https://jarvis.eng.nutanix.com/api/v2/pools/562f1d0a7e6e21292f14e729/cluster_details
+let downloadAndSaveUrl = function(url) {
+    let localfile = url.timeseries == "true" ? url.name + "." + utils.getISOTS() + ".json" : url.name + ".json";
+    return networkUtils.downloadAndSaveUrl(url.url, localfile, {"rejectUnauthorized": false }); 
+}
 
-let baseUrl = "https://jarvis.eng.nutanix.com/api/";
-let jarvisUrl = utils.fmt1("{0}/v1/clusters?limit=1000&search=acropolis", baseUrl);
-let urls = [];
-urls.push({ url: jarvisUrl, id: "cluster_usage_jarvis"});
-
-let main = function() {
-    let parr = [];
-    urls.forEach(url => {
-        utils.log("Starting download " + url.url);
-        let p = utils.getNetworkResponseForUrl(url.url, {"rejectUnauthorized": false }); 
-        parr.push(p)
+let resultData = {};
+let nUrls = 0;
+let downloadTask = function(args, onSuccess, onError) {
+    let urlMeta = args;
+    let p = networkUtils.getResponseForUrl(urlMeta.url, {"rejectUnauthorized": false });
+    let ts = utils.getTS();
+    p.then(function(response) {
+        let timeTaken = Math.floor(utils.getTS() - ts);
+        utils.log("Downloaded:" + urlMeta.url + " in " + timeTaken + " ms")
+        let responseObject = JSON.parse(response);
+        resultData[urlMeta.url] = { response: responseObject, meta: urlMeta };
+        utils.log("Total Downloaded:" + Object.keys(resultData).length + "/" + nUrls);
+        onSuccess();
+    }).catch(function(err){
+        resultData[urlMeta.url] = null;
+        utils.log("Download Error:" + ulrMeta.url + err);
+        onError(err);
     });
+}
 
-    
-    Promise.all(parr).then(function(resArr){
-        let p = [];
-        resArr.forEach((res, i) => {
-            let fileName = urls[i].id + "." + utils.getISOTS() + ".json";
-            let resSize = Math.floor(res.length/1024);//KB
-            utils.log("Downloaded Url: " + urls[i].url);
-            utils.log("Downloaded Size: " + resSize + " KB");
-            p.push(utils.writeToFile("./data/" + fileName, res));
+let downloadUrlsUsingWorkerPool = function(urlList) {
+    let nWorkers = urlList.length > 5 ? 5 : 1; 
+    let pool = new WorkerPool(nWorkers, onWorkComplete);
+    nUrls = urlList.length;
+    for(let kk = 0; kk < urlList.length; kk++) {
+        let urlMeta = urlList[kk];
+        pool.addTask(new Task(urlMeta.name, urlMeta, downloadTask));
+    }
+
+    pool.start();
+}
+
+let loadUrlsFromCsv = function() {
+    return utils.getTableRowsV2("./config/node-pool-stats.csv", "#").then(function(r){
+        r.shift();// skip the header
+        return r;
+    });
+}
+
+let loadTestQpUrlList = function() {
+    return utils.getTableRowsV2("./config/ahv_functional_test_meta.csv").then(function(r){
+        let urlList = [];
+        let baseUrl = 'https://jita.eng.nutanix.com/api/v1/agave_tests/history?name={0}';
+        r.shift();// skip the header
+        r.forEach(item => {
+            urlList.push({
+                name: item.name,
+                url: utils.fmt1(baseUrl, item.name)
+            });
         });
 
-        return Promise.all(p);
-    }).then(function(resArr){
-        resArr.forEach((filePath) => utils.log("Saved Url to " + filePath));
-        utils.log("Done.All Good.");
+        return urlList;
+    });
+}
+
+let loadUrlsMain = function() {
+    //let p = loadUrlsFromCsv();
+    let p = loadTestQpUrlList();
+    p.then(function(urlList) {
+        downloadUrlsUsingWorkerPool(urlList);
     }).catch(function(err){
         utils.log(err);
     });
+}
+
+let main = function() {
+    loadUrlsMain();
 }
 
 main()

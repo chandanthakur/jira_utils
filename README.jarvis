@@ -2,3 +2,19 @@
 node jarvis.js
 
 This will generate output files
+
+https://quality-pipeline/testdb/api/v1/all_test_cases?
+
+raw_query={"$and":[{"$or":
+[
+    {"target_service":"AOS","target_branch":"master","target_package_type":"tar","deleted":false},
+    {"target_service":"AHV","target_branch":"master","target_package_type":"tar","deleted":false},
+]},{"test_case.test_sets":{"$regex":"test_sets/milestones/master/ahv/","$options":"i"}},{"test_case.automated":true},{"test_case.deprecated":false}]}&limit=1000
+
+
+https://quality-pipeline/testdb/api/v1/all_test_cases?raw_query={"$and":[{"$or":[{"target_service":"AOS","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"AHV","target_branch":"master","target_package_type":"tar","deleted":false},]},{"test_case.test_sets":{"$regex":"test_sets/milestones/master/ahv/","$options":"i"}},{"test_case.automated":true},{"test_case.deprecated":false}]}&limit=1000
+
+
+
+
+https://quality-pipeline/testdb/api/v1/all_test_cases?raw_query={"$and":[{"$or":[{"target_service":"AOS","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"NCC","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"PC","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"AFS","target_branch":"master","target_package_type":"qcow2","deleted":false},{"target_service":"AHV","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"AGS","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"IAM","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"CMS","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"SecretStore","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"DCM","target_branch":"master","target_package_type":"ctr","deleted":false},{"target_service":"LCM","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"MSP","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"Hermes","target_branch":"master","target_package_type":"ctr","deleted":false},{"target_service":"Foundation","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"WitnessVM","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"XiBilling","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"XiSupport","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"XiAcctMgmt","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"Karbon","target_branch":"master","target_package_type":"tar","deleted":false},{"target_service":"FoundationCentral","target_branch":"master","target_package_type":"tar","deleted":false}]},{"test_case.test_sets":{"$regex":"test_sets/milestones/master/ahv/","$options":"i"}},{"test_case.automated":true},{"test_case.deprecated":false}]}&limit=1000
