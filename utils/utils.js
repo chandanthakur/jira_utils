@@ -250,7 +250,6 @@ utils = module.exports = {
             groupKeyHash[groupKeyValue].push(row);
         }
 
-
         var groupRows = [];
         var keySet = Object.keys(groupKeyHash);
         for (var kk = 0; keySet && kk < keySet.length; kk++) {
@@ -309,6 +308,31 @@ utils = module.exports = {
         });
 
         result = result.sort((a,b) => b.count - a.count);
+        return result;
+    },
+
+    groupItemsByColumns: function (rows, groupKeys) {
+        var groupKeyHash = {};
+        for (let kk = 0; rows && kk < rows.length; kk++) {
+            let row = rows[kk];
+            let groupValues = [];
+            groupKeys.forEach(key => groupValues.push(row[key]));
+            let groupKeyValue = groupValues.join("_");
+            if(!groupKeyHash[groupKeyValue]) {
+                groupKeyHash[groupKeyValue] = { items: [] };
+                groupKeys.forEach(key => groupKeyHash[groupKeyValue][key] = row[key]);
+                groupKeyHash[groupKeyValue].count = 0; //here for ordering reasons
+            }
+
+            groupKeyHash[groupKeyValue].items.push(row);
+        }
+
+        let result = [];
+        Object.keys(groupKeyHash).forEach(r => {
+            result.push(groupKeyHash[r]);
+        });
+
+        result = result.sort((a,b) => b.items.length - a.items.length);
         return result;
     },
 

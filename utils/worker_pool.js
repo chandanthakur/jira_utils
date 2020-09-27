@@ -21,7 +21,7 @@ class Worker {
         this.isStopped = false;
         this.busy = false;
         this.idleCount = 0;
-        this.wait = 50;
+        this.wait = 10;
         this.onIdleStateChange = onIdleStateChange;
         //console.log("Initialized worker: " + this.name);
     }
@@ -35,6 +35,11 @@ class Worker {
         let task = this.queue.poll();
         let ctx = this;
         if (task) {
+            if(!this.busy) {
+                this.busy = true;
+                this.onIdleStateChange(this.name, this.busy);
+            }
+
             this.idleCount = 0;
             //this.log("Executing Task: " + task.name);
             try { 
@@ -48,21 +53,17 @@ class Worker {
             }
         } else {
             this.idleCount++;
-            //this.log("Waiting for work...")
+            if (this.idleCount > 50 && this.busy == true) {
+                this.busy = false;
+                this.onIdleStateChange(this.name, this.busy);
+            } 
+    
             this.doWorkWithTimeout(this.wait);
         }
     }
 
     doWorkWithTimeout(t) {
         let ctx = this;
-        if (this.idleCount > 10 && this.busy == true) {
-            this.busy = false;
-            this.onIdleStateChange(this.name, this.busy);
-        } else if(this.busy == false) {
-            this.busy = true;
-            this.onIdleStateChange(this.name, this.busy);
-        }
-
         setTimeout(function(){
             ctx.doWork();
         }, t);

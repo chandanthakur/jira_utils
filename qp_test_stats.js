@@ -5,6 +5,7 @@ const { WorkerPool } = require('./utils/worker_pool');
 let resultData = {};
 let commitData = {};
 let nUrls = 0;
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 1; // unauthorized ssl
 
 let summarizeTestData = function(data, meta) {
     let res = {};
@@ -21,7 +22,7 @@ let summarizeTestData = function(data, meta) {
     res.name = meta.name;
     res.primaryComponent = meta.primaryComponent;
     res.priority = meta.priority,
-    res.primaryComponent = meta.primaryComponent,
+    res.estimatedComponent = meta.estimatedComponent,
     res.isRegHanded = meta.isRegHanded;
     let status = utils.groupCountByColumn(master, "status");
     res.passed = status.Succeeded || 0;
@@ -105,26 +106,24 @@ let outputStats = function(rows, fileName) {
 let onWorkComplete = function() {
     let keys = Object.keys(resultData);
     let summary = [];
-    keys.forEach(key => summary.push(resultData[key].summary));
-    outputStats(summary, "ahv-qp-test-summary.csv").then(function() {
+    keys.forEach(key => {
+        summary.push(resultData[key].summary)
+    });
+
+    let groupedItems = utils.groupItemsByColumns(summary, ["estimatedComponent", "isRegHanded"]);
+    let p = [];
+    groupedItems.forEach(function(entry){
+        let component = entry.estimatedComponent.toLowerCase();
+        let reg = entry.isRegHanded ? "reg" : "non-reg";
+        let fileName = utils.fmt2("ahv-test-summary-{0}-{1}.gen.csv", component, reg);
+        p.push(outputStats(entry.items, fileName));    
+    });
+
+    Promise.all(p).then(function(files) {
         utils.log("Done.All Good.");
     }).catch(function(err){
         utils.log(err);
     });
-
-    let commits = Object.keys(commitData);
-    commits = commits.sort((a, b) => commitData[b].updatedAt - commitData[a].updatedAt);
-    commits.forEach(c => {
-        console.log(c + ": " + commitData[c].data.length + ", date: " + new Date(commitData[c].updatedAt).toUTCString());
-    });
-
-    let data0 = commitData[commits[0]];
-    data0.data.forEach(d => {
-        console.log(d.commit_id + ":" + new Date(d.updated_at.$date).toUTCString());
-    });
-
-    //let grouped = utils.groupCountByColumn(data0.data, row => row["test"]["name"]);
-    //console.log("Unique Names:" + JSON.stringify(grouped));
 }
 
 let downloadUrlsUsingWorkerPool = function(urlList) {
@@ -146,14 +145,15 @@ let loadTestQpUrlList = function() {
         r.shift();// skip the header
         //r= r.slice(0, 50);
         r.forEach(item => {
-            if(item.primaryComponent != "AHV-Management") return;
+            let isReghanded = item.isRegHanded == "true";
+            if(item.estimatedComponent != "AHV-Management") return;
             urlList.push({
                 name: item.name,
                 url: utils.fmt1(baseUrl, item.name),
                 priority: item.priority,
                 primaryComponent: item.primaryComponent,
                 estimatedComponent: item.estimatedComponent,
-                isRegHanded: item.isRegHanded
+                isRegHanded: isReghanded
             });
         });
 

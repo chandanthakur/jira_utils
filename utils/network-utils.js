@@ -1,8 +1,10 @@
 var fs = require('fs');
+const fetch = require('node-fetch');
 var request = require("request").defaults({rejectUnauthorized:false});
 var level = require('level');
 const utils = require('./utils');
 var cacheDb = level('http-cache')
+  
 let getKey = function(key) {
     return cacheDb.get(key).then(function(valStr){
         if(!valStr) return null;
@@ -49,18 +51,8 @@ let getResponseForUrl = function (url, headers, isValidFn) {
 }
 
 let getNetworkResponseForUrl = function (url, headers) {
-    var promise = new Promise(function (resolve, reject) {
-        request({ uri: url, headers: headers }, function (error, response, body) {
-            if (error) {
-                reject(error);
-                return;
-            }
-
-            resolve(body);
-        });
-    });
-
-    return promise;
+    headers.compress = true;
+    return fetch(url, headers).then(res => res.text())
 }
 
 let getJsonResponseForUrl = function (url, headers) {

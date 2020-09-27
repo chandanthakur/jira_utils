@@ -58,7 +58,7 @@ total - Sum of:
         2) items that couldn't be resolved in "Key" number of days.
         * Total excludes items which are open for less than "Key" number of days
 
- 
+export NODE_TLS_REJECT_UNAUTHORIZED=0 
 
 
 

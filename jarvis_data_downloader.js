@@ -2,10 +2,11 @@ var utils = require('./utils/utils');
 var networkUtils = require('./utils/network-utils')
 const { Task } = require('./utils/worker_pool');
 const { WorkerPool } = require('./utils/worker_pool');
-
 let nUrls = 0;
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 let downloadAndSaveUrl = function(url, onSuccess, onError) {
-    let localfile = url.timeseries == "true" ? url.name + "." + utils.getISOTS() + ".json" : url.name + ".json";
+    let localfile = url.timeseries == "true" ? url.name + "." + utils.getISOTS() + ".gen.json" : url.name + ".gen.json";
     let p = networkUtils.downloadAndSaveUrl(url.url, localfile, {"rejectUnauthorized": false });
     p.then(function() {
         onSuccess();
