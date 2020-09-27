@@ -1,4 +1,4 @@
-*.csv
+./*.csv
 node_modules/
 .DS_Store
 http-cache

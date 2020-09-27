@@ -1,0 +1,2 @@
+name#timeseries#cache#url
+acropolis-pool-stats#true#600#https://jarvis.eng.nutanix.com/api/v1/clusters?limit=1000&search=acropolis

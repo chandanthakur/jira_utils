@@ -47,25 +47,8 @@ let loadUrlsFromCsv = function() {
     });
 }
 
-let loadTestQpUrlList = function() {
-    return utils.getTableRowsV2("./config/ahv_functional_test_meta.csv").then(function(r){
-        let urlList = [];
-        let baseUrl = 'https://jita.eng.nutanix.com/api/v1/agave_tests/history?name={0}';
-        r.shift();// skip the header
-        r.forEach(item => {
-            urlList.push({
-                name: item.name,
-                url: utils.fmt1(baseUrl, item.name)
-            });
-        });
-
-        return urlList;
-    });
-}
-
 let loadUrlsMain = function() {
-    //let p = loadUrlsFromCsv();
-    let p = loadTestQpUrlList();
+    let p = loadUrlsFromCsv();
     p.then(function(urlList) {
         downloadUrlsUsingWorkerPool(urlList);
     }).catch(function(err){
