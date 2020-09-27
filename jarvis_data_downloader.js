@@ -3,45 +3,31 @@ var networkUtils = require('./utils/network-utils')
 const { Task } = require('./utils/worker_pool');
 const { WorkerPool } = require('./utils/worker_pool');
 
-let downloadAndSaveUrl = function(url) {
-    let localfile = url.timeseries == "true" ? url.name + "." + utils.getISOTS() + ".json" : url.name + ".json";
-    return networkUtils.downloadAndSaveUrl(url.url, localfile, {"rejectUnauthorized": false }); 
-}
-
-let resultData = {};
 let nUrls = 0;
-let downloadTask = function(args, onSuccess, onError) {
-    let urlMeta = args;
-    let p = networkUtils.getResponseForUrl(urlMeta.url, {"rejectUnauthorized": false });
-    let ts = utils.getTS();
-    p.then(function(response) {
-        let timeTaken = Math.floor(utils.getTS() - ts);
-        utils.log("Downloaded:" + urlMeta.url + " in " + timeTaken + " ms")
-        let responseObject = JSON.parse(response);
-        resultData[urlMeta.url] = { response: responseObject, meta: urlMeta };
-        utils.log("Total Downloaded:" + Object.keys(resultData).length + "/" + nUrls);
+let downloadAndSaveUrl = function(url, onSuccess, onError) {
+    let localfile = url.timeseries == "true" ? url.name + "." + utils.getISOTS() + ".json" : url.name + ".json";
+    let p = networkUtils.downloadAndSaveUrl(url.url, localfile, {"rejectUnauthorized": false });
+    p.then(function() {
         onSuccess();
     }).catch(function(err){
-        resultData[urlMeta.url] = null;
-        utils.log("Download Error:" + ulrMeta.url + err);
         onError(err);
     });
 }
 
 let downloadUrlsUsingWorkerPool = function(urlList) {
     let nWorkers = urlList.length > 5 ? 5 : 1; 
-    let pool = new WorkerPool(nWorkers, onWorkComplete);
+    let pool = new WorkerPool(nWorkers, function(){});
     nUrls = urlList.length;
     for(let kk = 0; kk < urlList.length; kk++) {
         let urlMeta = urlList[kk];
-        pool.addTask(new Task(urlMeta.name, urlMeta, downloadTask));
+        pool.addTask(new Task(urlMeta.name, urlMeta, downloadAndSaveUrl));
     }
 
     pool.start();
 }
 
 let loadUrlsFromCsv = function() {
-    return utils.getTableRowsV2("./config/qp-test-meta-urls.csv", "#").then(function(r){
+    return utils.getTableRowsV2("./config/node-pool-stats.csv", "#").then(function(r){
         r.shift();// skip the header
         return r;
     });

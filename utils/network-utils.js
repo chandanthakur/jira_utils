@@ -91,7 +91,7 @@ let downloadFile = function (url, headers, filePath) {
 }
 
 let downloadAndSaveUrl = function(url, localfile, headers) {
-    let p = utils.getNetworkResponseForUrl(url, headers); 
+    let p = getNetworkResponseForUrl(url, headers); 
     let response = {};
     return p.then(function(res) {
         response.url = url;

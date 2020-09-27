@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/test_execution_stats.js"
+            "program": "${workspaceFolder}/jarvis_data_downloader.js"
         }
     ]
 }
