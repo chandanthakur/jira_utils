@@ -31,6 +31,10 @@ let estimateComponent = function(testName, primaryComponent) {
     return primaryComponent;
 }
 
+let isUI = function(testName) {
+    return testName.indexOf("ahv_ui") != -1 || testName.indexOf("manageability.ui") != -1 || testName.indexOf("uhura.ui") != -1;
+}
+
 let getResponse = function(response){
     let json = JSON.parse(response);
     let data = json.data;
@@ -45,7 +49,8 @@ let getResponse = function(response){
             primaryComponent: meta.primary_component,
             estimatedComponent: estimateComponent(row.name, meta.primary_component),
             isRegHanded: isRegHanded,
-            automated: row.test_case.automated
+            automated: row.test_case.automated,
+            isUI: isUI(row.name)
         });
     }
     

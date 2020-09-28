@@ -7,6 +7,63 @@ var es = require('event-stream');
 var utf8 = require('to-utf-8')
 var path = require('path');
 
+
+class AggregateSum {
+    constructor() {
+        this.arr = [];
+        this.result = 0;
+    }
+
+    next(val) {
+        if(isNaN(val)) return;
+        this.result = this.result + val;
+    }
+
+    value() {
+        return this.result;
+    }
+}
+
+class AggregateCount {
+    constructor() {
+        this.arr = [];
+        this.result = 0;
+    }
+
+    next(val) {
+        this.result = this.result + 1;
+    }
+
+    value() {
+        return this.result;
+    }
+}
+
+class AggregateAvg {
+    constructor() {
+        this.arr = [];
+        this.result = 0;
+        this.count = 0;
+    }
+
+    next(val) {
+        if(isNaN(val)) return;
+        this.result = this.result + val;
+        this.count = this.count + 1;
+    }
+
+    value() {
+        return Math.floor(100*this.result/this.count)/100;
+    }
+}
+
+let getAggregateObject = function(id) {
+    if(id == "sum") return new AggregateSum();
+    if(id == "avg") return new AggregateAvg();
+    if(id == "count") return new AggregateCount();
+    return new AggregateCount(); // default
+}
+
 utils = module.exports = {
     fileReadLineByLine: function (fileName, onLineRead, onFileClose) {
         var lineReader = readline.createInterface({
@@ -333,6 +390,38 @@ utils = module.exports = {
         });
 
         result = result.sort((a,b) => b.items.length - a.items.length);
+        return result;
+    },
+
+    agregateByColumns: function (rows, groupKeys, agregateKeys) {
+        var groupKeyHash = {};
+        for (let kk = 0; rows && kk < rows.length; kk++) {
+            let row = rows[kk];
+            let groupValues = [];
+            groupKeys.forEach(key => groupValues.push(row[key]));
+            let groupKeyValue = groupValues.join("_");
+            if(!groupKeyHash[groupKeyValue]) {
+                let aggregate = {};
+                groupKeyHash[groupKeyValue] = { aggregate: aggregate };
+                agregateKeys.forEach(entry => aggregate[entry[1]] = getAggregateObject(entry[0])); 
+                groupKeys.forEach(key => groupKeyHash[groupKeyValue][key] = row[key]);
+            }
+
+            agregateKeys.forEach(entry => {
+                groupKeyHash[groupKeyValue].aggregate[entry[1]].next(row[entry[1]])
+            });
+        }
+        
+        let result = [];
+        Object.keys(groupKeyHash).forEach(r => {
+            Object.keys(groupKeyHash[r].aggregate).forEach(key => {
+                groupKeyHash[r][key] = groupKeyHash[r].aggregate[key].value();
+            });
+
+            delete groupKeyHash[r].aggregate;
+            result.push(groupKeyHash[r]);
+        });
+
         return result;
     },
 
@@ -727,6 +816,12 @@ utils = module.exports = {
                 }, duration)
             });
         };
+    },
+
+    strcmp: function(a, b) {
+        if(a == b) return 0;
+        if(a < b) return -1;
+        return 1;
     },
 
     getTS: function() {

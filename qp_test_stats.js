@@ -24,6 +24,7 @@ let summarizeTestData = function(data, meta) {
     res.priority = meta.priority,
     res.estimatedComponent = meta.estimatedComponent,
     res.isRegHanded = meta.isRegHanded;
+    res.isUI = meta.isUI;
     let status = utils.groupCountByColumn(master, "status");
     res.passed = status.Succeeded || 0;
     res.failed = status.Failed || 0;
@@ -59,7 +60,7 @@ let downloadTask = function(args, onSuccess, onError) {
         let responseObject = JSON.parse(response);
         let summary = summarizeTestData(responseObject, urlMeta); 
         populateCommitMap(responseObject, urlMeta);
-        resultData[urlMeta.url] = { response: responseObject, summary: summary, meta: urlMeta };
+        resultData[urlMeta.url] = { summary: summary, meta: urlMeta };
         utils.log("Total Downloaded:" + Object.keys(resultData).length + "/" + nUrls);
         onSuccess();
     }).catch(function(err){
@@ -110,15 +111,30 @@ let onWorkComplete = function() {
         summary.push(resultData[key].summary)
     });
 
-    let groupedItems = utils.groupItemsByColumns(summary, ["estimatedComponent", "isRegHanded"]);
+    let groupColumns = ["estimatedComponent", "isRegHanded", "isUI"];
+    let groupedItems = utils.groupItemsByColumns(summary, groupColumns);
     let p = [];
+    let agregateColumns = [];
+    agregateColumns.push(["count", "uniqueTests"]);
+    agregateColumns.push(["sum", "passed"]);
+    agregateColumns.push(["sum", "failed"]);
+    agregateColumns.push(["sum", "totalRun"]);
+    agregateColumns.push(["sum", "durationP50"]);
+    agregateColumns.push(["sum", "durationP80"]);
+    agregateColumns.push(["sum", "durationP90"]);
+    
     groupedItems.forEach(function(entry){
         let component = entry.estimatedComponent.toLowerCase();
         let reg = entry.isRegHanded ? "reg" : "non-reg";
-        let fileName = utils.fmt2("ahv-test-summary-{0}-{1}.gen.csv", component, reg);
-        p.push(outputStats(entry.items, fileName));    
+        let ui = entry.isUI? "ui": "api";
+        let fileName = utils.fmt3("ahv-test-stats-{0}-{1}-{2}.gen.csv", component, ui, reg);
+        entry.items = entry.items.sort((a,b) => (b.successPercent - a.successPercent));
+        p.push(outputStats(entry.items, fileName));
     });
 
+    let aggregate = utils.agregateByColumns(summary,groupColumns, agregateColumns);
+    aggregate = aggregate.sort((a,b) => utils.strcmp(a.estimatedComponent, b.estimatedComponent));
+    p.push(outputStats(aggregate, "ahv-test-summary-all-components.gen.csv"));
     Promise.all(p).then(function(files) {
         utils.log("Done.All Good.");
     }).catch(function(err){
@@ -144,16 +160,18 @@ let loadTestQpUrlList = function() {
         let baseUrl = 'https://jita.eng.nutanix.com/api/v1/agave_tests/history?name={0}&limit=1000';
         r.shift();// skip the header
         //r= r.slice(0, 50);
-        r.forEach(item => {
+        r.forEach((item, i) => {
+            //if(i%10 != 0) return;
             let isReghanded = item.isRegHanded == "true";
-            if(item.estimatedComponent != "AHV-Management") return;
+            //if(!(item.estimatedComponent == "AHV-Management" || item.estimatedComponent == "Uhura")) return;
             urlList.push({
                 name: item.name,
                 url: utils.fmt1(baseUrl, item.name),
                 priority: item.priority,
                 primaryComponent: item.primaryComponent,
                 estimatedComponent: item.estimatedComponent,
-                isRegHanded: isReghanded
+                isRegHanded: isReghanded,
+                isUI: item.isUI == "true"
             });
         });
 
