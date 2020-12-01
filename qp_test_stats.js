@@ -5,31 +5,32 @@ const { WorkerPool } = require('./utils/worker_pool');
 let resultData = {};
 let commitData = {};
 let nUrls = 0;
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 1; // unauthorized ssl
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; // unauthorized ssl
 
 let summarizeTestData = function(data, meta) {
     let res = {};
-    data.data = data.data.filter(row => !!row.start_time);
     let master = data.data.filter(row => row.branch == "master");
-    master = master.sort((a,b) => a.start_time.$date - b.start_time.$date);
+    master = master.sort((a,b) => a.created_at.$date - b.created_at.$date);
     let runTime = [];
     master.forEach(row => {
-        if(!row.end_time) return;
+        if(row.status != "Succeeded" || !row.end_time) return;
         let time = Math.floor((row.end_time.$date - row.start_time.$date)/1000);
         runTime.push(time);
     });
 
     res.name = meta.name;
     res.primaryComponent = meta.primaryComponent;
-    res.priority = meta.priority,
     res.estimatedComponent = meta.estimatedComponent,
-    res.isRegHanded = meta.isRegHanded;
-    res.isUI = meta.isUI;
+    res.priority = meta.priority,
+    res.regType = meta.isRegHanded ? "reg" : "non-reg";
+    res.testType = meta.isUI ? "UI": "API";
     let status = utils.groupCountByColumn(master, "status");
     res.passed = status.Succeeded || 0;
     res.failed = status.Failed || 0;
-    res.totalRun = res.passed + res.failed;
+    res.skipped = status.Skipped || 0;
+    res.totalRun = res.passed + res.failed + res.skipped;
     res.successPercent = res.totalRun > 0 ? Math.floor((100.0*res.passed)/res.totalRun) : 0
+    res.skipPercent = res.totalRun > 0 ? Math.floor((100.0*res.skipped)/res.totalRun) : 0
     let runTimeP = utils.getPercentiles(runTime);
     res.durationP50 = runTimeP.p50;
     res.durationP80 = runTimeP.p80;
@@ -111,9 +112,23 @@ let onWorkComplete = function() {
         summary.push(resultData[key].summary)
     });
 
-    let groupColumns = ["estimatedComponent", "isRegHanded", "isUI"];
-    let groupedItems = utils.groupItemsByColumns(summary, groupColumns);
     let p = [];
+    // sorting based on multiple fields
+    summary = summary.sort((a,b) => {
+        if(a.estimatedComponent != b.estimatedComponent) {
+            return utils.strcmp(a.estimatedComponent, b.estimatedComponent);
+        } else if(a.regType != b.regType) {
+            return utils.strcmp(b.regType, a.regType);
+        } else if(a.testType != b.testType) {
+            return utils.strcmp(b.testType, a.testType);
+        } else {
+            return b.successPercent - a.successPercent;
+        }
+    });
+
+    p.push(outputStats(summary, "ahv-test-stats-all-components.gen.csv"));
+    let groupColumns = ["estimatedComponent", "regType", "testType"];
+    let groupedItems = utils.groupItemsByColumns(summary, groupColumns);
     let agregateColumns = [];
     agregateColumns.push(["count", "uniqueTests"]);
     agregateColumns.push(["sum", "passed"]);
@@ -122,12 +137,9 @@ let onWorkComplete = function() {
     agregateColumns.push(["sum", "durationP50"]);
     agregateColumns.push(["sum", "durationP80"]);
     agregateColumns.push(["sum", "durationP90"]);
-    
     groupedItems.forEach(function(entry){
         let component = entry.estimatedComponent.toLowerCase();
-        let reg = entry.isRegHanded ? "reg" : "non-reg";
-        let ui = entry.isUI? "ui": "api";
-        let fileName = utils.fmt3("ahv-test-stats-{0}-{1}-{2}.gen.csv", component, ui, reg);
+        let fileName = utils.fmt3("ahv-test-stats-{0}-{1}-{2}.gen.csv", component, entry.testType, entry.regType);
         entry.items = entry.items.sort((a,b) => (b.successPercent - a.successPercent));
         p.push(outputStats(entry.items, fileName));
     });
@@ -135,6 +147,7 @@ let onWorkComplete = function() {
     let aggregate = utils.agregateByColumns(summary,groupColumns, agregateColumns);
     aggregate = aggregate.sort((a,b) => utils.strcmp(a.estimatedComponent, b.estimatedComponent));
     p.push(outputStats(aggregate, "ahv-test-summary-all-components.gen.csv"));
+
     Promise.all(p).then(function(files) {
         utils.log("Done.All Good.");
     }).catch(function(err){
@@ -157,13 +170,14 @@ let downloadUrlsUsingWorkerPool = function(urlList) {
 let loadTestQpUrlList = function() {
     return utils.getTableRowsV2("./config/ahv_functional_test_meta.csv").then(function(r){
         let urlList = [];
-        let baseUrl = 'https://jita.eng.nutanix.com/api/v1/agave_tests/history?name={0}&limit=1000';
+        let baseUrl = 'https://jita.eng.nutanix.com/api/v1/agave_tests/history?name={0}&sort=-created_at&limit=1000';
         r.shift();// skip the header
         //r= r.slice(0, 50);
         r.forEach((item, i) => {
             //if(i%10 != 0) return;
+            //if(item.name != "acropolis.ahv_management.scheduler.cclm.test_cclm.TestCCLM.test_cclm_migration_failure_2") return;
             let isReghanded = item.isRegHanded == "true";
-            //if(!(item.estimatedComponent == "AHV-Management" || item.estimatedComponent == "Uhura")) return;
+            if(!(item.estimatedComponent == "OVA" || item.estimatedComponent == "AHV-Management" || item.estimatedComponent == "Uhura" || item.estimatedComponent == "Ergon")) return;
             urlList.push({
                 name: item.name,
                 url: utils.fmt1(baseUrl, item.name),

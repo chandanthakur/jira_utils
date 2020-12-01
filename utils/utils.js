@@ -824,6 +824,15 @@ utils = module.exports = {
         return 1;
     },
 
+    isValidJSON: function(value){
+        try {
+            JSON.parse(value);
+            return true
+        } catch {
+            return false;
+        }
+    },
+
     getTS: function() {
         return new Date().getTime();
     },

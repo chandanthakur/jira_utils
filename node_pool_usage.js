@@ -1,5 +1,6 @@
+const networkUtils = require('./utils/network-utils');
 var utils = require('./utils/utils');
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; // unauthorized ssl
 // users nodes
 // https://jarvis.eng.nutanix.com/api/v2/pools/562f1d0a7e6e21292f14e729/user_details
 // https://jarvis.eng.nutanix.com/api/v2/pools/562f1d0a7e6e21292f14e729/cluster_details
@@ -20,7 +21,7 @@ let getClusterResponse = function(response, managerMap){
     for(let kk = 0; kk < acropolisPool.length; kk++) {
         let row = acropolisPool[kk];
         let date = new Date(row.created_at.$date).toISOString().substr(0, 10);
-        let owner = row.owner.email;//row.client.owner ? row.client.owner + "@nutanix.com" : row.owner.email;
+        let owner = row.owner.email != "jita.svc@nutanix.com" ? row.owner.email : row.client.owner + "@nutanix.com";//row.client.owner ? row.client.owner + "@nutanix.com" : row.owner.email;
         let manager = managerMap[owner];
         op.push({
             clusterId: row.name,
@@ -90,16 +91,15 @@ let outputStats = function(rows, fileName) {
 let main = function() {
     let managerMap = {};
     let p1 = loadManagerMap();
-    let p2 = utils.getNetworkResponseForUrl(jarvisUrl, {"rejectUnauthorized": false });
-    //let p2 = utils.readFile("./data/cluster_usage_jarvis.1600016727373.json");
+    let p2 = networkUtils.getResponseForUrl(jarvisUrl, {"rejectUnauthorized": false });
     utils.log("Downloading data from jarvis: " + jarvisUrl);
     Promise.all([p1, p2]).then(function(result){
         managerMap = result[0];
         return getClusterResponse(result[1], managerMap);
     }).then(function(response){
-        let o1 = outputStats(response, "cluster_age_stats.csv");
-        let o2 = outputStats(getSummaryByManager(response), "manager_usage_summary.csv");
-        let o3 = outputStats(getDataByManager(response), "manager_usage.csv");
+        let o1 = outputStats(response, "cluster_age_stats.gen.csv");
+        let o2 = outputStats(getSummaryByManager(response), "node_manager_usage_summary.gen.csv");
+        let o3 = outputStats(getDataByManager(response), "node_manager_usage.gen.csv");
         return Promise.all([o1, o2, o3]);
     }).then(function(){
         utils.log("Done.All Good.");
