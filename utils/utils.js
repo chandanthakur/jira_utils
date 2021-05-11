@@ -184,6 +184,36 @@ utils = module.exports = {
         return promise;
     },
 
+    getFilesFromDir: function (dirPath, prefix, suffix) {
+        var promise = new Promise(function (resolve, reject) {
+            if (!dirPath) {
+                reject("Can't handle null dir path");
+                return;
+            }
+
+            const testFolder = './data/';
+            const fs = require('fs');
+        
+            fs.readdir(testFolder, (err, files) => {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+
+                let list = [];
+                files.forEach(function(file) {
+                    if((!prefix || file.startsWith(prefix)) && (!suffix || file.endsWith(suffix))) {
+                        list.push(dirPath + "/" + file);
+                    }
+                });                
+                
+                resolve(list);
+            });
+        });
+
+        return promise;
+    },
+
     getTableRows: function (csvFileName, seperator) {
         let sep = seperator || ",";
         console.log(utils.getTS() + ":LOADING csv: " + csvFileName);
